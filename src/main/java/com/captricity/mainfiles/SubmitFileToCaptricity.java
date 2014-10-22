@@ -32,7 +32,7 @@ import com.captricity.api.BatchFile;
 import com.captricity.api.BatchReadiness;
 import com.captricity.api.Job;
 
-public class CaptricityAPI {
+public class SubmitFileToCaptricity {
 
 	public static final String api_base_url = "https://shreddr.captricity.com/api/v1/";
 
@@ -44,7 +44,7 @@ public class CaptricityAPI {
 
 	public static void main(String args[]) {
 
-		CaptricityAPI capApi = new CaptricityAPI();
+		SubmitFileToCaptricity capApi = new SubmitFileToCaptricity();
 
 		// Create Batch file
 		Batch batch = capApi.createBatch();
