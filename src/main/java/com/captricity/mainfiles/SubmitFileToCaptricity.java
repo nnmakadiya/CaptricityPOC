@@ -36,7 +36,7 @@ public class SubmitFileToCaptricity {
 
 	public static final String api_base_url = "https://shreddr.captricity.com/api/v1/";
 
-	public static final String api_auth_token = "cfacdf1a9db8412cb484b58f5ed399ff";
+	public static final String api_auth_token = "XXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 	public static final String api_version = "v1";
 
