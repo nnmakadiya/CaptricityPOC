@@ -36,7 +36,7 @@ public class SubmitFileToCaptricity {
 
 	public static final String api_base_url = "https://shreddr.captricity.com/api/v1/";
 
-	public static final String api_auth_token = "XXXXXXXXXXXXXXXXXXXXXXXXXX";
+	public static final String api_auth_token = "cfacdf1a9db8412cb484b58f5ed399ff";
 
 	public static final String api_version = "v1";
 
@@ -47,10 +47,13 @@ public class SubmitFileToCaptricity {
 		SubmitFileToCaptricity capApi = new SubmitFileToCaptricity();
 
 		// Create Batch file
-		Batch batch = capApi.createBatch();
+		Batch batch = capApi.createBatch("BatchFromUnitTesting8");
 
 		// Add file to created batch
-		capApi.addFileToBatch(batch);
+		capApi.addFileToBatch(batch,"Employee_Unit_Teting_Form_Data_4.pdf");
+		//capApi.addFileToBatch(batch,"Test_Employee_Form_Data_2.pdf");
+		//capApi.addFileToBatch(batch,"Unit_Testing_Form_Data_3.pdf");
+		
 
 		// Check readiness of the batch after attached file
 		capApi.checkBatchReadiness(batch);
@@ -73,14 +76,14 @@ public class SubmitFileToCaptricity {
 	
 	// Create new Batch
 	@SuppressWarnings("deprecation")
-	public Batch createBatch() {
+	public Batch createBatch(String batchName) {
 
 		String url = "batch/";
 
 		HttpPost postRequest = createAPIPost(url);
 
 		List<NameValuePair> postParams = new ArrayList<NameValuePair>();
-		postParams.add(new BasicNameValuePair("name", "BatchFromJavaApp1"));
+		postParams.add(new BasicNameValuePair("name", batchName));
 
 		String responseText = null;
 		UrlEncodedFormEntity entity;
@@ -101,11 +104,11 @@ public class SubmitFileToCaptricity {
 	}
 
 	// Attach file to the batch
-	public BatchFile addFileToBatch(Batch batch) {
+	public BatchFile addFileToBatch(Batch batch, String fileName) {
 		String url = "batch/" + batch.getId() + "/batch-file/";
 		HttpPost postRequest = createAPIPost(url);
 
-		File file = new File("Test_Employee_Form_Data_1.pdf");
+		File file = new File(fileName);
 
 		MultipartEntityBuilder multipartEntityBuilder = MultipartEntityBuilder
 				.create();

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<file-format>
+	<converter name="char" class="com.captricity.utils.CustomConverter" method="convertChar" return-type="java.lang.String" />
+
+	<record name="SA">
+        <record-definition>
+            <bean name="SA" class="com.captricity.bean.FECScheduleARecord"/>
+			<line delimit="">
+				<record-element length="0" beanref="SA.formType" type="char"/>
+				<record-element length="0" beanref="SA.filerFECCommitteeId" type="char" />
+				<record-element length="0" beanref="SA.contribOrganizationName" type="char" />
+				<record-element length="0" beanref="SA.contributorLastName" type="char" />
+				<record-element length="0" beanref="SA.contributorFirstName" type="char" />
+				<record-element length="0" beanref="SA.contributorMiddleName" type="char" />
+				<record-element length="0" beanref="SA.contributorPrefix" type="char" />
+				<record-element length="0" beanref="SA.contributorSuffix" type="char" />
+				<record-element length="0" beanref="SA.street1" type="char" />
+				<record-element length="0" beanref="SA.street2" type="char" />
+				<record-element length="0" beanref="SA.city" type="char" />
+				<record-element length="0" beanref="SA.state" type="char" />
+				<record-element length="0" beanref="SA.zip" type="char" />
+				<record-element length="0" beanref="SA.dateReceived" type="char" />
+				<record-element length="0" beanref="SA.fecCommitteeIdNumber" type="char" />
+				<record-element length="0" beanref="SA.indEmployer" type="char" />
+				<record-element length="0" beanref="SA.indOccupation" type="char" />
+				<record-element length="0" beanref="SA.itemElectCode" type="char" />
+				<record-element length="0" beanref="SA.itemElectOther" type="char" />
+				<record-element length="13" beanref="SA.aggregateYTD" type="char">
+					<conversion-option name="pad-character" value=" "/>
+					<conversion-option name="justify" value="right"/>
+				</record-element>
+				<record-element length="13" beanref="SA.amountReceived" type="char">
+					<conversion-option name="pad-character" value=" "/>
+					<conversion-option name="justify" value="right"/>
+				</record-element>
+				<record-element length="0" beanref="SA.memoDescription" type="char" />
+				<record-element length="0" beanref="SA.imageNumber" type="char" />
+			</line>
+        </record-definition>
+    </record>
+</file-format>

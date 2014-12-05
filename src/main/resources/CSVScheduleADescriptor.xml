@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<file-format>
+	<converter name="char" class="com.blackbear.flatworm.converters.CoreConverters" method="convertChar" return-type="java.lang.String" />
+
+	<record name="FH">
+		<record-ident>
+			<field-ident field-start="0" field-length="4">
+				<match-string>name</match-string>
+			</field-ident>
+		</record-ident>
+		<record-definition>
+			<bean name="FH" class="com.captricity.bean.CSVScheduleARecord" />
+			<line delimit=",">
+				<record-element length="0" beanref="FH.name" type="char" />
+				<record-element length="0" beanref="FH.formType" type="char" />
+				<record-element length="0" beanref="FH.contributorLateName_A" type="char" />
+				<record-element length="0" beanref="FH.contribOrganizationName_A" type="char" />
+				<record-element length="0" beanref="FH.contributorSuffix_A" type="char" />
+				<record-element length="0" beanref="FH.contributorMiddleName_A" type="char" />
+				<record-element length="0" beanref="FH.contributorFirstName_A" type="char" />
+				<record-element length="0" beanref="FH.personOrOrganization_A" type="char" />
+				<record-element length="0" beanref="FH.contributorPrefix_A" type="char" />
+				<record-element length="0" beanref="FH.street2_A" type="char" />
+				<record-element length="0" beanref="FH.street1_A" type="char" />
+				<record-element length="0" beanref="FH.dateReceived_A" type="char" />
+				<record-element length="0" beanref="FH.city_A" type="char" />
+				<record-element length="0" beanref="FH.state_A" type="char" />
+				<record-element length="0" beanref="FH.zip_A" type="char" />
+				<record-element length="0" beanref="FH.fecCommitteeIdNumber_A" type="char" />
+				<record-element length="0" beanref="FH.amountReceived_A" type="char" />
+				<record-element length="0" beanref="FH.indEmployer_A" type="char" />
+				<record-element length="0" beanref="FH.indOccupation_A" type="char" />
+				<record-element length="0" beanref="FH.itemElectCode_A" type="char" />
+				<record-element length="0" beanref="FH.aggregateYTD_A" type="char" />
+				<record-element length="0" beanref="FH.memoDescription_A" type="char" />
+				<record-element length="0" beanref="FH.itemElectOther_A" type="char" />
+				<record-element length="0" beanref="FH.contributorMiddleName_B" type="char" />
+				<record-element length="0" beanref="FH.contribOrganizationName_B" type="char" />
+				<record-element length="0" beanref="FH.contributorFirstName_B" type="char" />
+				<record-element length="0" beanref="FH.contributorPrefix_B" type="char" />
+				<record-element length="0" beanref="FH.contributorLastName_B" type="char" />
+				<record-element length="0" beanref="FH.personOrOrganization_B" type="char" />
+				<record-element length="0" beanref="FH.contributorSuffix_B" type="char" />
+				<record-element length="0" beanref="FH.street2_B" type="char" />
+				<record-element length="0" beanref="FH.street1_B" type="char" />
+				<record-element length="0" beanref="FH.dateReceived_B" type="char" />
+				<record-element length="0" beanref="FH.city_B" type="char" />
+				<record-element length="0" beanref="FH.state_B" type="char" />
+				<record-element length="0" beanref="FH.zip_B" type="char" />
+				<record-element length="0" beanref="FH.fecCommitteeIdNumber_B" type="char" />
+				<record-element length="0" beanref="FH.amountReceived_B" type="char" />
+				<record-element length="0" beanref="FH.indEmployer_B" type="char" />
+				<record-element length="0" beanref="FH.indOccupation_B" type="char" />
+				<record-element length="0" beanref="FH.itemElectCode_B" type="char" />
+				<record-element length="0" beanref="FH.aggregateYTD_B" type="char" />
+				<record-element length="0" beanref="FH.memoDescription_B" type="char" />
+				<record-element length="0" beanref="FH.itemElectOther_B" type="char" />
+				<record-element length="0" beanref="FH.contributorMiddleName_C" type="char" />
+				<record-element length="0" beanref="FH.contributorLastName_C" type="char" />
+				<record-element length="0" beanref="FH.contributorFirstName_C" type="char" />
+				<record-element length="0" beanref="FH.contribOrganizationName_C" type="char" />
+				<record-element length="0" beanref="FH.contributorPrefix_C" type="char" />
+				<record-element length="0" beanref="FH.contributorSuffix_C" type="char" />
+				<record-element length="0" beanref="FH.personOrOrganization_C" type="char" />
+				<record-element length="0" beanref="FH.street2_C" type="char" />
+				<record-element length="0" beanref="FH.street1_C" type="char" />
+				<record-element length="0" beanref="FH.dateReceived_C" type="char" />
+				<record-element length="0" beanref="FH.city_C" type="char" />
+				<record-element length="0" beanref="FH.state_C" type="char" />
+				<record-element length="0" beanref="FH.zip_C" type="char" />
+				<record-element length="0" beanref="FH.fecCommitteeIdNumber_C" type="char" />
+				<record-element length="0" beanref="FH.indEmployer_C" type="char" />
+				<record-element length="0" beanref="FH.indOccupation_C" type="char" />
+				<record-element length="0" beanref="FH.amountReceived_C" type="char" />
+				<record-element length="0" beanref="FH.itemElectCode_C" type="char" />
+				<record-element length="0" beanref="FH.aggregateYTD_C" type="char" />
+				<record-element length="0" beanref="FH.memoDescription_C" type="char" />
+				<record-element length="0" beanref="FH.itemElectOther_C" type="char" />
+				<record-element length="0" beanref="FH.subtotal" type="char" />
+				<record-element length="0" beanref="FH.total" type="char" />
+			</line>
+		</record-definition>
+	</record>
+	
+	<record name="BODY">
+        <record-definition>
+            <bean name="BODY" class="com.captricity.bean.CSVScheduleARecord"/>
+			<line delimit=",">
+				<record-element length="0" beanref="BODY.name" type="char" />
+				<record-element length="0" beanref="BODY.formType" type="char" />
+				<record-element length="0" beanref="BODY.contributorLateName_A" type="char" />
+				<record-element length="0" beanref="BODY.contribOrganizationName_A" type="char" />
+				<record-element length="0" beanref="BODY.contributorSuffix_A" type="char" />
+				<record-element length="0" beanref="BODY.contributorMiddleName_A" type="char" />
+				<record-element length="0" beanref="BODY.contributorFirstName_A" type="char" />
+				<record-element length="0" beanref="BODY.personOrOrganization_A" type="char" />
+				<record-element length="0" beanref="BODY.contributorPrefix_A" type="char" />
+				<record-element length="0" beanref="BODY.street2_A" type="char" />
+				<record-element length="0" beanref="BODY.street1_A" type="char" />
+				<record-element length="0" beanref="BODY.dateReceived_A" type="char" />
+				<record-element length="0" beanref="BODY.city_A" type="char" />
+				<record-element length="0" beanref="BODY.state_A" type="char" />
+				<record-element length="0" beanref="BODY.zip_A" type="char" />
+				<record-element length="0" beanref="BODY.fecCommitteeIdNumber_A" type="char" />
+				<record-element length="0" beanref="BODY.amountReceived_A" type="char" />
+				<record-element length="0" beanref="BODY.indEmployer_A" type="char" />
+				<record-element length="0" beanref="BODY.indOccupation_A" type="char" />
+				<record-element length="0" beanref="BODY.itemElectCode_A" type="char" />
+				<record-element length="0" beanref="BODY.aggregateYTD_A" type="char" />
+				<record-element length="0" beanref="BODY.memoDescription_A" type="char" />
+				<record-element length="0" beanref="BODY.itemElectOther_A" type="char" />
+				<record-element length="0" beanref="BODY.contributorMiddleName_B" type="char" />
+				<record-element length="0" beanref="BODY.contribOrganizationName_B" type="char" />
+				<record-element length="0" beanref="BODY.contributorFirstName_B" type="char" />
+				<record-element length="0" beanref="BODY.contributorPrefix_B" type="char" />
+				<record-element length="0" beanref="BODY.contributorLastName_B" type="char" />
+				<record-element length="0" beanref="BODY.personOrOrganization_B" type="char" />
+				<record-element length="0" beanref="BODY.contributorSuffix_B" type="char" />
+				<record-element length="0" beanref="BODY.street2_B" type="char" />
+				<record-element length="0" beanref="BODY.street1_B" type="char" />
+				<record-element length="0" beanref="BODY.dateReceived_B" type="char" />
+				<record-element length="0" beanref="BODY.city_B" type="char" />
+				<record-element length="0" beanref="BODY.state_B" type="char" />
+				<record-element length="0" beanref="BODY.zip_B" type="char" />
+				<record-element length="0" beanref="BODY.fecCommitteeIdNumber_B" type="char" />
+				<record-element length="0" beanref="BODY.amountReceived_B" type="char" />
+				<record-element length="0" beanref="BODY.indEmployer_B" type="char" />
+				<record-element length="0" beanref="BODY.indOccupation_B" type="char" />
+				<record-element length="0" beanref="BODY.itemElectCode_B" type="char" />
+				<record-element length="0" beanref="BODY.aggregateYTD_B" type="char" />
+				<record-element length="0" beanref="BODY.memoDescription_B" type="char" />
+				<record-element length="0" beanref="BODY.itemElectOther_B" type="char" />
+				<record-element length="0" beanref="BODY.contributorMiddleName_C" type="char" />
+				<record-element length="0" beanref="BODY.contributorLastName_C" type="char" />
+				<record-element length="0" beanref="BODY.contributorFirstName_C" type="char" />
+				<record-element length="0" beanref="BODY.contribOrganizationName_C" type="char" />
+				<record-element length="0" beanref="BODY.contributorPrefix_C" type="char" />
+				<record-element length="0" beanref="BODY.contributorSuffix_C" type="char" />
+				<record-element length="0" beanref="BODY.personOrOrganization_C" type="char" />
+				<record-element length="0" beanref="BODY.street2_C" type="char" />
+				<record-element length="0" beanref="BODY.street1_C" type="char" />
+				<record-element length="0" beanref="BODY.dateReceived_C" type="char" />
+				<record-element length="0" beanref="BODY.city_C" type="char" />
+				<record-element length="0" beanref="BODY.state_C" type="char" />
+				<record-element length="0" beanref="BODY.zip_C" type="char" />
+				<record-element length="0" beanref="BODY.fecCommitteeIdNumber_C" type="char" />
+				<record-element length="0" beanref="BODY.indEmployer_C" type="char" />
+				<record-element length="0" beanref="BODY.indOccupation_C" type="char" />
+				<record-element length="0" beanref="BODY.amountReceived_C" type="char" />
+				<record-element length="0" beanref="BODY.itemElectCode_C" type="char" />
+				<record-element length="0" beanref="BODY.aggregateYTD_C" type="char" />
+				<record-element length="0" beanref="BODY.memoDescription_C" type="char" />
+				<record-element length="0" beanref="BODY.itemElectOther_C" type="char" />
+				<record-element length="0" beanref="BODY.subtotal" type="char" />
+				<record-element length="0" beanref="BODY.total" type="char" />
+			</line>
+        </record-definition>
+    </record>
+
+</file-format>
