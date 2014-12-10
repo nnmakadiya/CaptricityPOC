@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<file-format>
+	<converter name="char" class="com.blackbear.flatworm.converters.CoreConverters" method="convertChar" return-type="java.lang.String" />
+
+	<record name="FH">
+		<record-ident>
+			<field-ident field-start="0" field-length="4">
+				<match-string>name</match-string>
+			</field-ident>
+		</record-ident>
+		<record-definition>
+			<bean name="FH" class="com.captricity.bean.CSVScheduleCRecord" />
+			<line delimit=",">
+				<record-element length="0" beanref="FH.name" type="char" />
+				<record-element length="0" beanref="FH.formType" type="char" />
+				<record-element length="0" beanref="FH.indFirstName_1" type="char" />
+				<record-element length="0" beanref="FH.nameOfPersonOrOrganization_1" type="char" />
+				<record-element length="0" beanref="FH.indLastName_1" type="char" />
+				<record-element length="0" beanref="FH.indSuffix_1" type="char" />
+				<record-element length="0" beanref="FH.indPrefix_1" type="char" />
+				<record-element length="0" beanref="FH.indMiddleName_1" type="char" />
+				<record-element length="0" beanref="FH.indEmployer_1" type="char" />
+				<record-element length="0" beanref="FH.street1_1" type="char" />
+				<record-element length="0" beanref="FH.street2_1" type="char" />
+				<record-element length="0" beanref="FH.indOccupation_1" type="char" />
+				<record-element length="0" beanref="FH.city_1" type="char" />
+				<record-element length="0" beanref="FH.state_1" type="char" />
+				<record-element length="0" beanref="FH.zip_1" type="char" />
+				<record-element length="0" beanref="FH.amountGuaranteedBalance_1" type="char" />
+				<record-element length="0" beanref="FH.indMiddleName_2" type="char" />
+				<record-element length="0" beanref="FH.nameOfPersonOrOrganization_2" type="char" />
+				<record-element length="0" beanref="FH.indLastName_2" type="char" />
+				<record-element length="0" beanref="FH.indFirstName_2" type="char" />
+				<record-element length="0" beanref="FH.indPrefix_2" type="char" />
+				<record-element length="0" beanref="FH.indSuffix_2" type="char" />
+				<record-element length="0" beanref="FH.indEmployer_2" type="char" />
+				<record-element length="0" beanref="FH.street1_2" type="char" />
+				<record-element length="0" beanref="FH.street2_2" type="char" />
+				<record-element length="0" beanref="FH.indOccupation_2" type="char" />
+				<record-element length="0" beanref="FH.city_2" type="char" />
+				<record-element length="0" beanref="FH.state_2" type="char" />
+				<record-element length="0" beanref="FH.zip_2" type="char" />
+				<record-element length="0" beanref="FH.amountGuaranteedBalance_2" type="char" />
+				<record-element length="0" beanref="FH.indMiddleName_3" type="char" />
+				<record-element length="0" beanref="FH.indFirstName_3" type="char" />
+				<record-element length="0" beanref="FH.indPrefix_3" type="char" />
+				<record-element length="0" beanref="FH.indSuffix_3" type="char" />
+				<record-element length="0" beanref="FH.nameOfPersonOrOrganization_3" type="char" />
+				<record-element length="0" beanref="FH.indLastName_3" type="char" />
+				<record-element length="0" beanref="FH.indEmployer_3" type="char" />
+				<record-element length="0" beanref="FH.street1_3" type="char" />
+				<record-element length="0" beanref="FH.street2_3" type="char" />
+				<record-element length="0" beanref="FH.indOccupation_3" type="char" />
+				<record-element length="0" beanref="FH.city_3" type="char" />
+				<record-element length="0" beanref="FH.state_3" type="char" />
+				<record-element length="0" beanref="FH.zip_3" type="char" />
+				<record-element length="0" beanref="FH.amountGuaranteedBalance_3" type="char" />
+				<record-element length="0" beanref="FH.indMiddleName_4" type="char" />
+				<record-element length="0" beanref="FH.indFirstName_4" type="char" />
+				<record-element length="0" beanref="FH.indSuffix_4" type="char" />
+				<record-element length="0" beanref="FH.indPrefix_4" type="char" />
+				<record-element length="0" beanref="FH.nameOfPersonOrOrganization_4" type="char" />
+				<record-element length="0" beanref="FH.indLastName_4" type="char" />
+				<record-element length="0" beanref="FH.indEmployer_4" type="char" />
+				<record-element length="0" beanref="FH.street2_4" type="char" />
+				<record-element length="0" beanref="FH.street1_4" type="char" />
+				<record-element length="0" beanref="FH.indOccupation_4" type="char" />
+				<record-element length="0" beanref="FH.city_4" type="char" />
+				<record-element length="0" beanref="FH.state_4" type="char" />
+				<record-element length="0" beanref="FH.zip_4" type="char" />
+				<record-element length="0" beanref="FH.amountGuaranteedBalance_4" type="char" />
+				
+			</line>
+		</record-definition>
+	</record>
+	
+	<record name="BODY">
+        <record-definition>
+            <bean name="BODY" class="com.captricity.bean.CSVScheduleCRecord"/>
+			<line delimit=",">
+				<record-element length="0" beanref="BODY.name" type="char" />
+				<record-element length="0" beanref="BODY.formType" type="char" />
+				<record-element length="0" beanref="BODY.indFirstName_1" type="char" />
+				<record-element length="0" beanref="BODY.nameOfPersonOrOrganization_1" type="char" />
+				<record-element length="0" beanref="BODY.indLastName_1" type="char" />
+				<record-element length="0" beanref="BODY.indSuffix_1" type="char" />
+				<record-element length="0" beanref="BODY.indPrefix_1" type="char" />
+				<record-element length="0" beanref="BODY.indMiddleName_1" type="char" />
+				<record-element length="0" beanref="BODY.indEmployer_1" type="char" />
+				<record-element length="0" beanref="BODY.street1_1" type="char" />
+				<record-element length="0" beanref="BODY.street2_1" type="char" />
+				<record-element length="0" beanref="BODY.indOccupation_1" type="char" />
+				<record-element length="0" beanref="BODY.city_1" type="char" />
+				<record-element length="0" beanref="BODY.state_1" type="char" />
+				<record-element length="0" beanref="BODY.zip_1" type="char" />
+				<record-element length="0" beanref="BODY.amountGuaranteedBalance_1" type="char" />
+				<record-element length="0" beanref="BODY.indMiddleName_2" type="char" />
+				<record-element length="0" beanref="BODY.nameOfPersonOrOrganization_2" type="char" />
+				<record-element length="0" beanref="BODY.indLastName_2" type="char" />
+				<record-element length="0" beanref="BODY.indFirstName_2" type="char" />
+				<record-element length="0" beanref="BODY.indPrefix_2" type="char" />
+				<record-element length="0" beanref="BODY.indSuffix_2" type="char" />
+				<record-element length="0" beanref="BODY.indEmployer_2" type="char" />
+				<record-element length="0" beanref="BODY.street1_2" type="char" />
+				<record-element length="0" beanref="BODY.street2_2" type="char" />
+				<record-element length="0" beanref="BODY.indOccupation_2" type="char" />
+				<record-element length="0" beanref="BODY.city_2" type="char" />
+				<record-element length="0" beanref="BODY.state_2" type="char" />
+				<record-element length="0" beanref="BODY.zip_2" type="char" />
+				<record-element length="0" beanref="BODY.amountGuaranteedBalance_2" type="char" />
+				<record-element length="0" beanref="BODY.indMiddleName_3" type="char" />
+				<record-element length="0" beanref="BODY.indFirstName_3" type="char" />
+				<record-element length="0" beanref="BODY.indPrefix_3" type="char" />
+				<record-element length="0" beanref="BODY.indSuffix_3" type="char" />
+				<record-element length="0" beanref="BODY.nameOfPersonOrOrganization_3" type="char" />
+				<record-element length="0" beanref="BODY.indLastName_3" type="char" />
+				<record-element length="0" beanref="BODY.indEmployer_3" type="char" />
+				<record-element length="0" beanref="BODY.street1_3" type="char" />
+				<record-element length="0" beanref="BODY.street2_3" type="char" />
+				<record-element length="0" beanref="BODY.indOccupation_3" type="char" />
+				<record-element length="0" beanref="BODY.city_3" type="char" />
+				<record-element length="0" beanref="BODY.state_3" type="char" />
+				<record-element length="0" beanref="BODY.zip_3" type="char" />
+				<record-element length="0" beanref="BODY.amountGuaranteedBalance_3" type="char" />
+				<record-element length="0" beanref="BODY.indMiddleName_4" type="char" />
+				<record-element length="0" beanref="BODY.indFirstName_4" type="char" />
+				<record-element length="0" beanref="BODY.indSuffix_4" type="char" />
+				<record-element length="0" beanref="BODY.indPrefix_4" type="char" />
+				<record-element length="0" beanref="BODY.nameOfPersonOrOrganization_4" type="char" />
+				<record-element length="0" beanref="BODY.indLastName_4" type="char" />
+				<record-element length="0" beanref="BODY.indEmployer_4" type="char" />
+				<record-element length="0" beanref="BODY.street2_4" type="char" />
+				<record-element length="0" beanref="BODY.street1_4" type="char" />
+				<record-element length="0" beanref="BODY.indOccupation_4" type="char" />
+				<record-element length="0" beanref="BODY.city_4" type="char" />
+				<record-element length="0" beanref="BODY.state_4" type="char" />
+				<record-element length="0" beanref="BODY.zip_4" type="char" />
+				<record-element length="0" beanref="BODY.amountGuaranteedBalance_4" type="char" />
+				
+			</line>
+        </record-definition>
+    </record>
+
+</file-format>

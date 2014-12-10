@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<file-format>
+	<converter name="char" class="com.blackbear.flatworm.converters.CoreConverters" method="convertChar" return-type="java.lang.String" />
+
+	<record name="FH">
+		<record-ident>
+			<field-ident field-start="0" field-length="4">
+				<match-string>name</match-string>
+			</field-ident>
+		</record-ident>
+		<record-definition>
+			<bean name="FH" class="com.captricity.bean.CSVScheduleBRecord" />
+			<line delimit=",">
+				<record-element length="0" beanref="FH.name" type="char" />
+				<record-element length="0" beanref="FH.formType" type="char" />
+				<record-element length="0" beanref="FH.recipientFirstName_A" type="char" />
+				<record-element length="0" beanref="FH.recipientLastName_A" type="char" />
+				<record-element length="0" beanref="FH.recipientMiddleName_A" type="char" />
+				<record-element length="0" beanref="FH.recipientPrefix_A" type="char" />
+				<record-element length="0" beanref="FH.recipientSuffix_A" type="char" />
+				<record-element length="0" beanref="FH.personOrOrganization_A" type="char" />
+				<record-element length="0" beanref="FH.recipientOrganizationName_A" type="char" />
+				<record-element length="0" beanref="FH.street1_A" type="char" />
+				<record-element length="0" beanref="FH.dateOfDisbursement_A" type="char" />
+				<record-element length="0" beanref="FH.street2_A" type="char" />
+				<record-element length="0" beanref="FH.city_A" type="char" />
+				<record-element length="0" beanref="FH.state_A" type="char" />
+				<record-element length="0" beanref="FH.zip_A" type="char" />
+				<record-element length="0" beanref="FH.purposeOfDisbursement_A" type="char" />
+				<record-element length="0" beanref="FH.amountOfDisbursement_A" type="char" />
+				<record-element length="0" beanref="FH.categoryCode_A" type="char" />
+				<record-element length="0" beanref="FH.canMiddleName_A" type="char" />
+				<record-element length="0" beanref="FH.canLastName_A" type="char" />
+				<record-element length="0" beanref="FH.canPrefix_A" type="char" />
+				<record-element length="0" beanref="FH.canFirstName_A" type="char" />
+				<record-element length="0" beanref="FH.beneficiaryCommitteeName_A" type="char" />
+				<record-element length="0" beanref="FH.canSuffix_A" type="char" />
+				<record-element length="0" beanref="FH.canState_A" type="char" />
+				<record-element length="0" beanref="FH.canOffice_A" type="char" />
+				<record-element length="0" beanref="FH.memoTextDescription_A" type="char" />
+				<record-element length="0" beanref="FH.canDist_A" type="char" />
+				<record-element length="0" beanref="FH.itemElectOther_A" type="char" />
+				<record-element length="0" beanref="FH.itemElectCode_A" type="char" />
+				<record-element length="0" beanref="FH.recipientSuffix_B" type="char" />
+				<record-element length="0" beanref="FH.recipientLastName_B" type="char" />
+				<record-element length="0" beanref="FH.personOrOrganization_B" type="char" />
+				<record-element length="0" beanref="FH.recipientOrganizationName_B" type="char" />
+				<record-element length="0" beanref="FH.recipientMiddleName_B" type="char" />
+				<record-element length="0" beanref="FH.recipientFirstName_B" type="char" />
+				<record-element length="0" beanref="FH.recipientPrefix_B" type="char" />
+				<record-element length="0" beanref="FH.street1_B" type="char" />
+				<record-element length="0" beanref="FH.street2_B" type="char" />
+				<record-element length="0" beanref="FH.dateOfDisbursement_B" type="char" />
+				<record-element length="0" beanref="FH.city_B" type="char" />
+				<record-element length="0" beanref="FH.state_B" type="char" />
+				<record-element length="0" beanref="FH.zip_B" type="char" />
+				<record-element length="0" beanref="FH.purposeOfDisbursement_B" type="char" />
+				<record-element length="0" beanref="FH.amountOfDisbursement_B" type="char" />
+				<record-element length="0" beanref="FH.categoryCode_B" type="char" />
+				<record-element length="0" beanref="FH.canLastName_B" type="char" />
+				<record-element length="0" beanref="FH.beneficiaryCommitteeName_B" type="char" />
+				<record-element length="0" beanref="FH.canFirstName_B" type="char" />
+				<record-element length="0" beanref="FH.canSuffix_B" type="char" />
+				<record-element length="0" beanref="FH.canPrefix_B" type="char" />
+				<record-element length="0" beanref="FH.canMiddleName_B" type="char" />
+				<record-element length="0" beanref="FH.canState_B" type="char" />
+				<record-element length="0" beanref="FH.canOffice_B" type="char" />
+				<record-element length="0" beanref="FH.itemElectOther_B" type="char" />
+				<record-element length="0" beanref="FH.memoTextDescription_B" type="char" />
+				<record-element length="0" beanref="FH.itemElectCode_B" type="char" />
+				<record-element length="0" beanref="FH.canDist_B" type="char" />
+				<record-element length="0" beanref="FH.recipientOrganizationName_C" type="char" />
+				<record-element length="0" beanref="FH.recipientFirstName_C" type="char" />
+				<record-element length="0" beanref="FH.personOrOrganization_C" type="char" />
+				<record-element length="0" beanref="FH.recipientSuffix_C" type="char" />
+				<record-element length="0" beanref="FH.recipientLastName_C" type="char" />
+				<record-element length="0" beanref="FH.recipientPrefix_C" type="char" />
+				<record-element length="0" beanref="FH.recipientMiddleName_C" type="char" />
+				<record-element length="0" beanref="FH.street2_C" type="char" />
+				<record-element length="0" beanref="FH.street1_C" type="char" />
+				<record-element length="0" beanref="FH.dateOfDisbursement_C" type="char" />
+				<record-element length="0" beanref="FH.city_C" type="char" />
+				<record-element length="0" beanref="FH.state_C" type="char" />
+				<record-element length="0" beanref="FH.zip_C" type="char" />
+				<record-element length="0" beanref="FH.purposeOfDisbursement_C" type="char" />
+				<record-element length="0" beanref="FH.amountOfDisbursement_C" type="char" />
+				<record-element length="0" beanref="FH.categoryCode_C" type="char" />
+				<record-element length="0" beanref="FH.canMiddleName_C" type="char" />
+				<record-element length="0" beanref="FH.canSuffix_C" type="char" />
+				<record-element length="0" beanref="FH.canFirstName_C" type="char" />
+				<record-element length="0" beanref="FH.beneficiaryCommitteeName_C" type="char" />
+				<record-element length="0" beanref="FH.canLastName_C" type="char" />
+				<record-element length="0" beanref="FH.canPrefix_C" type="char" />
+				<record-element length="0" beanref="FH.canOffice_C" type="char" />
+				<record-element length="0" beanref="FH.itemElectOther_C" type="char" />
+				<record-element length="0" beanref="FH.memoTextDescription_C" type="char" />
+				<record-element length="0" beanref="FH.canState_C" type="char" />
+				<record-element length="0" beanref="FH.itemElectCode_C" type="char" />
+				<record-element length="0" beanref="FH.canDist_C" type="char" />
+			</line>
+		</record-definition>
+	</record>
+	
+	<record name="BODY">
+        <record-definition>
+            <bean name="BODY" class="com.captricity.bean.CSVScheduleBRecord"/>
+			<line delimit=",">
+				<record-element length="0" beanref="BODY.name" type="char" />
+				<record-element length="0" beanref="BODY.formType" type="char" />
+				<record-element length="0" beanref="BODY.recipientFirstName_A" type="char" />
+				<record-element length="0" beanref="BODY.recipientLastName_A" type="char" />
+				<record-element length="0" beanref="BODY.recipientMiddleName_A" type="char" />
+				<record-element length="0" beanref="BODY.recipientPrefix_A" type="char" />
+				<record-element length="0" beanref="BODY.recipientSuffix_A" type="char" />
+				<record-element length="0" beanref="BODY.personOrOrganization_A" type="char" />
+				<record-element length="0" beanref="BODY.recipientOrganizationName_A" type="char" />
+				<record-element length="0" beanref="BODY.street1_A" type="char" />
+				<record-element length="0" beanref="BODY.dateOfDisbursement_A" type="char" />
+				<record-element length="0" beanref="BODY.street2_A" type="char" />
+				<record-element length="0" beanref="BODY.city_A" type="char" />
+				<record-element length="0" beanref="BODY.state_A" type="char" />
+				<record-element length="0" beanref="BODY.zip_A" type="char" />
+				<record-element length="0" beanref="BODY.purposeOfDisbursement_A" type="char" />
+				<record-element length="0" beanref="BODY.amountOfDisbursement_A" type="char" />
+				<record-element length="0" beanref="BODY.categoryCode_A" type="char" />
+				<record-element length="0" beanref="BODY.canMiddleName_A" type="char" />
+				<record-element length="0" beanref="BODY.canLastName_A" type="char" />
+				<record-element length="0" beanref="BODY.canPrefix_A" type="char" />
+				<record-element length="0" beanref="BODY.canFirstName_A" type="char" />
+				<record-element length="0" beanref="BODY.beneficiaryCommitteeName_A" type="char" />
+				<record-element length="0" beanref="BODY.canSuffix_A" type="char" />
+				<record-element length="0" beanref="BODY.canState_A" type="char" />
+				<record-element length="0" beanref="BODY.canOffice_A" type="char" />
+				<record-element length="0" beanref="BODY.memoTextDescription_A" type="char" />
+				<record-element length="0" beanref="BODY.canDist_A" type="char" />
+				<record-element length="0" beanref="BODY.itemElectOther_A" type="char" />
+				<record-element length="0" beanref="BODY.itemElectCode_A" type="char" />
+				<record-element length="0" beanref="BODY.recipientSuffix_B" type="char" />
+				<record-element length="0" beanref="BODY.recipientLastName_B" type="char" />
+				<record-element length="0" beanref="BODY.personOrOrganization_B" type="char" />
+				<record-element length="0" beanref="BODY.recipientOrganizationName_B" type="char" />
+				<record-element length="0" beanref="BODY.recipientMiddleName_B" type="char" />
+				<record-element length="0" beanref="BODY.recipientFirstName_B" type="char" />
+				<record-element length="0" beanref="BODY.recipientPrefix_B" type="char" />
+				<record-element length="0" beanref="BODY.street1_B" type="char" />
+				<record-element length="0" beanref="BODY.street2_B" type="char" />
+				<record-element length="0" beanref="BODY.dateOfDisbursement_B" type="char" />
+				<record-element length="0" beanref="BODY.city_B" type="char" />
+				<record-element length="0" beanref="BODY.state_B" type="char" />
+				<record-element length="0" beanref="BODY.zip_B" type="char" />
+				<record-element length="0" beanref="BODY.purposeOfDisbursement_B" type="char" />
+				<record-element length="0" beanref="BODY.amountOfDisbursement_B" type="char" />
+				<record-element length="0" beanref="BODY.categoryCode_B" type="char" />
+				<record-element length="0" beanref="BODY.canLastName_B" type="char" />
+				<record-element length="0" beanref="BODY.beneficiaryCommitteeName_B" type="char" />
+				<record-element length="0" beanref="BODY.canFirstName_B" type="char" />
+				<record-element length="0" beanref="BODY.canSuffix_B" type="char" />
+				<record-element length="0" beanref="BODY.canPrefix_B" type="char" />
+				<record-element length="0" beanref="BODY.canMiddleName_B" type="char" />
+				<record-element length="0" beanref="BODY.canState_B" type="char" />
+				<record-element length="0" beanref="BODY.canOffice_B" type="char" />
+				<record-element length="0" beanref="BODY.itemElectOther_B" type="char" />
+				<record-element length="0" beanref="BODY.memoTextDescription_B" type="char" />
+				<record-element length="0" beanref="BODY.itemElectCode_B" type="char" />
+				<record-element length="0" beanref="BODY.canDist_B" type="char" />
+				<record-element length="0" beanref="BODY.recipientOrganizationName_C" type="char" />
+				<record-element length="0" beanref="BODY.recipientFirstName_C" type="char" />
+				<record-element length="0" beanref="BODY.personOrOrganization_C" type="char" />
+				<record-element length="0" beanref="BODY.recipientSuffix_C" type="char" />
+				<record-element length="0" beanref="BODY.recipientLastName_C" type="char" />
+				<record-element length="0" beanref="BODY.recipientPrefix_C" type="char" />
+				<record-element length="0" beanref="BODY.recipientMiddleName_C" type="char" />
+				<record-element length="0" beanref="BODY.street2_C" type="char" />
+				<record-element length="0" beanref="BODY.street1_C" type="char" />
+				<record-element length="0" beanref="BODY.dateOfDisbursement_C" type="char" />
+				<record-element length="0" beanref="BODY.city_C" type="char" />
+				<record-element length="0" beanref="BODY.state_C" type="char" />
+				<record-element length="0" beanref="BODY.zip_C" type="char" />
+				<record-element length="0" beanref="BODY.purposeOfDisbursement_C" type="char" />
+				<record-element length="0" beanref="BODY.amountOfDisbursement_C" type="char" />
+				<record-element length="0" beanref="BODY.categoryCode_C" type="char" />
+				<record-element length="0" beanref="BODY.canMiddleName_C" type="char" />
+				<record-element length="0" beanref="BODY.canSuffix_C" type="char" />
+				<record-element length="0" beanref="BODY.canFirstName_C" type="char" />
+				<record-element length="0" beanref="BODY.beneficiaryCommitteeName_C" type="char" />
+				<record-element length="0" beanref="BODY.canLastName_C" type="char" />
+				<record-element length="0" beanref="BODY.canPrefix_C" type="char" />
+				<record-element length="0" beanref="BODY.canOffice_C" type="char" />
+				<record-element length="0" beanref="BODY.itemElectOther_C" type="char" />
+				<record-element length="0" beanref="BODY.memoTextDescription_C" type="char" />
+				<record-element length="0" beanref="BODY.canState_C" type="char" />
+				<record-element length="0" beanref="BODY.itemElectCode_C" type="char" />
+				<record-element length="0" beanref="BODY.canDist_C" type="char" />
+			</line>
+        </record-definition>
+    </record>
+
+</file-format>

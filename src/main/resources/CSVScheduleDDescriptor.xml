@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<file-format>
+	<converter name="char" class="com.blackbear.flatworm.converters.CoreConverters" method="convertChar" return-type="java.lang.String" />
+
+	<record name="FH">
+		<record-ident>
+			<field-ident field-start="0" field-length="4">
+				<match-string>name</match-string>
+			</field-ident>
+		</record-ident>
+		<record-definition>
+			<bean name="FH" class="com.captricity.bean.CSVScheduleDRecord" />
+			<line delimit=",">
+				<record-element length="0" beanref="FH.name" type="char" />
+				<record-element length="0" beanref="FH.formType" type="char" />
+				<record-element length="0" beanref="FH.personOrOrganization_A" type="char" />
+				<record-element length="0" beanref="FH.debtPrefix_A" type="char" />
+				<record-element length="0" beanref="FH.debtLastName_A" type="char" />
+				<record-element length="0" beanref="FH.debtFirstName_A" type="char" />
+				<record-element length="0" beanref="FH.debtName_A" type="char" />
+				<record-element length="0" beanref="FH.debtMiddleName_A" type="char" />
+				<record-element length="0" beanref="FH.debtSuffix_A" type="char" />
+				<record-element length="0" beanref="FH.street1_A" type="char" />
+				<record-element length="0" beanref="FH.street2_A" type="char" />
+				<record-element length="0" beanref="FH.naturePurposeDebtDescription_A" type="char" />
+				<record-element length="0" beanref="FH.city_A" type="char" />
+				<record-element length="0" beanref="FH.state_A" type="char" />
+				<record-element length="0" beanref="FH.zip_A" type="char" />
+				<record-element length="0" beanref="FH.beginningBalance_A" type="char" />
+				<record-element length="0" beanref="FH.incurredThisPeriod_A" type="char" />
+				<record-element length="0" beanref="FH.paymentThisPeriod_A" type="char" />
+				<record-element length="0" beanref="FH.balanceAtClose_A" type="char" />	
+				<record-element length="0" beanref="FH.debtPrefix_B" type="char" />
+				<record-element length="0" beanref="FH.debtName_B" type="char" />
+				<record-element length="0" beanref="FH.debtLastName_B" type="char" />
+				<record-element length="0" beanref="FH.debtFirstName_B" type="char" />
+				<record-element length="0" beanref="FH.debtMiddleName_B" type="char" />
+				<record-element length="0" beanref="FH.debtSuffix_B" type="char" />
+				<record-element length="0" beanref="FH.personOrOrganization_B" type="char" />
+				<record-element length="0" beanref="FH.street2_B" type="char" />
+				<record-element length="0" beanref="FH.street1_B" type="char" />
+				<record-element length="0" beanref="FH.naturePurposeDebtDescription_B" type="char" />
+				<record-element length="0" beanref="FH.city_B" type="char" />
+				<record-element length="0" beanref="FH.state_B" type="char" />
+				<record-element length="0" beanref="FH.zip_B" type="char" />
+				<record-element length="0" beanref="FH.beginningBalance_B" type="char" />
+				<record-element length="0" beanref="FH.incurredThisPeriod_B" type="char" />
+				<record-element length="0" beanref="FH.paymentThisPeriod_B" type="char" />
+				<record-element length="0" beanref="FH.balanceAtClose_B" type="char" />
+				<record-element length="0" beanref="FH.debtSuffix_C" type="char" />
+				<record-element length="0" beanref="FH.personOrOrganization_C" type="char" />
+				<record-element length="0" beanref="FH.debtName_C" type="char" />
+				<record-element length="0" beanref="FH.debtFirstName_C" type="char" />
+				<record-element length="0" beanref="FH.debtMiddleName_C" type="char" />
+				<record-element length="0" beanref="FH.debtLastName_C" type="char" />
+				<record-element length="0" beanref="FH.debtPrefix_C" type="char" />
+				<record-element length="0" beanref="FH.street2_C" type="char" />
+				<record-element length="0" beanref="FH.street1_C" type="char" />
+				<record-element length="0" beanref="FH.naturePurposeDebtDescription_C" type="char" />
+				<record-element length="0" beanref="FH.city_C" type="char" />
+				<record-element length="0" beanref="FH.state_C" type="char" />
+				<record-element length="0" beanref="FH.zip_C" type="char" />
+				<record-element length="0" beanref="FH.beginningBalance_C" type="char" />
+				<record-element length="0" beanref="FH.incurredThisPeriod_C" type="char" />
+				<record-element length="0" beanref="FH.paymentThisPeriod_C" type="char" />
+				<record-element length="0" beanref="FH.balanceAtClose_C" type="char" />
+				
+			</line>
+		</record-definition>
+	</record>
+	
+	<record name="BODY">
+        <record-definition>
+            <bean name="BODY" class="com.captricity.bean.CSVScheduleDRecord"/>
+			<line delimit=",">
+				<record-element length="0" beanref="BODY.name" type="char" />
+				<record-element length="0" beanref="BODY.formType" type="char" />
+				<record-element length="0" beanref="BODY.personOrOrganization_A" type="char" />
+				<record-element length="0" beanref="BODY.debtPrefix_A" type="char" />
+				<record-element length="0" beanref="BODY.debtLastName_A" type="char" />
+				<record-element length="0" beanref="BODY.debtFirstName_A" type="char" />
+				<record-element length="0" beanref="BODY.debtName_A" type="char" />
+				<record-element length="0" beanref="BODY.debtMiddleName_A" type="char" />
+				<record-element length="0" beanref="BODY.debtSuffix_A" type="char" />
+				<record-element length="0" beanref="BODY.street1_A" type="char" />
+				<record-element length="0" beanref="BODY.street2_A" type="char" />
+				<record-element length="0" beanref="BODY.naturePurposeDebtDescription_A" type="char" />
+				<record-element length="0" beanref="BODY.city_A" type="char" />
+				<record-element length="0" beanref="BODY.state_A" type="char" />
+				<record-element length="0" beanref="BODY.zip_A" type="char" />
+				<record-element length="0" beanref="BODY.beginningBalance_A" type="char" />
+				<record-element length="0" beanref="BODY.incurredThisPeriod_A" type="char" />
+				<record-element length="0" beanref="BODY.paymentThisPeriod_A" type="char" />
+				<record-element length="0" beanref="BODY.balanceAtClose_A" type="char" />	
+				<record-element length="0" beanref="BODY.debtPrefix_B" type="char" />
+				<record-element length="0" beanref="BODY.debtName_B" type="char" />
+				<record-element length="0" beanref="BODY.debtLastName_B" type="char" />
+				<record-element length="0" beanref="BODY.debtFirstName_B" type="char" />
+				<record-element length="0" beanref="BODY.debtMiddleName_B" type="char" />
+				<record-element length="0" beanref="BODY.debtSuffix_B" type="char" />
+				<record-element length="0" beanref="BODY.personOrOrganization_B" type="char" />
+				<record-element length="0" beanref="BODY.street2_B" type="char" />
+				<record-element length="0" beanref="BODY.street1_B" type="char" />
+				<record-element length="0" beanref="BODY.naturePurposeDebtDescription_B" type="char" />
+				<record-element length="0" beanref="BODY.city_B" type="char" />
+				<record-element length="0" beanref="BODY.state_B" type="char" />
+				<record-element length="0" beanref="BODY.zip_B" type="char" />
+				<record-element length="0" beanref="BODY.beginningBalance_B" type="char" />
+				<record-element length="0" beanref="BODY.incurredThisPeriod_B" type="char" />
+				<record-element length="0" beanref="BODY.paymentThisPeriod_B" type="char" />
+				<record-element length="0" beanref="BODY.balanceAtClose_B" type="char" />
+				<record-element length="0" beanref="BODY.debtSuffix_C" type="char" />
+				<record-element length="0" beanref="BODY.personOrOrganization_C" type="char" />
+				<record-element length="0" beanref="BODY.debtName_C" type="char" />
+				<record-element length="0" beanref="BODY.debtFirstName_C" type="char" />
+				<record-element length="0" beanref="BODY.debtMiddleName_C" type="char" />
+				<record-element length="0" beanref="BODY.debtLastName_C" type="char" />
+				<record-element length="0" beanref="BODY.debtPrefix_C" type="char" />
+				<record-element length="0" beanref="BODY.street2_C" type="char" />
+				<record-element length="0" beanref="BODY.street1_C" type="char" />
+				<record-element length="0" beanref="BODY.naturePurposeDebtDescription_C" type="char" />
+				<record-element length="0" beanref="BODY.city_C" type="char" />
+				<record-element length="0" beanref="BODY.state_C" type="char" />
+				<record-element length="0" beanref="BODY.zip_C" type="char" />
+				<record-element length="0" beanref="BODY.beginningBalance_C" type="char" />
+				<record-element length="0" beanref="BODY.incurredThisPeriod_C" type="char" />
+				<record-element length="0" beanref="BODY.paymentThisPeriod_C" type="char" />
+				<record-element length="0" beanref="BODY.balanceAtClose_C" type="char" />
+			</line>
+        </record-definition>
+    </record>
+
+</file-format>

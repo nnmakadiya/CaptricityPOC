@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<file-format>
+	<converter name="char" class="com.blackbear.flatworm.converters.CoreConverters" method="convertChar" return-type="java.lang.String" />
+
+	<record name="FH">
+		<record-ident>
+			<field-ident field-start="0" field-length="4">
+				<match-string>name</match-string>
+			</field-ident>
+		</record-ident>
+		<record-definition>
+			<bean name="FH" class="com.captricity.bean.CSVScheduleCRecord" />
+			<line delimit=",">
+				<record-element length="0" beanref="FH.name" type="char" />
+				<record-element length="0" beanref="FH.formType" type="char" />
+				<record-element length="0" beanref="FH.receiptLineNumber" type="char" />
+				<record-element length="0" beanref="FH.loanMiddleName" type="char" />
+				<record-element length="0" beanref="FH.loanSuffix" type="char" />
+				<record-element length="0" beanref="FH.loanFirstName" type="char" />
+				<record-element length="0" beanref="FH.nameofPersonorOrganization" type="char" />
+				<record-element length="0" beanref="FH.loanOrganizationName" type="char" />
+				<record-element length="0" beanref="FH.loanPrefix" type="char" />
+				<record-element length="0" beanref="FH.loanLastName" type="char" />
+				<record-element length="0" beanref="FH.election" type="char" />
+				<record-element length="0" beanref="FH.street1" type="char" />
+				<record-element length="0" beanref="FH.street2" type="char" />
+				<record-element length="0" beanref="FH.electionDescription" type="char" />
+				<record-element length="0" beanref="FH.city" type="char" />
+				<record-element length="0" beanref="FH.state" type="char" />
+				<record-element length="0" beanref="FH.zip" type="char" />
+				<record-element length="0" beanref="FH.origAmtOfLoan" type="char" />
+				<record-element length="0" beanref="FH.paymentToDate" type="char" />
+				<record-element length="0" beanref="FH.loanBalance" type="char" />
+				<record-element length="0" beanref="FH.memoTextDescription" type="char" />
+				<record-element length="0" beanref="FH.dateIncurred" type="char" />
+				<record-element length="0" beanref="FH.dueDateTerms" type="char" />
+				<record-element length="0" beanref="FH.pctRateTerms" type="char" />
+				<record-element length="0" beanref="FH.securedYesno" type="char" />
+				
+			</line>
+		</record-definition>
+	</record>
+	
+	<record name="BODY">
+        <record-definition>
+            <bean name="BODY" class="com.captricity.bean.CSVScheduleCRecord"/>
+			<line delimit=",">
+				<record-element length="0" beanref="BODY.name" type="char" />
+				<record-element length="0" beanref="BODY.formType" type="char" />
+				<record-element length="0" beanref="BODY.receiptLineNumber" type="char" />
+				<record-element length="0" beanref="BODY.loanMiddleName" type="char" />
+				<record-element length="0" beanref="BODY.loanSuffix" type="char" />
+				<record-element length="0" beanref="BODY.loanFirstName" type="char" />
+				<record-element length="0" beanref="BODY.nameofPersonorOrganization" type="char" />
+				<record-element length="0" beanref="BODY.loanOrganizationName" type="char" />
+				<record-element length="0" beanref="BODY.loanPrefix" type="char" />
+				<record-element length="0" beanref="BODY.loanLastName" type="char" />
+				<record-element length="0" beanref="BODY.election" type="char" />
+				<record-element length="0" beanref="BODY.street1" type="char" />
+				<record-element length="0" beanref="BODY.street2" type="char" />
+				<record-element length="0" beanref="BODY.electionDescription" type="char" />
+				<record-element length="0" beanref="BODY.city" type="char" />
+				<record-element length="0" beanref="BODY.state" type="char" />
+				<record-element length="0" beanref="BODY.zip" type="char" />
+				<record-element length="0" beanref="BODY.origAmtOfLoan" type="char" />
+				<record-element length="0" beanref="BODY.paymentToDate" type="char" />
+				<record-element length="0" beanref="BODY.loanBalance" type="char" />
+				<record-element length="0" beanref="BODY.memoTextDescription" type="char" />
+				<record-element length="0" beanref="BODY.dateIncurred" type="char" />
+				<record-element length="0" beanref="BODY.dueDateTerms" type="char" />
+				<record-element length="0" beanref="BODY.pctRateTerms" type="char" />
+				<record-element length="0" beanref="BODY.securedYesno" type="char" />
+				
+			</line>
+        </record-definition>
+    </record>
+
+</file-format>
