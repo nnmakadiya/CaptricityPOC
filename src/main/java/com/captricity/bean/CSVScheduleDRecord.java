@@ -9,15 +9,16 @@ public class CSVScheduleDRecord {
 	private String name;
 	private String formType;
 	
-	private String personOrOrganization_A;
-	private String debtPrefix_A;
 	private String debtLastName_A;
-	private String debtFirstName_A;
-	private String debtName_A;
+	private String debtPrefix_A;
 	private String debtMiddleName_A;
+	private String personOrOrganization_A;
+	private String debtName_A;
 	private String debtSuffix_A;
+	private String debtFirstName_A;
 	private String street1_A;
 	private String street2_A;
+	private String streetFull_A;
 	private String naturePurposeDebtDescription_A;
 	private String city_A;
 	private String state_A;
@@ -27,15 +28,16 @@ public class CSVScheduleDRecord {
 	private String paymentThisPeriod_A;
 	private String balanceAtClose_A;
 	
-	private String debtPrefix_B;
 	private String debtName_B;
+	private String debtPrefix_B;
 	private String debtLastName_B;
-	private String debtFirstName_B;
 	private String debtMiddleName_B;
-	private String debtSuffix_B;
 	private String personOrOrganization_B;
-	private String street2_B;
+	private String debtFirstName_B;
+	private String debtSuffix_B;
+	private String streetFull_B;
 	private String street1_B;
+	private String street2_B;
 	private String naturePurposeDebtDescription_B;
 	private String city_B;
 	private String state_B;
@@ -45,14 +47,15 @@ public class CSVScheduleDRecord {
 	private String paymentThisPeriod_B;
 	private String balanceAtClose_B;
 	
-	private String debtSuffix_C;
-	private String personOrOrganization_C;
 	private String debtName_C;
-	private String debtFirstName_C;
+	private String debtSuffix_C;
 	private String debtMiddleName_C;
-	private String debtLastName_C;
 	private String debtPrefix_C;
+	private String personOrOrganization_C;	
+	private String debtFirstName_C;
+	private String debtLastName_C;
 	private String street2_C;
+	private String streetFull_C;
 	private String street1_C;
 	private String naturePurposeDebtDescription_C;
 	private String city_C;
@@ -591,5 +594,38 @@ public class CSVScheduleDRecord {
 	}
 	public void setBalanceAtClose_C(String balanceAtClose_C) {
 		this.balanceAtClose_C = balanceAtClose_C;
+	}
+	public String getStreetFull_A() {
+		if (StringUtils.containsIgnoreCase(streetFull_A, CSVFileConstant.BLANK)
+				|| StringUtils.containsIgnoreCase(streetFull_A,
+						CSVFileConstant.IMPOSSIBLE)) {
+			return "";
+		}
+		return streetFull_A;
+	}
+	public void setStreetFull_A(String streetFull_A) {
+		this.streetFull_A = streetFull_A;
+	}
+	public String getStreetFull_B() {
+		if (StringUtils.containsIgnoreCase(streetFull_B, CSVFileConstant.BLANK)
+				|| StringUtils.containsIgnoreCase(streetFull_B,
+						CSVFileConstant.IMPOSSIBLE)) {
+			return "";
+		}
+		return streetFull_B;
+	}
+	public void setStreetFull_B(String streetFull_B) {
+		this.streetFull_B = streetFull_B;
+	}
+	public String getStreetFull_C() {
+		if (StringUtils.containsIgnoreCase(streetFull_C, CSVFileConstant.BLANK)
+				|| StringUtils.containsIgnoreCase(streetFull_C,
+						CSVFileConstant.IMPOSSIBLE)) {
+			return "";
+		}
+		return streetFull_C;
+	}
+	public void setStreetFull_C(String streetFull_C) {
+		this.streetFull_C = streetFull_C;
 	}
 }

@@ -3,6 +3,8 @@ package com.captricity.converter;
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.apache.commons.lang3.StringUtils;
 
@@ -18,30 +20,92 @@ public class ConvertCSVScheCToFECScheC2 {
 	
 	//TODO: Full name is missing
 
-	public static final String[] columns = new String[] { "name",
-			"receiptLineNumber", "loanMiddleName", "loanSuffix",
-			"loanFirstName", "nameofPersonorOrganization",
-			"loanOrganizationName", "loanPrefix", "loanLastName", "election",
-			"street1", "street2", "electionDescription", "city", "state",
-			"zip", "origAmtOfLoan", "paymentToDate", "loanBalance",
-			"memoTextDescription", "dateIncurred", "dueDateTerms",
-			"pctRateTerms", "securedYesno", "indFirstName_1",
-			"nameOfPersonOrOrganization_1", "indLastName_1", "indSuffix_1",
-			"indPrefix_1", "indMiddleName_1", "indEmployer_1", "street1_1",
-			"street2_1", "indOccupation_1", "city_1", "state_1", "zip_1",
-			"amountGuaranteedBalance_1", "indMiddleName_2",
-			"nameOfPersonOrOrganization_2", "indLastName_2", "indFirstName_2",
-			"indPrefix_2", "indSuffix_2", "indEmployer_2", "street1_2",
-			"street2_2", "indOccupation_2", "city_2", "state_2", "zip_2",
-			"amountGuaranteedBalance_2", "indMiddleName_3", "indFirstName_3",
-			"indPrefix_3", "indSuffix_3", "nameOfPersonOrOrganization_3",
-			"indLastName_3", "indEmployer_3", "street1_3", "street2_3",
-			"indOccupation_3", "city_3", "state_3", "zip_3",
-			"amountGuaranteedBalance_3", "indMiddleName_4", "indFirstName_4",
-			"indSuffix_4", "indPrefix_4", "nameOfPersonOrOrganization_4",
-			"indLastName_4", "indEmployer_4", "street2_4", "street1_4",
-			"indOccupation_4", "city_4", "state_4", "zip_4",
-			"amountGuaranteedBalance_4" };
+	public static final String columns[] = new String[] {"name",
+		"receiptLineNumber",
+		"loanPrefix",
+		"loanFirstName",
+		"loanLastName",
+		"nameofPersonorOrganization",
+		"loanMiddleName",
+		"loanOrganizationName",
+		"loanSuffix",
+		"itemElectYear",
+		"election",
+		"streetFull",
+		"street1",
+		"street2",
+		"electionDescription",
+		"city",
+		"state",
+		"zip",
+		"origAmtOfLoan",
+		"paymentToDate",
+		"loanBalance",
+		"memoTextDescription",
+		"dateIncurred",
+		"dueDateTerms",
+		"pctRateTerms",
+		"securedYesno",
+		"indLastName_1",
+		"indSuffix_1",
+		"indFirstName_1",
+		"indMiddleName_1",
+		"nameOfPersonOrOrganization_1",
+		"indPrefix_1",
+		"indEmployer_1",
+		"street1_1",
+		"streetFull_1",
+		"street2_1",
+		"indOccupation_1",
+		"city_1",
+		"state_1",
+		"zip_1",
+		"amountGuaranteedBalance_1",
+		"indPrefix_2",
+		"nameOfPersonOrOrganization_2",
+		"indMiddleName_2",
+		"indFirstName_2",
+		"indLastName_2",
+		"indEmployer_2",
+		"street2_2",
+		"street1_2",
+		"streetFull_2",
+		"indOccupation_2",
+		"city_2",
+		"state_2",
+		"zip_2",
+		"amountGuaranteedBalance_2",
+		"indFirstName_3",
+		"indSuffix_3",
+		"indMiddleName_3",
+		"indLastName_3",
+		"indSuffix_2",
+		"indPrefix_3",
+		"nameOfPersonOrOrganization_3",
+		"indEmployer_3",
+		"streetFull_3",
+		"street1_3",
+		"street2_3",
+		"indOccupation_3",
+		"city_3",
+		"state_3",
+		"zip_3",
+		"amountGuaranteedBalance_3",
+		"indMiddleName_4",
+		"indPrefix_4",
+		"indSuffix_4",
+		"nameOfPersonOrOrganization_4",
+		"indFirstName_4",
+		"indLastName_4",
+		"indEmployer_4",
+		"street2_4",
+		"streetFull_4",
+		"street1_4",
+		"indOccupation_4",
+		"city_4",
+		"state_4",
+		"zip_4",
+		"amountGuaranteedBalance_4"};
 
 	public static List<FECScheduleC2Record> convertCSVScheCToFECScheC2(
 			String fileName) {
@@ -124,7 +188,11 @@ public class ConvertCSVScheCToFECScheC2 {
 		fecScheduleC2Record_1.setAmountGuaranteedBalance(csvScheduleCRecord.getAmountGuaranteedBalance_1());
 		
 		
-		fecScheduleC2Record_1.setImageNumber("14020412871");//TODO: Need to get from file name
+		Pattern pattern = Pattern.compile("\\_(.*?)\\-");
+		Matcher match = pattern.matcher(csvScheduleCRecord.getName());
+		if (match.find()) {
+			fecScheduleC2Record_1.setImageNumber(match.group(1));
+		}
 
 		return fecScheduleC2Record_1;
 	}
@@ -161,8 +229,11 @@ public class ConvertCSVScheCToFECScheC2 {
 		fecScheduleC2Record_2.setIndOccupation(csvScheduleCRecord.getIndOccupation_2());
 		fecScheduleC2Record_2.setAmountGuaranteedBalance(csvScheduleCRecord.getAmountGuaranteedBalance_2());
 		
-		
-		fecScheduleC2Record_2.setImageNumber("14020412871");//TODO: Need to get from file name
+		Pattern pattern = Pattern.compile("\\_(.*?)\\-");
+		Matcher match = pattern.matcher(csvScheduleCRecord.getName());
+		if (match.find()) {
+			fecScheduleC2Record_2.setImageNumber(match.group(1));
+		}
 
 		return fecScheduleC2Record_2;
 	}
@@ -199,8 +270,11 @@ public class ConvertCSVScheCToFECScheC2 {
 		fecScheduleC2Record_3.setIndOccupation(csvScheduleCRecord.getIndOccupation_3());
 		fecScheduleC2Record_3.setAmountGuaranteedBalance(csvScheduleCRecord.getAmountGuaranteedBalance_3());
 		
-		
-		fecScheduleC2Record_3.setImageNumber("14020412871");//TODO: Need to get from file name
+		Pattern pattern = Pattern.compile("\\_(.*?)\\-");
+		Matcher match = pattern.matcher(csvScheduleCRecord.getName());
+		if (match.find()) {
+			fecScheduleC2Record_3.setImageNumber(match.group(1));
+		}
 
 		return fecScheduleC2Record_3;
 	}
@@ -238,7 +312,12 @@ public class ConvertCSVScheCToFECScheC2 {
 				.getIndOccupation_4());
 		fecScheduleC2Record_4.setAmountGuaranteedBalance(csvScheduleCRecord
 				.getAmountGuaranteedBalance_4());
-		fecScheduleC2Record_4.setImageNumber("14020412871");//TODO: Need to get from file name
+		
+		Pattern pattern = Pattern.compile("\\_(.*?)\\-");
+		Matcher match = pattern.matcher(csvScheduleCRecord.getName());
+		if (match.find()) {
+			fecScheduleC2Record_4.setImageNumber(match.group(1));
+		}
 
 		return fecScheduleC2Record_4;
 	}

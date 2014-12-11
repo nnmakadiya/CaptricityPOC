@@ -7,17 +7,18 @@ import com.captricity.constant.CSVFileConstant;
 public class CSVScheduleCRecord {
 		
 	private String name;
-	private String formType;
 	
 	private String receiptLineNumber;
-	private String loanMiddleName;
-	private String loanSuffix;
-	private String loanFirstName;
-	private String nameofPersonorOrganization;
-	private String loanOrganizationName;
 	private String loanPrefix;
+	private String loanFirstName;
 	private String loanLastName;
+	private String nameofPersonorOrganization;
+	private String loanMiddleName;
+	private String loanOrganizationName;
+	private String loanSuffix;
+	private String itemElectYear;
 	private String election;
+	private String streetFull;
 	private String street1;
 	private String street2;
 	private String electionDescription;
@@ -33,14 +34,15 @@ public class CSVScheduleCRecord {
 	private String pctRateTerms;
 	private String securedYesno;
 	
-	private String indFirstName_1;
-	private String nameOfPersonOrOrganization_1;
 	private String indLastName_1;
 	private String indSuffix_1;
-	private String indPrefix_1;
+	private String indFirstName_1;
 	private String indMiddleName_1;
+	private String nameOfPersonOrOrganization_1;
+	private String indPrefix_1;
 	private String indEmployer_1;
 	private String street1_1;
+	private String streetFull_1;
 	private String street2_1;
 	private String indOccupation_1;
 	private String city_1;
@@ -48,28 +50,30 @@ public class CSVScheduleCRecord {
 	private String zip_1;
 	private String amountGuaranteedBalance_1;
 	
-	private String indMiddleName_2;
-	private String nameOfPersonOrOrganization_2;
-	private String indLastName_2;
-	private String indFirstName_2;
 	private String indPrefix_2;
-	private String indSuffix_2;
+	private String nameOfPersonOrOrganization_2;
+	private String indMiddleName_2;
+	private String indFirstName_2;
+	private String indLastName_2;
 	private String indEmployer_2;
-	private String street1_2;
 	private String street2_2;
+	private String street1_2;
+	private String streetFull_2;
 	private String indOccupation_2;
 	private String city_2;
 	private String state_2;
 	private String zip_2;
 	private String amountGuaranteedBalance_2;
 	
-	private String indMiddleName_3;
 	private String indFirstName_3;
-	private String indPrefix_3;
 	private String indSuffix_3;
-	private String nameOfPersonOrOrganization_3;
+	private String indMiddleName_3;
 	private String indLastName_3;
+	private String indSuffix_2;
+	private String indPrefix_3;
+	private String nameOfPersonOrOrganization_3;
 	private String indEmployer_3;
+	private String streetFull_3;
 	private String street1_3;
 	private String street2_3;
 	private String indOccupation_3;
@@ -79,13 +83,14 @@ public class CSVScheduleCRecord {
 	private String amountGuaranteedBalance_3;
 	
 	private String indMiddleName_4;
-	private String indFirstName_4;
-	private String indSuffix_4;
 	private String indPrefix_4;
+	private String indSuffix_4;
 	private String nameOfPersonOrOrganization_4;
+	private String indFirstName_4;
 	private String indLastName_4;
 	private String indEmployer_4;
 	private String street2_4;
+	private String streetFull_4;
 	private String street1_4;
 	private String indOccupation_4;
 	private String city_4;
@@ -93,22 +98,11 @@ public class CSVScheduleCRecord {
 	private String zip_4;
 	private String amountGuaranteedBalance_4;
 	
-	
 	public String getName() {
 		return name;
 	}
 	public void setName(String name) {
 		this.name = name;
-	}
-	public String getFormType() {
-		if(StringUtils.containsIgnoreCase(formType, CSVFileConstant.BLANK) ||
-				StringUtils.containsIgnoreCase(formType, CSVFileConstant.IMPOSSIBLE)){
-			return "";
-		}
-		return formType;
-	}
-	public void setFormType(String formType) {
-		this.formType = formType;
 	}
 	public String getReceiptLineNumber() {
 		if(StringUtils.containsIgnoreCase(receiptLineNumber, CSVFileConstant.BLANK) ||
@@ -900,5 +894,70 @@ public class CSVScheduleCRecord {
 	public void setAmountGuaranteedBalance_4(String amountGuaranteedBalance_4) {
 		this.amountGuaranteedBalance_4 = amountGuaranteedBalance_4;
 	}
-	
+	public String getItemElectYear() {
+		if (StringUtils.containsIgnoreCase(itemElectYear, CSVFileConstant.BLANK)
+				|| StringUtils.containsIgnoreCase(itemElectYear,
+						CSVFileConstant.IMPOSSIBLE)) {
+			return "";
+		}
+		return itemElectYear;
+	}
+	public void setItemElectYear(String itemElectYear) {
+		this.itemElectYear = itemElectYear;
+	}
+	public String getStreetFull() {
+		if (StringUtils.containsIgnoreCase(streetFull, CSVFileConstant.BLANK)
+				|| StringUtils.containsIgnoreCase(streetFull,
+						CSVFileConstant.IMPOSSIBLE)) {
+			return "";
+		}
+		return streetFull;
+	}
+	public void setStreetFull(String streetFull) {
+		this.streetFull = streetFull;
+	}
+	public String getStreetFull_1() {
+		if (StringUtils.containsIgnoreCase(streetFull_1, CSVFileConstant.BLANK)
+				|| StringUtils.containsIgnoreCase(streetFull_1,
+						CSVFileConstant.IMPOSSIBLE)) {
+			return "";
+		}
+		return streetFull_1;
+	}
+	public void setStreetFull_1(String streetFull_1) {
+		this.streetFull_1 = streetFull_1;
+	}
+	public String getStreetFull_2() {
+		if (StringUtils.containsIgnoreCase(streetFull_2, CSVFileConstant.BLANK)
+				|| StringUtils.containsIgnoreCase(streetFull_2,
+						CSVFileConstant.IMPOSSIBLE)) {
+			return "";
+		}
+		return streetFull_2;
+	}
+	public void setStreetFull_2(String streetFull_2) {
+		this.streetFull_2 = streetFull_2;
+	}
+	public String getStreetFull_3() {
+		if (StringUtils.containsIgnoreCase(streetFull_3, CSVFileConstant.BLANK)
+				|| StringUtils.containsIgnoreCase(streetFull_3,
+						CSVFileConstant.IMPOSSIBLE)) {
+			return "";
+		}
+		return streetFull_3;
+	}
+	public void setStreetFull_3(String streetFull_3) {
+		this.streetFull_3 = streetFull_3;
+	}
+	public String getStreetFull_4() {
+		if (StringUtils.containsIgnoreCase(streetFull_4, CSVFileConstant.BLANK)
+				|| StringUtils.containsIgnoreCase(streetFull_4,
+						CSVFileConstant.IMPOSSIBLE)) {
+			return "";
+		}
+		return streetFull_4;
+	}
+	public void setStreetFull_4(String streetFull_4) {
+		this.streetFull_4 = streetFull_4;
+	}
 }

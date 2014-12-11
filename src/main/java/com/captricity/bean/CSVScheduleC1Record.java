@@ -13,6 +13,7 @@ public class CSVScheduleC1Record {
 	private String amtOfLoan;
 	private String loanInterestRatePercent;
 	private String street1;
+	private String streetFull;
 	private String street2;
 	private String dateIncurred;
 	private String city;
@@ -38,27 +39,28 @@ public class CSVScheduleC1Record {
 	private String estimatedValue_E;
 	private String accountName_E;
 	private String street1_E;
-	private String date_E;
+	private String streetFull_E;
 	private String street2_E;
-	private String city_E;
+	private String date_E;
 	private String state_E;
+	private String city_E;
 	private String zip_E;
 	
 	private String description_F;
 	
-	private String tresFullName_G;
-	private String treasSuffix_G;
-	private String treasMiddleName_G;
-	private String treasLastName_G;
 	private String treasPrefix_G;
+	private String treasSuffix_G;
+	private String treasLastName_G;
+	private String treasMiddleName_G;
 	private String treasFirstName_G;
+	private String tresFullName_G;
 	private String treasDate_G;
 	
-	private String authFullName;
-	private String authFirstName;
 	private String authMiddleName;
-	private String authPrefix;
+	private String authFullName;
 	private String authLastName;
+	private String authPrefix;
+	private String authFirstName;
 	private String authSuffix;
 	private String authTitle;
 	private String authDate;
@@ -539,6 +541,28 @@ public class CSVScheduleC1Record {
 	}
 	public void setAuthDate(String authDate) {
 		this.authDate = authDate;
+	}
+	public String getStreetFull() {
+		if (StringUtils.containsIgnoreCase(streetFull, CSVFileConstant.BLANK)
+				|| StringUtils.containsIgnoreCase(streetFull,
+						CSVFileConstant.IMPOSSIBLE)) {
+			return "";
+		}
+		return streetFull;
+	}
+	public void setStreetFull(String streetFull) {
+		this.streetFull = streetFull;
+	}
+	public String getStreetFull_E() {
+		if (StringUtils.containsIgnoreCase(streetFull_E, CSVFileConstant.BLANK)
+				|| StringUtils.containsIgnoreCase(streetFull_E,
+						CSVFileConstant.IMPOSSIBLE)) {
+			return "";
+		}
+		return streetFull_E;
+	}
+	public void setStreetFull_E(String streetFull_E) {
+		this.streetFull_E = streetFull_E;
 	}
 	
 }

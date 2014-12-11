@@ -28,6 +28,7 @@ public class ConvertCSVSummaryToFECSummary {
 	
 	public static final  String[] columns = new String[] {"name",
 		"committeeName",
+		"streetFull",
 		"street1",
 		"street2",
 		"changeOfAddress",
@@ -50,9 +51,9 @@ public class ConvertCSVSummaryToFECSummary {
 		"coverageThroughDate",
 		"treasMiddleName",
 		"treasPrefix",
-		"treasFirstName",
 		"treasFullName",
 		"treasSuffix",
+		"treasFirstName",
 		"treasLastName",
 		"treasDate",
 		"totalContributionsNoLoan_A",
@@ -133,8 +134,7 @@ public class ConvertCSVSummaryToFECSummary {
 
 		try {
 
-			CSVReader reader = new CSVReader(new FileReader(fileName), ',',
-					'\"', 1);
+			CSVReader reader = new CSVReader(new FileReader(fileName), ',','\"', 1);
 			ColumnPositionMappingStrategy<CSVSummaryRecord> mappingStrategy = new ColumnPositionMappingStrategy<CSVSummaryRecord>();
 			mappingStrategy.setType(CSVSummaryRecord.class);
 
@@ -266,14 +266,16 @@ public class ConvertCSVSummaryToFECSummary {
 				}
 			}
 	
-			String splitedFullName[] = FECConverterUtil
-					.splitFullName(csvSummaryRecord.getTreasFullName());
-	
-			fecSummaryRecord.setTreasPrefix(splitedFullName[0]);
-			fecSummaryRecord.setTreasFirstName(splitedFullName[1]);
-			fecSummaryRecord.setTreasMiddleName(splitedFullName[2]);
-			fecSummaryRecord.setTreasLastName(splitedFullName[3]);
-			fecSummaryRecord.setTreasSuffix(splitedFullName[4]);
+			if(!StringUtils.isBlank(csvSummaryRecord.getTreasFullName())){
+				String splitedFullName[] = FECConverterUtil
+						.splitFullName(csvSummaryRecord.getTreasFullName());
+		
+				fecSummaryRecord.setTreasPrefix(splitedFullName[0]);
+				fecSummaryRecord.setTreasFirstName(splitedFullName[1]);
+				fecSummaryRecord.setTreasMiddleName(splitedFullName[2]);
+				fecSummaryRecord.setTreasLastName(splitedFullName[3]);
+				fecSummaryRecord.setTreasSuffix(splitedFullName[4]);
+			}
 	
 			if (!StringUtils.isBlank(csvSummaryRecord.getTreasDate())) {
 				try {
@@ -458,7 +460,11 @@ public class ConvertCSVSummaryToFECSummary {
 			fecSummaryRecord.setCashOnHandAtClosePeriod(csvSummaryRecord
 					.getCashOnHandClosePeriod());
 			
-			fecSummaryRecord.setBeginningImageNumber("14020412651"); // TODO: Need to get from file name
+			Pattern pattern = Pattern.compile("\\_(.*?)\\-");
+			Matcher match = pattern.matcher(csvSummaryRecord.getName());
+			if (match.find()) {
+				fecSummaryRecord.setBeginningImageNumber(match.group(1));
+			}
 	
 			listFecSummaryRecords.add(fecSummaryRecord);
 		}

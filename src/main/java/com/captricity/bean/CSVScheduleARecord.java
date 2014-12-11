@@ -12,12 +12,13 @@ public class CSVScheduleARecord {
 	private String contributorLateName_A;
 	private String contribOrganizationName_A;
 	private String contributorSuffix_A;
-	private String contributorMiddleName_A;
 	private String contributorFirstName_A;
-	private String personOrOrganization_A;
+	private String contributorMiddleName_A;
 	private String contributorPrefix_A;
+	private String personOrOrganization_A;
 	private String street2_A;
 	private String street1_A;
+	private String streetFull_A;
 	private String dateReceived_A;
 	private String city_A;
 	private String state_A;
@@ -26,6 +27,7 @@ public class CSVScheduleARecord {
 	private String amountReceived_A;
 	private String indEmployer_A;
 	private String indOccupation_A;
+	private String itemElectYear_A;
 	private String itemElectCode_A;
 	private String aggregateYTD_A;
 	private String memoDescription_A;
@@ -38,6 +40,7 @@ public class CSVScheduleARecord {
 	private String contributorLastName_B;
 	private String personOrOrganization_B;
 	private String contributorSuffix_B;
+	private String streetFull_B;
 	private String street2_B;
 	private String street1_B;
 	private String dateReceived_B;
@@ -48,20 +51,22 @@ public class CSVScheduleARecord {
 	private String amountReceived_B;
 	private String indEmployer_B;
 	private String indOccupation_B;
+	private String itemElectYear_B;
 	private String itemElectCode_B;
 	private String aggregateYTD_B;
 	private String memoDescription_B;
 	private String itemElectOther_B;
 	
 	private String contributorMiddleName_C;
-	private String contributorLastName_C;
 	private String contributorFirstName_C;
+	private String contributorLastName_C;
 	private String contribOrganizationName_C;
 	private String contributorPrefix_C;
 	private String contributorSuffix_C;
 	private String personOrOrganization_C;
-	private String street2_C;
 	private String street1_C;
+	private String streetFull_C;
+	private String street2_C;
 	private String dateReceived_C;
 	private String city_C;
 	private String state_C;
@@ -70,6 +75,7 @@ public class CSVScheduleARecord {
 	private String indEmployer_C;
 	private String indOccupation_C;
 	private String amountReceived_C;
+	private String itemElectYear_C;
 	private String itemElectCode_C;
 	private String aggregateYTD_C;
 	private String memoDescription_C;
@@ -87,7 +93,7 @@ public class CSVScheduleARecord {
 	public String getFormType() {
 		if(StringUtils.containsIgnoreCase(formType, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(formType, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return formType;
 	}
@@ -97,7 +103,7 @@ public class CSVScheduleARecord {
 	public String getContributorLateName_A() {
 		if(StringUtils.containsIgnoreCase(contributorLateName_A, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(contributorLateName_A, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return contributorLateName_A;
 	}
@@ -107,7 +113,7 @@ public class CSVScheduleARecord {
 	public String getContributorSuffix_A() {
 		if(StringUtils.containsIgnoreCase(contributorSuffix_A, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(contributorSuffix_A, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return contributorSuffix_A;
 	}
@@ -117,7 +123,7 @@ public class CSVScheduleARecord {
 	public String getContributorMiddleName_A() {
 		if(StringUtils.containsIgnoreCase(contributorMiddleName_A, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(contributorMiddleName_A, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return contributorMiddleName_A;		
 	}
@@ -127,7 +133,7 @@ public class CSVScheduleARecord {
 	public String getContributorFirstName_A() {
 		if(StringUtils.containsIgnoreCase(contributorFirstName_A, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(contributorFirstName_A, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return contributorFirstName_A;		
 	}
@@ -137,7 +143,7 @@ public class CSVScheduleARecord {
 	public String getPersonOrOrganization_A() {
 		if(StringUtils.containsIgnoreCase(personOrOrganization_A, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(personOrOrganization_A, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return personOrOrganization_A;		
 	}
@@ -147,7 +153,7 @@ public class CSVScheduleARecord {
 	public String getContributorPrefix_A() {
 		if(StringUtils.containsIgnoreCase(contributorPrefix_A, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(contributorPrefix_A, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return contributorPrefix_A;
 	}
@@ -157,7 +163,7 @@ public class CSVScheduleARecord {
 	public String getStreet2_A() {
 		if(StringUtils.containsIgnoreCase(street2_A, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(street2_A, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return street2_A;
 	}
@@ -167,7 +173,7 @@ public class CSVScheduleARecord {
 	public String getStreet1_A() {
 		if(StringUtils.containsIgnoreCase(street1_A, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(street1_A, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return street1_A;
 	}
@@ -177,7 +183,7 @@ public class CSVScheduleARecord {
 	public String getDateReceived_A() {
 		if(StringUtils.containsIgnoreCase(dateReceived_A, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(dateReceived_A, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return dateReceived_A;
 	}
@@ -187,7 +193,7 @@ public class CSVScheduleARecord {
 	public String getCity_A() {
 		if(StringUtils.containsIgnoreCase(city_A, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(city_A, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return city_A;
 	}
@@ -197,7 +203,7 @@ public class CSVScheduleARecord {
 	public String getState_A() {
 		if(StringUtils.containsIgnoreCase(state_A, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(state_A, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return state_A;
 	}
@@ -207,7 +213,7 @@ public class CSVScheduleARecord {
 	public String getZip_A() {
 		if(StringUtils.containsIgnoreCase(zip_A, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(zip_A, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return zip_A;
 	}
@@ -217,7 +223,7 @@ public class CSVScheduleARecord {
 	public String getFecCommitteeIdNumber_A() {
 		if(StringUtils.containsIgnoreCase(fecCommitteeIdNumber_A, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(fecCommitteeIdNumber_A, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return fecCommitteeIdNumber_A;
 	}
@@ -227,7 +233,7 @@ public class CSVScheduleARecord {
 	public String getAmountReceived_A() {
 		if(StringUtils.containsIgnoreCase(amountReceived_A, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(amountReceived_A, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return amountReceived_A;
 	}
@@ -237,7 +243,7 @@ public class CSVScheduleARecord {
 	public String getIndEmployer_A() {
 		if(StringUtils.containsIgnoreCase(indEmployer_A, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(indEmployer_A, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return indEmployer_A;
 	}
@@ -247,7 +253,7 @@ public class CSVScheduleARecord {
 	public String getIndOccupation_A() {
 		if(StringUtils.containsIgnoreCase(indOccupation_A, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(indOccupation_A, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return indOccupation_A;
 	}
@@ -257,7 +263,7 @@ public class CSVScheduleARecord {
 	public String getItemElectCode_A() {
 		if(StringUtils.containsIgnoreCase(itemElectCode_A, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(itemElectCode_A, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return itemElectCode_A;
 	}
@@ -267,7 +273,7 @@ public class CSVScheduleARecord {
 	public String getAggregateYTD_A() {
 		if(StringUtils.containsIgnoreCase(aggregateYTD_A, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(aggregateYTD_A, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return aggregateYTD_A;
 	}
@@ -277,7 +283,7 @@ public class CSVScheduleARecord {
 	public String getMemoDescription_A() {
 		if(StringUtils.containsIgnoreCase(memoDescription_A, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(memoDescription_A, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return memoDescription_A;
 	}
@@ -287,7 +293,7 @@ public class CSVScheduleARecord {
 	public String getItemElectOther_A() {
 		if(StringUtils.containsIgnoreCase(itemElectOther_A, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(itemElectOther_A, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return itemElectOther_A;
 	}
@@ -297,7 +303,7 @@ public class CSVScheduleARecord {
 	public String getContributorMiddleName_B() {
 		if(StringUtils.containsIgnoreCase(contributorMiddleName_B, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(contributorMiddleName_B, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return contributorMiddleName_B;
 	}
@@ -307,7 +313,7 @@ public class CSVScheduleARecord {
 	public String getContributorFirstName_B() {
 		if(StringUtils.containsIgnoreCase(contributorFirstName_B, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(contributorFirstName_B, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return contributorFirstName_B;
 	}
@@ -317,7 +323,7 @@ public class CSVScheduleARecord {
 	public String getContributorPrefix_B() {
 		if(StringUtils.containsIgnoreCase(contributorPrefix_B, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(contributorPrefix_B, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return contributorPrefix_B;
 	}
@@ -327,7 +333,7 @@ public class CSVScheduleARecord {
 	public String getContributorLastName_B() {
 		if(StringUtils.containsIgnoreCase(contributorLastName_B, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(contributorLastName_B, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return contributorLastName_B;
 	}
@@ -337,7 +343,7 @@ public class CSVScheduleARecord {
 	public String getPersonOrOrganization_B() {
 		if(StringUtils.containsIgnoreCase(personOrOrganization_B, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(personOrOrganization_B, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return personOrOrganization_B;
 	}
@@ -347,7 +353,7 @@ public class CSVScheduleARecord {
 	public String getContributorSuffix_B() {
 		if(StringUtils.containsIgnoreCase(contributorSuffix_B, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(contributorSuffix_B, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return contributorSuffix_B;
 	}
@@ -357,7 +363,7 @@ public class CSVScheduleARecord {
 	public String getStreet2_B() {
 		if(StringUtils.containsIgnoreCase(street2_B, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(street2_B, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return street2_B;
 	}
@@ -367,7 +373,7 @@ public class CSVScheduleARecord {
 	public String getStreet1_B() {
 		if(StringUtils.containsIgnoreCase(street1_B, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(street1_B, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return street1_B;
 	}
@@ -377,7 +383,7 @@ public class CSVScheduleARecord {
 	public String getDateReceived_B() {
 		if(StringUtils.containsIgnoreCase(dateReceived_B, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(dateReceived_B, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return dateReceived_B;
 	}
@@ -387,7 +393,7 @@ public class CSVScheduleARecord {
 	public String getCity_B() {
 		if(StringUtils.containsIgnoreCase(city_B, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(city_B, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return city_B;
 	}
@@ -397,7 +403,7 @@ public class CSVScheduleARecord {
 	public String getState_B() {
 		if(StringUtils.containsIgnoreCase(state_B, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(state_B, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return state_B;
 	}
@@ -407,7 +413,7 @@ public class CSVScheduleARecord {
 	public String getZip_B() {
 		if(StringUtils.containsIgnoreCase(zip_B, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(zip_B, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return zip_B;
 	}
@@ -417,7 +423,7 @@ public class CSVScheduleARecord {
 	public String getFecCommitteeIdNumber_B() {
 		if(StringUtils.containsIgnoreCase(fecCommitteeIdNumber_B, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(fecCommitteeIdNumber_B, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return fecCommitteeIdNumber_B;
 	}
@@ -427,7 +433,7 @@ public class CSVScheduleARecord {
 	public String getAmountReceived_B() {
 		if(StringUtils.containsIgnoreCase(amountReceived_B, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(amountReceived_B, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return amountReceived_B;
 	}
@@ -437,7 +443,7 @@ public class CSVScheduleARecord {
 	public String getIndEmployer_B() {
 		if(StringUtils.containsIgnoreCase(indEmployer_B, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(indEmployer_B, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return indEmployer_B;
 	}
@@ -447,7 +453,7 @@ public class CSVScheduleARecord {
 	public String getIndOccupation_B() {
 		if(StringUtils.containsIgnoreCase(indOccupation_B, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(indOccupation_B, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return indOccupation_B;
 	}
@@ -457,7 +463,7 @@ public class CSVScheduleARecord {
 	public String getItemElectCode_B() {
 		if(StringUtils.containsIgnoreCase(itemElectCode_B, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(itemElectCode_B, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return itemElectCode_B;
 	}
@@ -467,7 +473,7 @@ public class CSVScheduleARecord {
 	public String getAggregateYTD_B() {
 		if(StringUtils.containsIgnoreCase(aggregateYTD_B, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(aggregateYTD_B, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return aggregateYTD_B;
 	}
@@ -477,7 +483,7 @@ public class CSVScheduleARecord {
 	public String getMemoDescription_B() {
 		if(StringUtils.containsIgnoreCase(memoDescription_B, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(memoDescription_B, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return memoDescription_B;
 	}
@@ -487,7 +493,7 @@ public class CSVScheduleARecord {
 	public String getItemElectOther_B() {
 		if(StringUtils.containsIgnoreCase(itemElectOther_B, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(itemElectOther_B, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return itemElectOther_B;
 	}
@@ -497,7 +503,7 @@ public class CSVScheduleARecord {
 	public String getContributorMiddleName_C() {
 		if(StringUtils.containsIgnoreCase(contributorMiddleName_C, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(contributorMiddleName_C, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return contributorMiddleName_C;
 	}
@@ -507,7 +513,7 @@ public class CSVScheduleARecord {
 	public String getContributorLastName_C() {
 		if(StringUtils.containsIgnoreCase(contributorLastName_C, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(contributorLastName_C, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return contributorLastName_C;
 	}
@@ -517,7 +523,7 @@ public class CSVScheduleARecord {
 	public String getContributorFirstName_C() {
 		if(StringUtils.containsIgnoreCase(contributorFirstName_C, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(contributorFirstName_C, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return contributorFirstName_C;
 	}
@@ -527,7 +533,7 @@ public class CSVScheduleARecord {
 	public String getContributorPrefix_C() {
 		if(StringUtils.containsIgnoreCase(contributorPrefix_C, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(contributorPrefix_C, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return contributorPrefix_C;
 	}
@@ -537,7 +543,7 @@ public class CSVScheduleARecord {
 	public String getContributorSuffix_C() {
 		if(StringUtils.containsIgnoreCase(contributorSuffix_C, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(contributorSuffix_C, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return contributorSuffix_C;
 	}
@@ -547,7 +553,7 @@ public class CSVScheduleARecord {
 	public String getPersonOrOrganization_C() {
 		if(StringUtils.containsIgnoreCase(personOrOrganization_C, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(personOrOrganization_C, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return personOrOrganization_C;
 	}
@@ -557,7 +563,7 @@ public class CSVScheduleARecord {
 	public String getStreet2_C() {
 		if(StringUtils.containsIgnoreCase(street2_C, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(street2_C, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return street2_C;
 	}
@@ -567,7 +573,7 @@ public class CSVScheduleARecord {
 	public String getDateReceived_C() {
 		if(StringUtils.containsIgnoreCase(dateReceived_C, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(dateReceived_C, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return dateReceived_C;
 	}
@@ -577,7 +583,7 @@ public class CSVScheduleARecord {
 	public String getCity_C() {
 		if(StringUtils.containsIgnoreCase(city_C, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(city_C, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return city_C;
 	}
@@ -587,7 +593,7 @@ public class CSVScheduleARecord {
 	public String getState_C() {
 		if(StringUtils.containsIgnoreCase(state_C, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(state_C, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return state_C;
 	}
@@ -597,7 +603,7 @@ public class CSVScheduleARecord {
 	public String getZip_C() {
 		if(StringUtils.containsIgnoreCase(zip_C, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(zip_C, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return zip_C;
 	}
@@ -607,7 +613,7 @@ public class CSVScheduleARecord {
 	public String getFecCommitteeIdNumber_C() {
 		if(StringUtils.containsIgnoreCase(fecCommitteeIdNumber_C, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(fecCommitteeIdNumber_C, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return fecCommitteeIdNumber_C;
 	}
@@ -617,7 +623,7 @@ public class CSVScheduleARecord {
 	public String getIndEmployer_C() {
 		if(StringUtils.containsIgnoreCase(indEmployer_C, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(indEmployer_C, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return indEmployer_C;
 	}
@@ -627,7 +633,7 @@ public class CSVScheduleARecord {
 	public String getIndOccupation_C() {
 		if(StringUtils.containsIgnoreCase(indOccupation_C, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(indOccupation_C, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return indOccupation_C;
 	}
@@ -637,7 +643,7 @@ public class CSVScheduleARecord {
 	public String getAmountReceived_C() {
 		if(StringUtils.containsIgnoreCase(amountReceived_C, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(amountReceived_C, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return amountReceived_C;
 	}
@@ -647,7 +653,7 @@ public class CSVScheduleARecord {
 	public String getItemElectCode_C() {
 		if(StringUtils.containsIgnoreCase(itemElectCode_C, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(itemElectCode_C, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return itemElectCode_C;
 	}
@@ -657,7 +663,7 @@ public class CSVScheduleARecord {
 	public String getAggregateYTD_C() {
 		if(StringUtils.containsIgnoreCase(aggregateYTD_C, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(aggregateYTD_C, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return aggregateYTD_C;
 	}
@@ -667,7 +673,7 @@ public class CSVScheduleARecord {
 	public String getMemoDescription_C() {
 		if(StringUtils.containsIgnoreCase(memoDescription_C, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(memoDescription_C, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return memoDescription_C;
 	}
@@ -677,7 +683,7 @@ public class CSVScheduleARecord {
 	public String getItemElectOther_C() {
 		if(StringUtils.containsIgnoreCase(itemElectOther_C, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(itemElectOther_C, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return itemElectOther_C;
 	}
@@ -687,7 +693,7 @@ public class CSVScheduleARecord {
 	public String getSubtotal() {
 		if(StringUtils.containsIgnoreCase(subtotal, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(subtotal, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return subtotal;
 	}
@@ -697,7 +703,7 @@ public class CSVScheduleARecord {
 	public String getTotal() {
 		if(StringUtils.containsIgnoreCase(total, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(total, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return total;
 	}
@@ -707,7 +713,7 @@ public class CSVScheduleARecord {
 	public String getContribOrganizationName_A() {
 		if(StringUtils.containsIgnoreCase(contribOrganizationName_A, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(contribOrganizationName_A, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return contribOrganizationName_A;
 	}
@@ -717,7 +723,7 @@ public class CSVScheduleARecord {
 	public String getContribOrganizationName_B() {
 		if(StringUtils.containsIgnoreCase(contribOrganizationName_B, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(contribOrganizationName_B, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return contribOrganizationName_B;
 	}
@@ -727,7 +733,7 @@ public class CSVScheduleARecord {
 	public String getContribOrganizationName_C() {
 		if(StringUtils.containsIgnoreCase(contribOrganizationName_C, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(contribOrganizationName_C, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return contribOrganizationName_C;
 	}
@@ -737,11 +743,77 @@ public class CSVScheduleARecord {
 	public String getStreet1_C() {
 		if(StringUtils.containsIgnoreCase(street1_C, CSVFileConstant.BLANK) ||
 				StringUtils.containsIgnoreCase(street1_C, CSVFileConstant.IMPOSSIBLE)){
-			return null;
+			return "";
 		}
 		return street1_C;
 	}
 	public void setStreet1_C(String street1_C) {
 		this.street1_C = street1_C;
+	}
+	public String getStreetFull_A() {
+		if (StringUtils.containsIgnoreCase(streetFull_A, CSVFileConstant.BLANK)
+				|| StringUtils.containsIgnoreCase(streetFull_A,
+						CSVFileConstant.IMPOSSIBLE)) {
+			return "";
+		}
+		return streetFull_A;
+	}
+	public void setStreetFull_A(String streetFull_A) {
+		this.streetFull_A = streetFull_A;
+	}
+	public String getItemElectYear_A() {
+		if (StringUtils.containsIgnoreCase(itemElectYear_A, CSVFileConstant.BLANK)
+				|| StringUtils.containsIgnoreCase(itemElectYear_A,
+						CSVFileConstant.IMPOSSIBLE)) {
+			return "";
+		}
+		return itemElectYear_A;
+	}
+	public void setItemElectYear_A(String itemElectYear_A) {
+		this.itemElectYear_A = itemElectYear_A;
+	}
+	public String getStreetFull_B() {
+		if (StringUtils.containsIgnoreCase(streetFull_B, CSVFileConstant.BLANK)
+				|| StringUtils.containsIgnoreCase(streetFull_B,
+						CSVFileConstant.IMPOSSIBLE)) {
+			return "";
+		}
+		return streetFull_B;
+	}
+	public void setStreetFull_B(String streetFull_B) {
+		this.streetFull_B = streetFull_B;
+	}
+	public String getItemElectYear_B() {
+		if (StringUtils.containsIgnoreCase(itemElectYear_B, CSVFileConstant.BLANK)
+				|| StringUtils.containsIgnoreCase(itemElectYear_B,
+						CSVFileConstant.IMPOSSIBLE)) {
+			return "";
+		}
+		return itemElectYear_B;
+	}
+	public void setItemElectYear_B(String itemElectYear_B) {
+		this.itemElectYear_B = itemElectYear_B;
+	}
+	public String getStreetFull_C() {
+		if (StringUtils.containsIgnoreCase(streetFull_C, CSVFileConstant.BLANK)
+				|| StringUtils.containsIgnoreCase(streetFull_C,
+						CSVFileConstant.IMPOSSIBLE)) {
+			return "";
+		}
+		return streetFull_C;
+	}
+	public void setStreetFull_C(String streetFull_C) {
+		this.streetFull_C = streetFull_C;
+	}
+	public String getItemElectYear_C() {
+		if (StringUtils.containsIgnoreCase(itemElectYear_C, CSVFileConstant.BLANK)
+				|| StringUtils.containsIgnoreCase(itemElectYear_C,
+						CSVFileConstant.IMPOSSIBLE)) {
+			return "";
+		}
+		return itemElectYear_C;
+	}
+	public void setItemElectYear_C(String itemElectYear_C) {
+		this.itemElectYear_C = itemElectYear_C;
 	}
 }

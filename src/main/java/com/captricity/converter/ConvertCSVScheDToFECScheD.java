@@ -3,6 +3,8 @@ package com.captricity.converter;
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.apache.commons.lang3.StringUtils;
 
@@ -18,15 +20,18 @@ import com.captricity.utils.FECConverterUtil;
 
 public class ConvertCSVScheDToFECScheD {
 	
-	public static final  String[] columns = new String[] {"name","formType","personOrOrganization_A",
-		"debtPrefix_A",
+	public static final  String[] columns = new String[] {	"name",
+		"formType",
 		"debtLastName_A",
-		"debtFirstName_A",
-		"debtName_A",
+		"debtPrefix_A",
 		"debtMiddleName_A",
+		"personOrOrganization_A",
+		"debtName_A",
 		"debtSuffix_A",
+		"debtFirstName_A",
 		"street1_A",
 		"street2_A",
+		"streetFull_A",
 		"naturePurposeDebtDescription_A",
 		"city_A",
 		"state_A",
@@ -35,15 +40,16 @@ public class ConvertCSVScheDToFECScheD {
 		"incurredThisPeriod_A",
 		"paymentThisPeriod_A",
 		"balanceAtClose_A",
-		"debtPrefix_B",
 		"debtName_B",
+		"debtPrefix_B",
 		"debtLastName_B",
-		"debtFirstName_B",
 		"debtMiddleName_B",
-		"debtSuffix_B",
 		"personOrOrganization_B",
-		"street2_B",
+		"debtFirstName_B",
+		"debtSuffix_B",
+		"streetFull_B",
 		"street1_B",
+		"street2_B",
 		"naturePurposeDebtDescription_B",
 		"city_B",
 		"state_B",
@@ -52,14 +58,15 @@ public class ConvertCSVScheDToFECScheD {
 		"incurredThisPeriod_B",
 		"paymentThisPeriod_B",
 		"balanceAtClose_B",
-		"debtSuffix_C",
-		"personOrOrganization_C",
 		"debtName_C",
-		"debtFirstName_C",
+		"debtSuffix_C",
 		"debtMiddleName_C",
-		"debtLastName_C",
 		"debtPrefix_C",
+		"personOrOrganization_C",	
+		"debtFirstName_C",
+		"debtLastName_C",
 		"street2_C",
+		"streetFull_C",
 		"street1_C",
 		"naturePurposeDebtDescription_C",
 		"city_C",
@@ -131,17 +138,19 @@ public class ConvertCSVScheDToFECScheD {
 			//TODO:  Need to get from summary page
 			fecScheduleDRecord_A.setFilterFECCommitteeId("C00091892");
 			
-			if(csvScheduleDRecord.getPersonOrOrganization_A().equals(IdentifyNameConstant.ORGANIZATION.getIdentfyDetail())){
-				fecScheduleDRecord_A.setDebtName(csvScheduleDRecord.getDebtName_A());
-			}else{
-				
-				String splitedFullName[] = FECConverterUtil.splitFullName(csvScheduleDRecord.getDebtName_A());
-				
-				fecScheduleDRecord_A.setDebtPrefix(splitedFullName[0]);
-				fecScheduleDRecord_A.setDebtFirstName(splitedFullName[1]);
-				fecScheduleDRecord_A.setDebtMiddleName(splitedFullName[2]);
-				fecScheduleDRecord_A.setDebtLastName(splitedFullName[3]);
-				fecScheduleDRecord_A.setDebtSuffix(splitedFullName[4]);
+			if(!StringUtils.isBlank(csvScheduleDRecord.getPersonOrOrganization_A())){
+				if(csvScheduleDRecord.getPersonOrOrganization_A().equals(IdentifyNameConstant.ORGANIZATION.getIdentfyDetail())){
+					fecScheduleDRecord_A.setDebtName(csvScheduleDRecord.getDebtName_A());
+				}else{
+					
+					String splitedFullName[] = FECConverterUtil.splitFullName(csvScheduleDRecord.getDebtName_A());
+					
+					fecScheduleDRecord_A.setDebtPrefix(splitedFullName[0]);
+					fecScheduleDRecord_A.setDebtFirstName(splitedFullName[1]);
+					fecScheduleDRecord_A.setDebtMiddleName(splitedFullName[2]);
+					fecScheduleDRecord_A.setDebtLastName(splitedFullName[3]);
+					fecScheduleDRecord_A.setDebtSuffix(splitedFullName[4]);
+				}
 			}
 			
 			fecScheduleDRecord_A.setStreet1(csvScheduleDRecord.getStreet1_A().replace(csvScheduleDRecord.getStreet2_A(), ""));
@@ -154,7 +163,12 @@ public class ConvertCSVScheDToFECScheD {
 			fecScheduleDRecord_A.setIncurredThisPeriod(csvScheduleDRecord.getIncurredThisPeriod_A());
 			fecScheduleDRecord_A.setPaymentThisPeriod(csvScheduleDRecord.getPaymentThisPeriod_A());
 			fecScheduleDRecord_A.setBalanceAtClose(csvScheduleDRecord.getBalanceAtClose_A());
-			fecScheduleDRecord_A.setImageNumber("14020412873");//TODO: Need to get from file name
+			
+			Pattern pattern = Pattern.compile("\\_(.*?)\\-");
+			Matcher match = pattern.matcher(csvScheduleDRecord.getName());
+			if (match.find()) {
+				fecScheduleDRecord_A.setImageNumber(match.group(1));
+			}
 			
 			return fecScheduleDRecord_A;
 	}
@@ -172,17 +186,19 @@ public class ConvertCSVScheDToFECScheD {
 			//TODO: Need to get from summary page
 			fecScheduleDRecord_B.setFilterFECCommitteeId("C00091892");
 			
-			if(csvScheduleDRecord.getPersonOrOrganization_B().equals(IdentifyNameConstant.ORGANIZATION.getIdentfyDetail())){
-				fecScheduleDRecord_B.setDebtName(csvScheduleDRecord.getDebtName_B());
-			}else{
-				
-				String splitedFullName[] = FECConverterUtil.splitFullName(csvScheduleDRecord.getDebtName_B());
-				
-				fecScheduleDRecord_B.setDebtPrefix(splitedFullName[0]);
-				fecScheduleDRecord_B.setDebtFirstName(splitedFullName[1]);
-				fecScheduleDRecord_B.setDebtMiddleName(splitedFullName[2]);
-				fecScheduleDRecord_B.setDebtLastName(splitedFullName[3]);
-				fecScheduleDRecord_B.setDebtSuffix(splitedFullName[4]);
+			if(!StringUtils.isBlank(csvScheduleDRecord.getPersonOrOrganization_B())){
+				if(csvScheduleDRecord.getPersonOrOrganization_B().equals(IdentifyNameConstant.ORGANIZATION.getIdentfyDetail())){
+					fecScheduleDRecord_B.setDebtName(csvScheduleDRecord.getDebtName_B());
+				}else{
+					
+					String splitedFullName[] = FECConverterUtil.splitFullName(csvScheduleDRecord.getDebtName_B());
+					
+					fecScheduleDRecord_B.setDebtPrefix(splitedFullName[0]);
+					fecScheduleDRecord_B.setDebtFirstName(splitedFullName[1]);
+					fecScheduleDRecord_B.setDebtMiddleName(splitedFullName[2]);
+					fecScheduleDRecord_B.setDebtLastName(splitedFullName[3]);
+					fecScheduleDRecord_B.setDebtSuffix(splitedFullName[4]);
+				}
 			}
 			
 			fecScheduleDRecord_B.setStreet1(csvScheduleDRecord.getStreet1_B().replace(csvScheduleDRecord.getStreet2_B(), ""));
@@ -195,7 +211,12 @@ public class ConvertCSVScheDToFECScheD {
 			fecScheduleDRecord_B.setIncurredThisPeriod(csvScheduleDRecord.getIncurredThisPeriod_B());
 			fecScheduleDRecord_B.setPaymentThisPeriod(csvScheduleDRecord.getPaymentThisPeriod_B());
 			fecScheduleDRecord_B.setBalanceAtClose(csvScheduleDRecord.getBalanceAtClose_B());
-			fecScheduleDRecord_B.setImageNumber("14020412873");//TODO: Need to get from file name
+			
+			Pattern pattern = Pattern.compile("\\_(.*?)\\-");
+			Matcher match = pattern.matcher(csvScheduleDRecord.getName());
+			if (match.find()) {
+				fecScheduleDRecord_B.setImageNumber(match.group(1));
+			}
 			
 			return fecScheduleDRecord_B;
 	}
@@ -214,17 +235,19 @@ public class ConvertCSVScheDToFECScheD {
 			// TODO: Need to get from summary page
 			fecScheduleDRecord_C.setFilterFECCommitteeId("C00091892"); 
 			
-			if(csvScheduleDRecord.getPersonOrOrganization_C().equals(IdentifyNameConstant.ORGANIZATION.getIdentfyDetail())){
-				fecScheduleDRecord_C.setDebtName(csvScheduleDRecord.getDebtName_C());
-			}else{
-				
-				String splitedFullName[] = FECConverterUtil.splitFullName(csvScheduleDRecord.getDebtName_C());
-				
-				fecScheduleDRecord_C.setDebtPrefix(splitedFullName[0]);
-				fecScheduleDRecord_C.setDebtFirstName(splitedFullName[1]);
-				fecScheduleDRecord_C.setDebtMiddleName(splitedFullName[2]);
-				fecScheduleDRecord_C.setDebtLastName(splitedFullName[3]);
-				fecScheduleDRecord_C.setDebtSuffix(splitedFullName[4]);
+			if(!StringUtils.isBlank(csvScheduleDRecord.getPersonOrOrganization_C())){
+				if(csvScheduleDRecord.getPersonOrOrganization_C().equals(IdentifyNameConstant.ORGANIZATION.getIdentfyDetail())){
+					fecScheduleDRecord_C.setDebtName(csvScheduleDRecord.getDebtName_C());
+				}else{
+					
+					String splitedFullName[] = FECConverterUtil.splitFullName(csvScheduleDRecord.getDebtName_C());
+					
+					fecScheduleDRecord_C.setDebtPrefix(splitedFullName[0]);
+					fecScheduleDRecord_C.setDebtFirstName(splitedFullName[1]);
+					fecScheduleDRecord_C.setDebtMiddleName(splitedFullName[2]);
+					fecScheduleDRecord_C.setDebtLastName(splitedFullName[3]);
+					fecScheduleDRecord_C.setDebtSuffix(splitedFullName[4]);
+				}
 			}
 			
 			fecScheduleDRecord_C.setStreet1(csvScheduleDRecord.getStreet1_C().replace(csvScheduleDRecord.getStreet2_C(), ""));
@@ -237,7 +260,12 @@ public class ConvertCSVScheDToFECScheD {
 			fecScheduleDRecord_C.setIncurredThisPeriod(csvScheduleDRecord.getIncurredThisPeriod_C());
 			fecScheduleDRecord_C.setPaymentThisPeriod(csvScheduleDRecord.getPaymentThisPeriod_C());
 			fecScheduleDRecord_C.setBalanceAtClose(csvScheduleDRecord.getBalanceAtClose_C());
-			fecScheduleDRecord_C.setImageNumber("14020412873");//TODO: Need to get from file name
+
+			Pattern pattern = Pattern.compile("\\_(.*?)\\-");
+			Matcher match = pattern.matcher(csvScheduleDRecord.getName());
+			if (match.find()) {
+				fecScheduleDRecord_C.setImageNumber(match.group(1));
+			}
 			
 			return fecScheduleDRecord_C;
 	}

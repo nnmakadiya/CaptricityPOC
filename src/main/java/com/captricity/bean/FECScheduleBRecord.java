@@ -44,7 +44,7 @@ public class FECScheduleBRecord {
 		if(StringUtils.isBlank(formType)){
 			return "" + (char) FECFileConstant.COLUMN_SEPARATOR;
 		}
-		return StringUtils.upperCase(formType) + (char)FECFileConstant.COLUMN_SEPARATOR;
+		return StringUtils.left(StringUtils.upperCase(formType), 8) + (char)FECFileConstant.COLUMN_SEPARATOR;
 	}
 	public void setFormType(String formType) {
 		this.formType = formType;
@@ -53,7 +53,7 @@ public class FECScheduleBRecord {
 		if(StringUtils.isBlank(fecCommitteeId)){
 			return "" + (char)FECFileConstant.COLUMN_SEPARATOR;
 		}
-		return StringUtils.upperCase(fecCommitteeId) + (char)FECFileConstant.COLUMN_SEPARATOR;
+		return StringUtils.left(StringUtils.upperCase(fecCommitteeId),9) + (char)FECFileConstant.COLUMN_SEPARATOR;
 	}
 	public void setFecCommitteeId(String fecCommitteeId) {
 		this.fecCommitteeId = fecCommitteeId;
@@ -62,7 +62,7 @@ public class FECScheduleBRecord {
 		if(StringUtils.isBlank(recipientOrganizationName)){
 			return "" + (char)FECFileConstant.COLUMN_SEPARATOR;
 		}
-		return StringUtils.upperCase(recipientOrganizationName) + (char)FECFileConstant.COLUMN_SEPARATOR;
+		return StringUtils.left(StringUtils.upperCase(recipientOrganizationName),200) + (char)FECFileConstant.COLUMN_SEPARATOR;
 	}
 	public void setRecipientOrganizationName(String recipientOrganizationName) {
 		this.recipientOrganizationName = recipientOrganizationName;
@@ -71,7 +71,7 @@ public class FECScheduleBRecord {
 		if(StringUtils.isBlank(recipientLastName)){
 			return "" + (char)FECFileConstant.COLUMN_SEPARATOR;
 		}
-		return StringUtils.upperCase(recipientLastName) + (char)FECFileConstant.COLUMN_SEPARATOR;
+		return StringUtils.left(StringUtils.upperCase(recipientLastName),30) + (char)FECFileConstant.COLUMN_SEPARATOR;
 	}
 	public void setRecipientLastName(String recipientLastName) {
 		this.recipientLastName = recipientLastName;
@@ -80,7 +80,7 @@ public class FECScheduleBRecord {
 		if(StringUtils.isBlank(recipientFirstName)){
 			return "" + (char)FECFileConstant.COLUMN_SEPARATOR;
 		}
-		return StringUtils.upperCase(recipientFirstName) + (char)FECFileConstant.COLUMN_SEPARATOR;
+		return StringUtils.left(StringUtils.upperCase(recipientFirstName),20) + (char)FECFileConstant.COLUMN_SEPARATOR;
 	}
 	public void setRecipientFirstName(String recipientFirstName) {
 		this.recipientFirstName = recipientFirstName;
@@ -89,7 +89,7 @@ public class FECScheduleBRecord {
 		if(StringUtils.isBlank(recipientMiddleName)){
 			return "" + (char)FECFileConstant.COLUMN_SEPARATOR;
 		}
-		return StringUtils.upperCase(recipientMiddleName) + (char)FECFileConstant.COLUMN_SEPARATOR;
+		return StringUtils.left(StringUtils.upperCase(recipientMiddleName),20) + (char)FECFileConstant.COLUMN_SEPARATOR;
 	}
 	public void setRecipientMiddleName(String recipientMiddleName) {
 		this.recipientMiddleName = recipientMiddleName;
@@ -98,7 +98,7 @@ public class FECScheduleBRecord {
 		if(StringUtils.isBlank(recipientPrefix)){
 			return "" + (char)FECFileConstant.COLUMN_SEPARATOR;
 		}
-		return StringUtils.upperCase(recipientPrefix) + (char)FECFileConstant.COLUMN_SEPARATOR;
+		return StringUtils.left(StringUtils.upperCase(recipientPrefix),10) + (char)FECFileConstant.COLUMN_SEPARATOR;
 	}
 	public void setRecipientPrefix(String recipientPrefix) {
 		this.recipientPrefix = recipientPrefix;
@@ -107,7 +107,7 @@ public class FECScheduleBRecord {
 		if(StringUtils.isBlank(recipientSuffix)){
 			return "" + (char)FECFileConstant.COLUMN_SEPARATOR;
 		}
-		return StringUtils.upperCase(recipientSuffix) + (char)FECFileConstant.COLUMN_SEPARATOR;
+		return StringUtils.left(StringUtils.upperCase(recipientSuffix),10) + (char)FECFileConstant.COLUMN_SEPARATOR;
 	}
 	public void setRecipientSuffix(String recipientSuffix) {
 		this.recipientSuffix = recipientSuffix;
@@ -116,7 +116,7 @@ public class FECScheduleBRecord {
 		if(StringUtils.isBlank(street1)){
 			return "" + (char)FECFileConstant.COLUMN_SEPARATOR;
 		}
-		return StringUtils.upperCase(street1) + (char)FECFileConstant.COLUMN_SEPARATOR;
+		return StringUtils.left(StringUtils.upperCase(street1),34) + (char)FECFileConstant.COLUMN_SEPARATOR;
 	}
 	public void setStreet1(String street1) {
 		this.street1 = street1;
@@ -125,7 +125,7 @@ public class FECScheduleBRecord {
 		if(StringUtils.isBlank(street2)){
 			return "" + (char)FECFileConstant.COLUMN_SEPARATOR;
 		}
-		return StringUtils.upperCase(street2) + (char)FECFileConstant.COLUMN_SEPARATOR;
+		return StringUtils.left(StringUtils.upperCase(street2),34) + (char)FECFileConstant.COLUMN_SEPARATOR;
 	}
 	public void setStreet2(String street2) {
 		this.street2 = street2;
@@ -134,7 +134,7 @@ public class FECScheduleBRecord {
 		if(StringUtils.isBlank(city)){
 			return "" + (char)FECFileConstant.COLUMN_SEPARATOR;
 		}
-		return StringUtils.upperCase(city) + (char)FECFileConstant.COLUMN_SEPARATOR;
+		return StringUtils.left(StringUtils.upperCase(city),30) + (char)FECFileConstant.COLUMN_SEPARATOR;
 	}
 	public void setCity(String city) {
 		this.city = city;
@@ -143,7 +143,7 @@ public class FECScheduleBRecord {
 		if(StringUtils.isBlank(state)){
 			return "" + (char)FECFileConstant.COLUMN_SEPARATOR;
 		}
-		return StringUtils.upperCase(state) + (char)FECFileConstant.COLUMN_SEPARATOR;
+		return StringUtils.left(StringUtils.upperCase(state),2) + (char)FECFileConstant.COLUMN_SEPARATOR;
 	}
 	public void setState(String state) {
 		this.state = state;
@@ -152,7 +152,7 @@ public class FECScheduleBRecord {
 		if(StringUtils.isBlank(zip)){
 			return "" + (char)FECFileConstant.COLUMN_SEPARATOR;
 		}
-		return StringUtils.upperCase(zip) + (char)FECFileConstant.COLUMN_SEPARATOR;
+		return StringUtils.left(StringUtils.upperCase(zip),9) + (char)FECFileConstant.COLUMN_SEPARATOR;
 	}
 	public void setZip(String zip) {
 		this.zip = zip;
@@ -161,7 +161,7 @@ public class FECScheduleBRecord {
 		if(StringUtils.isBlank(dateOfDisbursement)){
 			return "" + (char)FECFileConstant.COLUMN_SEPARATOR;
 		}
-		return StringUtils.upperCase(dateOfDisbursement) + (char)FECFileConstant.COLUMN_SEPARATOR;
+		return StringUtils.left(StringUtils.upperCase(dateOfDisbursement),8) + (char)FECFileConstant.COLUMN_SEPARATOR;
 	}
 	public void setDateOfDisbursement(String dateOfDisbursement) {
 		this.dateOfDisbursement = dateOfDisbursement;
@@ -170,7 +170,7 @@ public class FECScheduleBRecord {
 		if(StringUtils.isBlank(purposeOfDisbursement)){
 			return "" + (char)FECFileConstant.COLUMN_SEPARATOR;
 		}
-		return StringUtils.upperCase(purposeOfDisbursement) + (char)FECFileConstant.COLUMN_SEPARATOR;
+		return StringUtils.left(StringUtils.upperCase(purposeOfDisbursement),40) + (char)FECFileConstant.COLUMN_SEPARATOR;
 	}
 	public void setPurposeOfDisbursement(String purposeOfDisbursement) {
 		this.purposeOfDisbursement = purposeOfDisbursement;
@@ -179,7 +179,7 @@ public class FECScheduleBRecord {
 		if(StringUtils.isBlank(beneficiaryCommitteeName)){
 			return "" + (char)FECFileConstant.COLUMN_SEPARATOR;
 		}
-		return StringUtils.upperCase(beneficiaryCommitteeName) + (char)FECFileConstant.COLUMN_SEPARATOR;
+		return StringUtils.left(StringUtils.upperCase(beneficiaryCommitteeName),200) + (char)FECFileConstant.COLUMN_SEPARATOR;
 	}
 	public void setBeneficiaryCommitteeName(String beneficiaryCommitteeName) {
 		this.beneficiaryCommitteeName = beneficiaryCommitteeName;
@@ -188,7 +188,7 @@ public class FECScheduleBRecord {
 		if(StringUtils.isBlank(canLastName)){
 			return "" + (char)FECFileConstant.COLUMN_SEPARATOR;
 		}
-		return StringUtils.upperCase(canLastName) + (char)FECFileConstant.COLUMN_SEPARATOR;
+		return StringUtils.left(StringUtils.upperCase(canLastName),30) + (char)FECFileConstant.COLUMN_SEPARATOR;
 	}
 	public void setCanLastName(String canLastName) {
 		this.canLastName = canLastName;
@@ -197,7 +197,7 @@ public class FECScheduleBRecord {
 		if(StringUtils.isBlank(canFirstName)){
 			return "" + (char)FECFileConstant.COLUMN_SEPARATOR;
 		}
-		return StringUtils.upperCase(canFirstName) + (char)FECFileConstant.COLUMN_SEPARATOR;
+		return StringUtils.left(StringUtils.upperCase(canFirstName),20) + (char)FECFileConstant.COLUMN_SEPARATOR;
 	}
 	public void setCanFirstName(String canFirstName) {
 		this.canFirstName = canFirstName;
@@ -206,7 +206,7 @@ public class FECScheduleBRecord {
 		if(StringUtils.isBlank(canMiddleName)){
 			return "" + (char)FECFileConstant.COLUMN_SEPARATOR;
 		}
-		return StringUtils.upperCase(canMiddleName) + (char)FECFileConstant.COLUMN_SEPARATOR;
+		return StringUtils.left(StringUtils.upperCase(canMiddleName),20) + (char)FECFileConstant.COLUMN_SEPARATOR;
 	}
 	public void setCanMiddleName(String canMiddleName) {
 		this.canMiddleName = canMiddleName;
@@ -215,7 +215,7 @@ public class FECScheduleBRecord {
 		if(StringUtils.isBlank(canPrefix)){
 			return "" + (char)FECFileConstant.COLUMN_SEPARATOR;
 		}
-		return StringUtils.upperCase(canPrefix) + (char)FECFileConstant.COLUMN_SEPARATOR;
+		return StringUtils.left(StringUtils.upperCase(canPrefix),10) + (char)FECFileConstant.COLUMN_SEPARATOR;
 	}
 	public void setCanPrefix(String canPrefix) {
 		this.canPrefix = canPrefix;
@@ -224,7 +224,7 @@ public class FECScheduleBRecord {
 		if(StringUtils.isBlank(canSuffix)){
 			return "" + (char)FECFileConstant.COLUMN_SEPARATOR;
 		}
-		return StringUtils.upperCase(canSuffix) + (char)FECFileConstant.COLUMN_SEPARATOR;
+		return StringUtils.left(StringUtils.upperCase(canSuffix),10) + (char)FECFileConstant.COLUMN_SEPARATOR;
 	}
 	public void setCanSuffix(String canSuffix) {
 		this.canSuffix = canSuffix;
@@ -233,7 +233,7 @@ public class FECScheduleBRecord {
 		if(StringUtils.isBlank(categoryCode)){
 			return "" + (char)FECFileConstant.COLUMN_SEPARATOR;
 		}
-		return StringUtils.upperCase(categoryCode) + (char)FECFileConstant.COLUMN_SEPARATOR;
+		return StringUtils.left(StringUtils.upperCase(categoryCode),3) + (char)FECFileConstant.COLUMN_SEPARATOR;
 	}
 	public void setCategoryCode(String categoryCode) {
 		this.categoryCode = categoryCode;
@@ -242,7 +242,7 @@ public class FECScheduleBRecord {
 		if(StringUtils.isBlank(canOffice)){
 			return "" + (char)FECFileConstant.COLUMN_SEPARATOR;
 		}
-		return StringUtils.upperCase(canOffice) + (char)FECFileConstant.COLUMN_SEPARATOR;
+		return StringUtils.left(StringUtils.upperCase(canOffice),1) + (char)FECFileConstant.COLUMN_SEPARATOR;
 	}
 	public void setCanOffice(String canOffice) {
 		this.canOffice = canOffice;
@@ -251,7 +251,7 @@ public class FECScheduleBRecord {
 		if(StringUtils.isBlank(canState)){
 			return "" + (char)FECFileConstant.COLUMN_SEPARATOR;
 		}
-		return StringUtils.upperCase(canState) + (char)FECFileConstant.COLUMN_SEPARATOR;
+		return StringUtils.left(StringUtils.upperCase(canState),2) + (char)FECFileConstant.COLUMN_SEPARATOR;
 	}
 	public void setCanState(String canState) {
 		this.canState = canState;
@@ -260,7 +260,7 @@ public class FECScheduleBRecord {
 		if(StringUtils.isBlank(canDist)){
 			return "" + (char)FECFileConstant.COLUMN_SEPARATOR;
 		}
-		return StringUtils.upperCase(canDist) + (char)FECFileConstant.COLUMN_SEPARATOR;
+		return StringUtils.left(StringUtils.upperCase(canDist),2) + (char)FECFileConstant.COLUMN_SEPARATOR;
 	}
 	public void setCanDist(String canDist) {
 		this.canDist = canDist;
@@ -269,7 +269,7 @@ public class FECScheduleBRecord {
 		if(StringUtils.isBlank(itemElectCode)){
 			return "" + (char)FECFileConstant.COLUMN_SEPARATOR;
 		}
-		return StringUtils.upperCase(itemElectCode) + (char)FECFileConstant.COLUMN_SEPARATOR;
+		return StringUtils.left(StringUtils.upperCase(itemElectCode),5) + (char)FECFileConstant.COLUMN_SEPARATOR;
 	}
 	public void setItemElectCode(String itemElectCode) {
 		this.itemElectCode = itemElectCode;
@@ -278,7 +278,7 @@ public class FECScheduleBRecord {
 		if(StringUtils.isBlank(itemElectOther)){
 			return "" + (char)FECFileConstant.COLUMN_SEPARATOR;
 		}
-		return StringUtils.upperCase(itemElectOther) + (char)FECFileConstant.COLUMN_SEPARATOR;
+		return StringUtils.left(StringUtils.upperCase(itemElectOther),20) + (char)FECFileConstant.COLUMN_SEPARATOR;
 	}
 	public void setItemElectOther(String itemElectOther) {
 		this.itemElectOther = itemElectOther;
@@ -305,7 +305,7 @@ public class FECScheduleBRecord {
 		if(StringUtils.isBlank(memoTextDescription)){
 			return "" + (char)FECFileConstant.COLUMN_SEPARATOR;
 		}
-		return StringUtils.upperCase(memoTextDescription) + (char)FECFileConstant.COLUMN_SEPARATOR;
+		return StringUtils.left(StringUtils.upperCase(memoTextDescription),100) + (char)FECFileConstant.COLUMN_SEPARATOR;
 	}
 	public void setMemoTextDescription(String memoTextDescription) {
 		this.memoTextDescription = memoTextDescription;
@@ -314,7 +314,7 @@ public class FECScheduleBRecord {
 		if(StringUtils.isBlank(imageNumber)){
 			return "";
 		}
-		return StringUtils.upperCase(imageNumber);
+		return StringUtils.left(StringUtils.upperCase(imageNumber),11);
 	}
 	public void setImageNumber(String imageNumber) {
 		this.imageNumber = imageNumber;

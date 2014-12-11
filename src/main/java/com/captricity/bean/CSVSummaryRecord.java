@@ -8,6 +8,7 @@ public class CSVSummaryRecord {
    
     private String name;
 	private String committeeName;
+	private String streetFullName;
 	private String street1;
 	private String street2;
 	private String changeOfAddress;
@@ -30,9 +31,9 @@ public class CSVSummaryRecord {
 	private String coverageThroughDate;
 	private String treasMiddleName;
 	private String treasPrefix;
-	private String treasFirstName;
 	private String treasFullName;
 	private String treasSuffix;
+	private String treasFirstName;
 	private String treasLastName;
 	private String treasDate;
 	private String totalContributionsNoLoan_A;
@@ -126,6 +127,17 @@ public class CSVSummaryRecord {
 	}
 	public void setCommitteeName(String committeeName) {
 		this.committeeName = committeeName;
+	}
+	public String getStreetFullName() {
+		if (StringUtils.containsIgnoreCase(streetFullName, CSVFileConstant.BLANK)
+				|| StringUtils.containsIgnoreCase(streetFullName,
+						CSVFileConstant.IMPOSSIBLE)) {
+			return "";
+		}
+		return streetFullName;
+	}
+	public void setStreetFullName(String streetFullName) {
+		this.streetFullName = streetFullName;
 	}
 	public String getStreet1() {
 		if (StringUtils.containsIgnoreCase(street1, CSVFileConstant.BLANK)

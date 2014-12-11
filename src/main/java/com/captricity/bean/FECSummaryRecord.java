@@ -110,7 +110,7 @@ public class FECSummaryRecord {
 		if (StringUtils.isBlank(formType)) {
 			return "" + (char) FECFileConstant.COLUMN_SEPARATOR;
 		}
-		return StringUtils.upperCase(formType)
+		return StringUtils.left(StringUtils.upperCase(formType), 4)
 				+ (char) FECFileConstant.COLUMN_SEPARATOR;
 	}
 
@@ -118,7 +118,7 @@ public class FECSummaryRecord {
 		if (StringUtils.isBlank(filterFecCommitteeId)) {
 			return "" + (char) FECFileConstant.COLUMN_SEPARATOR;
 		}
-		return StringUtils.upperCase(filterFecCommitteeId)
+		return StringUtils.left(StringUtils.upperCase(filterFecCommitteeId),9)
 				+ (char) FECFileConstant.COLUMN_SEPARATOR;
 	}
 
@@ -130,7 +130,7 @@ public class FECSummaryRecord {
 		if (StringUtils.isBlank(committeeName)) {
 			return "" + (char) FECFileConstant.COLUMN_SEPARATOR;
 		}
-		return StringUtils.upperCase(committeeName)
+		return StringUtils.left(StringUtils.upperCase(committeeName),200)
 				+ (char) FECFileConstant.COLUMN_SEPARATOR;
 	}
 
@@ -142,7 +142,7 @@ public class FECSummaryRecord {
 		if (StringUtils.isBlank(changeOfAddress)) {
 			return "" + (char) FECFileConstant.COLUMN_SEPARATOR;
 		}
-		return StringUtils.upperCase(changeOfAddress)
+		return StringUtils.left(StringUtils.upperCase(changeOfAddress),1)
 				+ (char) FECFileConstant.COLUMN_SEPARATOR;
 	}
 
@@ -154,7 +154,7 @@ public class FECSummaryRecord {
 		if (StringUtils.isBlank(street1)) {
 			return "" + (char) FECFileConstant.COLUMN_SEPARATOR;
 		}
-		return StringUtils.upperCase(street1)
+		return StringUtils.left(StringUtils.upperCase(street1),34)
 				+ (char) FECFileConstant.COLUMN_SEPARATOR;
 	}
 
@@ -166,7 +166,7 @@ public class FECSummaryRecord {
 		if (StringUtils.isBlank(street2)) {
 			return "" + (char) FECFileConstant.COLUMN_SEPARATOR;
 		}
-		return StringUtils.upperCase(street2)
+		return StringUtils.left(StringUtils.upperCase(street2),34)
 				+ (char) FECFileConstant.COLUMN_SEPARATOR;
 	}
 
@@ -178,7 +178,7 @@ public class FECSummaryRecord {
 		if (StringUtils.isBlank(city)) {
 			return "" + (char) FECFileConstant.COLUMN_SEPARATOR;
 		}
-		return StringUtils.upperCase(city)
+		return StringUtils.left(StringUtils.upperCase(city),30)
 				+ (char) FECFileConstant.COLUMN_SEPARATOR;
 	}
 
@@ -190,7 +190,7 @@ public class FECSummaryRecord {
 		if (StringUtils.isBlank(state)) {
 			return "" + (char) FECFileConstant.COLUMN_SEPARATOR;
 		}
-		return StringUtils.upperCase(state)
+		return StringUtils.left(StringUtils.upperCase(state),2)
 				+ (char) FECFileConstant.COLUMN_SEPARATOR;
 	}
 
@@ -202,7 +202,7 @@ public class FECSummaryRecord {
 		if (StringUtils.isBlank(zip)) {
 			return "" + (char) FECFileConstant.COLUMN_SEPARATOR;
 		}
-		return StringUtils.upperCase(zip)
+		return StringUtils.left(StringUtils.upperCase(zip),9)
 				+ (char) FECFileConstant.COLUMN_SEPARATOR;
 	}
 
@@ -214,7 +214,7 @@ public class FECSummaryRecord {
 		if (StringUtils.isBlank(electionState)) {
 			return "" + (char) FECFileConstant.COLUMN_SEPARATOR;
 		}
-		return StringUtils.upperCase(electionState)
+		return StringUtils.left(StringUtils.upperCase(electionState),2)
 				+ (char) FECFileConstant.COLUMN_SEPARATOR;
 	}
 
@@ -226,7 +226,7 @@ public class FECSummaryRecord {
 		if (StringUtils.isBlank(electionDistrict)) {
 			return "" + (char) FECFileConstant.COLUMN_SEPARATOR;
 		}
-		return StringUtils.upperCase(electionDistrict)
+		return StringUtils.left(StringUtils.upperCase(electionDistrict),2)
 				+ (char) FECFileConstant.COLUMN_SEPARATOR;
 	}
 
@@ -238,7 +238,7 @@ public class FECSummaryRecord {
 		if (StringUtils.isBlank(reportCode)) {
 			return "" + (char) FECFileConstant.COLUMN_SEPARATOR;
 		}
-		return StringUtils.upperCase(reportCode)
+		return StringUtils.left(StringUtils.upperCase(reportCode),3)
 				+ (char) FECFileConstant.COLUMN_SEPARATOR;
 	}
 
@@ -250,7 +250,7 @@ public class FECSummaryRecord {
 		if (StringUtils.isBlank(dateOfElection)) {
 			return "" + (char) FECFileConstant.COLUMN_SEPARATOR;
 		}
-		return StringUtils.upperCase(dateOfElection)
+		return StringUtils.left(StringUtils.upperCase(dateOfElection),8)
 				+ (char) FECFileConstant.COLUMN_SEPARATOR;
 	}
 
@@ -262,7 +262,7 @@ public class FECSummaryRecord {
 		if (StringUtils.isBlank(stateOfElection)) {
 			return "" + (char) FECFileConstant.COLUMN_SEPARATOR;
 		}
-		return StringUtils.upperCase(stateOfElection)
+		return StringUtils.left(StringUtils.upperCase(stateOfElection),2)
 				+ (char) FECFileConstant.COLUMN_SEPARATOR;
 	}
 
@@ -274,7 +274,7 @@ public class FECSummaryRecord {
 		if (StringUtils.isBlank(coverageFromDate)) {
 			return "" + (char) FECFileConstant.COLUMN_SEPARATOR;
 		}
-		return StringUtils.upperCase(coverageFromDate)
+		return StringUtils.left(StringUtils.upperCase(coverageFromDate),8)
 				+ (char) FECFileConstant.COLUMN_SEPARATOR;
 	}
 
@@ -286,7 +286,7 @@ public class FECSummaryRecord {
 		if (StringUtils.isBlank(coverageThroughDate)) {
 			return "" + (char) FECFileConstant.COLUMN_SEPARATOR;
 		}
-		return StringUtils.upperCase(coverageThroughDate)
+		return StringUtils.left(StringUtils.upperCase(coverageThroughDate),8)
 				+ (char) FECFileConstant.COLUMN_SEPARATOR;
 	}
 
@@ -298,7 +298,7 @@ public class FECSummaryRecord {
 		if (StringUtils.isBlank(treasLastName)) {
 			return "" + (char) FECFileConstant.COLUMN_SEPARATOR;
 		}
-		return StringUtils.upperCase(treasLastName)
+		return StringUtils.left(StringUtils.upperCase(treasLastName),30)
 				+ (char) FECFileConstant.COLUMN_SEPARATOR;
 	}
 
@@ -310,7 +310,7 @@ public class FECSummaryRecord {
 		if (StringUtils.isBlank(treasFirstName)) {
 			return "" + (char) FECFileConstant.COLUMN_SEPARATOR;
 		}
-		return StringUtils.upperCase(treasFirstName)
+		return StringUtils.left(StringUtils.upperCase(treasFirstName),20)
 				+ (char) FECFileConstant.COLUMN_SEPARATOR;
 	}
 
@@ -322,7 +322,7 @@ public class FECSummaryRecord {
 		if (StringUtils.isBlank(treasMiddleName)) {
 			return "" + (char) FECFileConstant.COLUMN_SEPARATOR;
 		}
-		return StringUtils.upperCase(treasMiddleName)
+		return StringUtils.left(StringUtils.upperCase(treasMiddleName),20)
 				+ (char) FECFileConstant.COLUMN_SEPARATOR;
 	}
 
@@ -334,7 +334,7 @@ public class FECSummaryRecord {
 		if (StringUtils.isBlank(treasPrefix)) {
 			return "" + (char) FECFileConstant.COLUMN_SEPARATOR;
 		}
-		return StringUtils.upperCase(treasPrefix)
+		return StringUtils.left(StringUtils.upperCase(treasPrefix),10)
 				+ (char) FECFileConstant.COLUMN_SEPARATOR;
 	}
 
@@ -346,7 +346,7 @@ public class FECSummaryRecord {
 		if (StringUtils.isBlank(treasSuffix)) {
 			return "" + (char) FECFileConstant.COLUMN_SEPARATOR;
 		}
-		return StringUtils.upperCase(treasSuffix)
+		return StringUtils.left(StringUtils.upperCase(treasSuffix),10)
 				+ (char) FECFileConstant.COLUMN_SEPARATOR;
 	}
 
@@ -358,7 +358,7 @@ public class FECSummaryRecord {
 		if (StringUtils.isBlank(treasDate)) {
 			return "" + (char) FECFileConstant.COLUMN_SEPARATOR;
 		}
-		return StringUtils.upperCase(treasDate)
+		return StringUtils.left(StringUtils.upperCase(treasDate),8)
 				+ (char) FECFileConstant.COLUMN_SEPARATOR;
 	}
 
@@ -1295,7 +1295,7 @@ public class FECSummaryRecord {
 		if (StringUtils.isBlank(beginningImageNumber)) {
 			return "";
 		}
-		return StringUtils.upperCase(beginningImageNumber);
+		return StringUtils.left(StringUtils.upperCase(beginningImageNumber),11);
 	}
 
 	public void setBeginningImageNumber(String beginningImageNumber) {

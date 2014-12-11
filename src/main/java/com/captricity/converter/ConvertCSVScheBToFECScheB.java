@@ -4,6 +4,8 @@ import java.io.FileReader;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.time.FastDateFormat;
@@ -24,7 +26,7 @@ public class ConvertCSVScheBToFECScheB {
 	private static final FastDateFormat FEC_DATE_RECEIVED = FastDateFormat.getInstance("yyyyMMdd");
 	private static final FastDateFormat CSV_DATE_RECEIVED = FastDateFormat.getInstance("MMddyyyy");
 	
-	public static final  String[] columns = new String[] {"name",
+	public static final  String[] columns = new String[] {	"name",
 		"formType",
 		"recipientFirstName_A",
 		"recipientLastName_A",
@@ -34,35 +36,39 @@ public class ConvertCSVScheBToFECScheB {
 		"personOrOrganization_A",
 		"recipientOrganizationName_A",
 		"street1_A",
-		"dateOfDisbursement_A",
+		"streetFull_A",
 		"street2_A",
+		"dateOfDisbursement_A",
 		"city_A",
 		"state_A",
 		"zip_A",
 		"purposeOfDisbursement_A",
 		"amountOfDisbursement_A", 
 		"categoryCode_A",
+		"nameOfPersonOrCommitee_A",
+		"canPrefix_A",
 		"canMiddleName_A",
 		"canLastName_A",
-		"canPrefix_A",
 		"canFirstName_A",
-		"beneficiaryCommitteeName_A",	
 		"canSuffix_A",
+		"beneficiaryCommitteeName_A",	
 		"canState_A",
 		"canOffice_A",
-		"memoTextDescription_A",
+		"itemElectYear_A",
 		"canDist_A",
-		"itemElectOther_A", 
+		"itemElectOther_A",
+		"memoTextDescription_A",
 		"itemElectCode_A",
 		"recipientSuffix_B",
 		"recipientLastName_B",
 		"personOrOrganization_B",
-		"recipientOrganizationName_B",
 		"recipientMiddleName_B",
+		"recipientOrganizationName_B",
 		"recipientFirstName_B",
 		"recipientPrefix_B",
-		"street1_B",
+		"streetFull_B",
 		"street2_B",
+		"street1_B",
 		"dateOfDisbursement_B",
 		"city_B",
 		"state_B",
@@ -72,6 +78,7 @@ public class ConvertCSVScheBToFECScheB {
 		"categoryCode_B",
 		"canLastName_B",
 		"beneficiaryCommitteeName_B",
+		"nameOfPersonOrCommittee_B",
 		"canFirstName_B",
 		"canSuffix_B",
 		"canPrefix_B",
@@ -79,6 +86,7 @@ public class ConvertCSVScheBToFECScheB {
 		"canState_B",
 		"canOffice_B",
 		"itemElectOther_B",
+		"itemElectYear_B",
 		"memoTextDescription_B",
 		"itemElectCode_B",
 		"canDist_B",
@@ -90,6 +98,7 @@ public class ConvertCSVScheBToFECScheB {
 		"recipientPrefix_C",
 		"recipientMiddleName_C",
 		"street2_C",
+		"streetFull_C",
 		"street1_C",
 		"dateOfDisbursement_C",
 		"city_C",
@@ -101,13 +110,15 @@ public class ConvertCSVScheBToFECScheB {
 		"canMiddleName_C",
 		"canSuffix_C",
 		"canFirstName_C",
+		"nameOfPersonOrCommittee_C",
 		"beneficiaryCommitteeName_C",
 		"canLastName_C",
 		"canPrefix_C",
-		"canOffice_C",
-		"itemElectOther_C",
 		"memoTextDescription_C",
 		"canState_C",
+		"canOffice_C",
+		"itemElectYear_C",
+		"itemElectOther_C",
 		"itemElectCode_C",
 		"canDist_C"};
 	
@@ -159,17 +170,19 @@ public class ConvertCSVScheBToFECScheB {
 			//TODO: Get id from summary page
 			fecScheduleBRecord_A.setFecCommitteeId("C00091892");
 			
-			if(csvScheduleBRecord.getPersonOrOrganization_A().equals(IdentifyNameConstant.ORGANIZATION.getIdentfyDetail())){
-				fecScheduleBRecord_A.setRecipientOrganizationName(csvScheduleBRecord.getRecipientOrganizationName_A());
-			}else{
-				
-				String splitedFullName[] = 	FECConverterUtil.splitFullName(csvScheduleBRecord.getRecipientOrganizationName_A());
+			if(!StringUtils.isBlank(csvScheduleBRecord.getPersonOrOrganization_A())){
+				if(csvScheduleBRecord.getPersonOrOrganization_A().equals(IdentifyNameConstant.ORGANIZATION.getIdentfyDetail())){
+					fecScheduleBRecord_A.setRecipientOrganizationName(csvScheduleBRecord.getRecipientOrganizationName_A());
+				}else{
 					
-				fecScheduleBRecord_A.setRecipientPrefix(splitedFullName[0]);
-				fecScheduleBRecord_A.setRecipientFirstName(splitedFullName[1]);
-				fecScheduleBRecord_A.setRecipientMiddleName(splitedFullName[2]);
-				fecScheduleBRecord_A.setRecipientLastName(splitedFullName[3]);		
-				fecScheduleBRecord_A.setRecipientSuffix(splitedFullName[4]);
+					String splitedFullName[] = 	FECConverterUtil.splitFullName(csvScheduleBRecord.getRecipientOrganizationName_A());
+						
+					fecScheduleBRecord_A.setRecipientPrefix(splitedFullName[0]);
+					fecScheduleBRecord_A.setRecipientFirstName(splitedFullName[1]);
+					fecScheduleBRecord_A.setRecipientMiddleName(splitedFullName[2]);
+					fecScheduleBRecord_A.setRecipientLastName(splitedFullName[3]);		
+					fecScheduleBRecord_A.setRecipientSuffix(splitedFullName[4]);
+				}
 			}
 			
 			fecScheduleBRecord_A.setStreet1(csvScheduleBRecord.getStreet1_A().replace(csvScheduleBRecord.getStreet2_A(), ""));
@@ -207,8 +220,7 @@ public class ConvertCSVScheBToFECScheB {
 					if(iec.getCode().equals(ItemElectConstant.OTHER.getCode())){
 						fecScheduleBRecord_A.setItemElectOther(csvScheduleBRecord.getItemElectOther_A());
 					}else{
-						//TODO: Need to replace with Receipt For text
-						fecScheduleBRecord_A.setItemElectOther("2014");
+						fecScheduleBRecord_A.setItemElectOther(csvScheduleBRecord.getItemElectYear_A());
 					}
 					break;
 				}
@@ -217,11 +229,13 @@ public class ConvertCSVScheBToFECScheB {
 			fecScheduleBRecord_A.setAmountOfDisbursement(csvScheduleBRecord.getAmountOfDisbursement_A());
 			fecScheduleBRecord_A.setMemoTextDescription(csvScheduleBRecord.getMemoTextDescription_A());
 			
-			//TODO: Get number from file name
-			fecScheduleBRecord_A.setImageNumber("14020412653");
+			Pattern pattern = Pattern.compile("\\_(.*?)\\-");
+			Matcher match = pattern.matcher(csvScheduleBRecord.getName());
+			if (match.find()) {
+				fecScheduleBRecord_A.setImageNumber(match.group(1));
+			}
 			
 			return fecScheduleBRecord_A;
-	
 	}
 	
 	private static FECScheduleBRecord getFECScheduleBRecord_B(CSVScheduleBRecord csvScheduleBRecord) {
@@ -232,17 +246,19 @@ public class ConvertCSVScheBToFECScheB {
 			//TODO: Get id from summary page
 			fecScheduleBRecord_B.setFecCommitteeId("C00091892");
 			
-			if(csvScheduleBRecord.getPersonOrOrganization_B().equals(IdentifyNameConstant.ORGANIZATION.getIdentfyDetail())){
-				fecScheduleBRecord_B.setRecipientOrganizationName(csvScheduleBRecord.getRecipientOrganizationName_B());
-			}else{
-				String splitedFullName[] = 	FECConverterUtil.splitFullName(csvScheduleBRecord.getRecipientOrganizationName_B());
+			if(!StringUtils.isBlank(csvScheduleBRecord.getPersonOrOrganization_B())){
+				if(csvScheduleBRecord.getPersonOrOrganization_B().equals(IdentifyNameConstant.ORGANIZATION.getIdentfyDetail())){
+					fecScheduleBRecord_B.setRecipientOrganizationName(csvScheduleBRecord.getRecipientOrganizationName_B());
+				}else{
+					String splitedFullName[] = 	FECConverterUtil.splitFullName(csvScheduleBRecord.getRecipientOrganizationName_B());
+						
+					fecScheduleBRecord_B.setRecipientPrefix(splitedFullName[0]);
+					fecScheduleBRecord_B.setRecipientFirstName(splitedFullName[1]);
+					fecScheduleBRecord_B.setRecipientMiddleName(splitedFullName[2]);
+					fecScheduleBRecord_B.setRecipientLastName(splitedFullName[3]);		
+					fecScheduleBRecord_B.setRecipientSuffix(splitedFullName[4]);
 					
-				fecScheduleBRecord_B.setRecipientPrefix(splitedFullName[0]);
-				fecScheduleBRecord_B.setRecipientFirstName(splitedFullName[1]);
-				fecScheduleBRecord_B.setRecipientMiddleName(splitedFullName[2]);
-				fecScheduleBRecord_B.setRecipientLastName(splitedFullName[3]);		
-				fecScheduleBRecord_B.setRecipientSuffix(splitedFullName[4]);
-				
+				}
 			}
 			
 			fecScheduleBRecord_B.setStreet1(csvScheduleBRecord.getStreet1_B().replace(csvScheduleBRecord.getStreet2_B(), ""));
@@ -280,8 +296,7 @@ public class ConvertCSVScheBToFECScheB {
 					if(iec.getCode().equals(ItemElectConstant.OTHER.getCode())){
 						fecScheduleBRecord_B.setItemElectOther(csvScheduleBRecord.getItemElectOther_B());
 					}else{
-						//TODO: Need to replace with Receipt For text
-						fecScheduleBRecord_B.setItemElectOther("2014");
+						fecScheduleBRecord_B.setItemElectOther(csvScheduleBRecord.getItemElectYear_B());
 					}
 					break;
 				}
@@ -290,9 +305,12 @@ public class ConvertCSVScheBToFECScheB {
 			fecScheduleBRecord_B.setAmountOfDisbursement(csvScheduleBRecord.getAmountOfDisbursement_B());
 			fecScheduleBRecord_B.setMemoTextDescription(csvScheduleBRecord.getMemoTextDescription_B());
 			
-			//TODO: Get number from file name
-			fecScheduleBRecord_B.setImageNumber("14020412654");
-			
+			Pattern pattern = Pattern.compile("\\_(.*?)\\-");
+			Matcher match = pattern.matcher(csvScheduleBRecord.getName());
+			if (match.find()) {
+				fecScheduleBRecord_B.setImageNumber(match.group(1));
+			}
+
 			return fecScheduleBRecord_B;
 			
 	}
@@ -306,16 +324,18 @@ public class ConvertCSVScheBToFECScheB {
 			//TODO: Get id from summary page
 			fecScheduleBRecord_C.setFecCommitteeId("C00091892");
 			
-			if (csvScheduleBRecord.getPersonOrOrganization_C().equals(IdentifyNameConstant.ORGANIZATION.getIdentfyDetail())){
-				fecScheduleBRecord_C.setRecipientOrganizationName(csvScheduleBRecord.getRecipientOrganizationName_C());
-			}else{
-				String splitedFullName[] = 	FECConverterUtil.splitFullName(csvScheduleBRecord.getRecipientOrganizationName_C());
-					
-				fecScheduleBRecord_C.setRecipientPrefix(splitedFullName[0]);
-				fecScheduleBRecord_C.setRecipientFirstName(splitedFullName[1]);
-				fecScheduleBRecord_C.setRecipientMiddleName(splitedFullName[2]);
-				fecScheduleBRecord_C.setRecipientLastName(splitedFullName[3]);		
-				fecScheduleBRecord_C.setRecipientSuffix(splitedFullName[4]);
+			if(!StringUtils.isBlank(csvScheduleBRecord.getPersonOrOrganization_C())){
+				if (csvScheduleBRecord.getPersonOrOrganization_C().equals(IdentifyNameConstant.ORGANIZATION.getIdentfyDetail())){
+					fecScheduleBRecord_C.setRecipientOrganizationName(csvScheduleBRecord.getRecipientOrganizationName_C());
+				}else{
+					String splitedFullName[] = 	FECConverterUtil.splitFullName(csvScheduleBRecord.getRecipientOrganizationName_C());
+						
+					fecScheduleBRecord_C.setRecipientPrefix(splitedFullName[0]);
+					fecScheduleBRecord_C.setRecipientFirstName(splitedFullName[1]);
+					fecScheduleBRecord_C.setRecipientMiddleName(splitedFullName[2]);
+					fecScheduleBRecord_C.setRecipientLastName(splitedFullName[3]);		
+					fecScheduleBRecord_C.setRecipientSuffix(splitedFullName[4]);
+				}
 			}
 		
 			fecScheduleBRecord_C.setStreet1(csvScheduleBRecord.getStreet1_C().replace(csvScheduleBRecord.getStreet2_C(), ""));
@@ -354,8 +374,7 @@ public class ConvertCSVScheBToFECScheB {
 					if(iec.getCode().equals(ItemElectConstant.OTHER.getCode())){
 						fecScheduleBRecord_C.setItemElectOther(csvScheduleBRecord.getItemElectOther_C());
 					}else{
-						//TODO: Need to replace with Receipt For text
-						fecScheduleBRecord_C.setItemElectOther("2014");
+						fecScheduleBRecord_C.setItemElectOther(csvScheduleBRecord.getItemElectYear_C());
 					}
 					break;
 				}
@@ -364,8 +383,11 @@ public class ConvertCSVScheBToFECScheB {
 			fecScheduleBRecord_C.setAmountOfDisbursement(csvScheduleBRecord.getAmountOfDisbursement_C());
 			fecScheduleBRecord_C.setMemoTextDescription(csvScheduleBRecord.getMemoTextDescription_C());
 			
-			//TODO: Get number from file name
-			fecScheduleBRecord_C.setImageNumber("14020412655");				
+			Pattern pattern = Pattern.compile("\\_(.*?)\\-");
+			Matcher match = pattern.matcher(csvScheduleBRecord.getName());
+			if (match.find()) {
+				fecScheduleBRecord_C.setImageNumber(match.group(1));
+			}
 			
 			return fecScheduleBRecord_C;
 	}

@@ -17,36 +17,40 @@ public class CSVScheduleBRecord {
 	private String personOrOrganization_A;
 	private String recipientOrganizationName_A;
 	private String street1_A;
-	private String dateOfDisbursement_A;
+	private String streetFull_A;
 	private String street2_A;
+	private String dateOfDisbursement_A;
 	private String city_A;
 	private String state_A;
 	private String zip_A;
 	private String purposeOfDisbursement_A;
 	private String amountOfDisbursement_A; 
 	private String categoryCode_A;
+	private String nameOfPersonOrCommitee_A;
+	private String canPrefix_A;
 	private String canMiddleName_A;
 	private String canLastName_A;
-	private String canPrefix_A;
 	private String canFirstName_A;
-	private String beneficiaryCommitteeName_A;	
 	private String canSuffix_A;
+	private String beneficiaryCommitteeName_A;	
 	private String canState_A;
 	private String canOffice_A;
-	private String memoTextDescription_A;
+	private String itemElectYear_A;
 	private String canDist_A;
-	private String itemElectOther_A; 
+	private String itemElectOther_A;
+	private String memoTextDescription_A;
 	private String itemElectCode_A;
 	
 	private String recipientSuffix_B;
 	private String recipientLastName_B;
 	private String personOrOrganization_B;
-	private String recipientOrganizationName_B;
 	private String recipientMiddleName_B;
+	private String recipientOrganizationName_B;
 	private String recipientFirstName_B;
 	private String recipientPrefix_B;
-	private String street1_B;
+	private String streetFull_B;
 	private String street2_B;
+	private String street1_B;
 	private String dateOfDisbursement_B;
 	private String city_B;
 	private String state_B;
@@ -56,6 +60,7 @@ public class CSVScheduleBRecord {
 	private String categoryCode_B;
 	private String canLastName_B;
 	private String beneficiaryCommitteeName_B;
+	private String nameOfPersonOrCommittee_B;
 	private String canFirstName_B;
 	private String canSuffix_B;
 	private String canPrefix_B;
@@ -63,6 +68,7 @@ public class CSVScheduleBRecord {
 	private String canState_B;
 	private String canOffice_B;
 	private String itemElectOther_B;
+	private String itemElectYear_B;
 	private String memoTextDescription_B;
 	private String itemElectCode_B;
 	private String canDist_B;
@@ -75,6 +81,7 @@ public class CSVScheduleBRecord {
 	private String recipientPrefix_C;
 	private String recipientMiddleName_C;
 	private String street2_C;
+	private String streetFull_C;
 	private String street1_C;
 	private String dateOfDisbursement_C;
 	private String city_C;
@@ -86,13 +93,15 @@ public class CSVScheduleBRecord {
 	private String canMiddleName_C;
 	private String canSuffix_C;
 	private String canFirstName_C;
+	private String nameOfPersonOrCommittee_C;
 	private String beneficiaryCommitteeName_C;
 	private String canLastName_C;
 	private String canPrefix_C;
-	private String canOffice_C;
-	private String itemElectOther_C;
 	private String memoTextDescription_C;
 	private String canState_C;
+	private String canOffice_C;
+	private String itemElectYear_C;
+	private String itemElectOther_C;
 	private String itemElectCode_C;
 	private String canDist_C;
 	
@@ -952,5 +961,107 @@ public class CSVScheduleBRecord {
 	}
 	public void setCanDist_C(String canDist_C) {
 		this.canDist_C = canDist_C;
+	}
+	public String getStreetFull_A() {
+		if (StringUtils.containsIgnoreCase(streetFull_A, CSVFileConstant.BLANK)
+				|| StringUtils.containsIgnoreCase(streetFull_A,
+						CSVFileConstant.IMPOSSIBLE)) {
+			return "";
+		}
+		return streetFull_A;
+	}
+	public void setStreetFull_A(String streetFull_A) {
+		this.streetFull_A = streetFull_A;
+	}
+	public String getNameOfPersonOrCommitee_A() {
+		if (StringUtils.containsIgnoreCase(nameOfPersonOrCommitee_A,
+				CSVFileConstant.BLANK)
+				|| StringUtils.containsIgnoreCase(nameOfPersonOrCommitee_A,
+						CSVFileConstant.IMPOSSIBLE)) {
+			return "";
+		}
+		return nameOfPersonOrCommitee_A;
+	}
+	public void setNameOfPersonOrCommitee_A(String nameOfPersonOrCommitee_A) {
+		this.nameOfPersonOrCommitee_A = nameOfPersonOrCommitee_A;
+	}
+	public String getItemElectYear_A() {
+		if (StringUtils.containsIgnoreCase(itemElectYear_A, CSVFileConstant.BLANK)
+				|| StringUtils.containsIgnoreCase(itemElectYear_A,
+						CSVFileConstant.IMPOSSIBLE)) {
+			return "";
+		}
+		return itemElectYear_A;
+	}
+	public void setItemElectYear_A(String itemElectYear_A) {
+		this.itemElectYear_A = itemElectYear_A;
+	}
+	public String getStreetFull_B() {
+		if (StringUtils.containsIgnoreCase(streetFull_B, CSVFileConstant.BLANK)
+				|| StringUtils.containsIgnoreCase(streetFull_B,
+						CSVFileConstant.IMPOSSIBLE)) {
+			return "";
+		}
+		return streetFull_B;
+	}
+	public void setStreetFull_B(String streetFull_B) {
+		this.streetFull_B = streetFull_B;
+	}
+	public String getNameOfPersonOrCommittee_B() {
+		if (StringUtils.containsIgnoreCase(nameOfPersonOrCommittee_B,
+				CSVFileConstant.BLANK)
+				|| StringUtils.containsIgnoreCase(nameOfPersonOrCommittee_B,
+						CSVFileConstant.IMPOSSIBLE)) {
+			return "";
+		}
+		return nameOfPersonOrCommittee_B;
+	}
+	public void setNameOfPersonOrCommittee_B(String nameOfPersonOrCommittee_B) {
+		this.nameOfPersonOrCommittee_B = nameOfPersonOrCommittee_B;
+	}
+	public String getItemElectYear_B() {
+		if (StringUtils.containsIgnoreCase(itemElectYear_B, CSVFileConstant.BLANK)
+				|| StringUtils.containsIgnoreCase(itemElectYear_B,
+						CSVFileConstant.IMPOSSIBLE)) {
+			return "";
+		}
+		return itemElectYear_B;
+	}
+	public void setItemElectYear_B(String itemElectYear_B) {
+		this.itemElectYear_B = itemElectYear_B;
+	}
+	public String getStreetFull_C() {
+		if (StringUtils.containsIgnoreCase(streetFull_C, CSVFileConstant.BLANK)
+				|| StringUtils.containsIgnoreCase(streetFull_C,
+						CSVFileConstant.IMPOSSIBLE)) {
+			return "";
+		}
+		return streetFull_C;
+	}
+	public void setStreetFull_C(String streetFull_C) {
+		this.streetFull_C = streetFull_C;
+	}
+	public String getNameOfPersonOrCommittee_C() {
+		if (StringUtils.containsIgnoreCase(nameOfPersonOrCommittee_C,
+				CSVFileConstant.BLANK)
+				|| StringUtils.containsIgnoreCase(nameOfPersonOrCommittee_C,
+						CSVFileConstant.IMPOSSIBLE)) {
+			return "";
+		}
+		return nameOfPersonOrCommittee_C;
+	}
+	public void setNameOfPersonOrCommittee_C(String nameOfPersonOrCommittee_C) {
+		this.nameOfPersonOrCommittee_C = nameOfPersonOrCommittee_C;
+	}
+	public String getItemElectYear_C() {
+		if (StringUtils.containsIgnoreCase(itemElectYear_C, CSVFileConstant.BLANK)
+				|| StringUtils.containsIgnoreCase(itemElectYear_C,
+						CSVFileConstant.IMPOSSIBLE)) {
+			return "";
+		}
+		return itemElectYear_C;
+	}
+	public void setItemElectYear_C(String itemElectYear_C) {
+		this.itemElectYear_C = itemElectYear_C;
 	}
 }

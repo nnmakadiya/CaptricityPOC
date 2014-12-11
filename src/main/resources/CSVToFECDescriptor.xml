@@ -7,99 +7,99 @@
         <record-definition>
         	<bean name="SP" class="com.captricity.bean.FECSummaryRecord"/>
         		<line delimit="">
-				<record-element length="4" beanref="SP.formType" type="char"/>
-				<record-element length="9" beanref="SP.filterFecCommitteeId" type="char"/>
-				<record-element length="200" beanref="SP.committeeName" type="char"/>
-				<record-element length="1" beanref="SP.changeOfAddress" type="char"/>
-				<record-element length="34" beanref="SP.street1" type="char"/>
-				<record-element length="34" beanref="SP.street2" type="char"/>
-				<record-element length="30" beanref="SP.city" type="char"/>
-				<record-element length="2" beanref="SP.state" type="char"/>
-				<record-element length="9" beanref="SP.zip" type="char"/>
-				<record-element length="2" beanref="SP.electionState" type="char"/>
-				<record-element length="2" beanref="SP.electionDistrict" type="char"/>
-				<record-element length="3" beanref="SP.reportCode" type="char"/>
-				<record-element length="8" beanref="SP.dateOfElection" type="char"/>
-				<record-element length="2" beanref="SP.stateOfElection" type="char"/>
-				<record-element length="8" beanref="SP.coverageFromDate" type="char"/>
-				<record-element length="8" beanref="SP.coverageThroughDate" type="char"/>
-				<record-element length="30" beanref="SP.treasLastName" type="char"/>
-				<record-element length="20" beanref="SP.treasFirstName" type="char"/>
-				<record-element length="20" beanref="SP.treasMiddleName" type="char"/>
-				<record-element length="10" beanref="SP.treasPrefix" type="char"/>
-				<record-element length="10" beanref="SP.treasSuffix" type="char"/>
-				<record-element length="8" beanref="SP.treasDate" type="char"/>
-				<record-element length="12" beanref="SP.totalContributionsNoLoans_A" type="char"/>
-				<record-element length="12" beanref="SP.totalContributionRefunds_A" type="char"/>
-				<record-element length="12" beanref="SP.netContributions_A" type="char"/>
-				<record-element length="12" beanref="SP.totalOperatingExpenditures_A" type="char"/>
-				<record-element length="12" beanref="SP.totalOffsetToOperatingExpenditures_A" type="char"/>
-				<record-element length="12" beanref="SP.netOperatingExpenditures_A" type="char"/>
-				<record-element length="12" beanref="SP.cashOnHandAtClose" type="char"/>
-				<record-element length="12" beanref="SP.debtsTo" type="char"/>
-				<record-element length="12" beanref="SP.debtsBy" type="char"/>
-				<record-element length="12" beanref="SP.individualsItemized_A" type="char"/>
-				<record-element length="12" beanref="SP.individualsUnitemized_A" type="char"/>
-				<record-element length="12" beanref="SP.individualContributionTotal_A" type="char"/>
-				<record-element length="12" beanref="SP.politicalPartyCommittees_A" type="char"/>
-				<record-element length="12" beanref="SP.otherPoliticalCommittees_A" type="char"/>
-				<record-element length="12" beanref="SP.theCandidate_A" type="char"/>
-				<record-element length="12" beanref="SP.totalContributions_A" type="char"/>
-				<record-element length="12" beanref="SP.transfersFromOtherAuthorizedCmtes_A" type="char"/>
-				<record-element length="12" beanref="SP.loansMadeOrGuarantyByTheCandidate_A" type="char"/>
-				<record-element length="12" beanref="SP.allOtherLoans_A" type="char"/>
-				<record-element length="12" beanref="SP.totalLoans_A" type="char"/>
-				<record-element length="12" beanref="SP.offsetsToOperatingExpenditures_A" type="char"/>
-				<record-element length="12" beanref="SP.otherReceipts_A" type="char"/>
-				<record-element length="12" beanref="SP.totalReceipts_A" type="char"/>
-				<record-element length="12" beanref="SP.operatingExpenditures_A" type="char"/>
-				<record-element length="12" beanref="SP.transfersToOtherAuthorizedCommittees_A" type="char"/>
-				<record-element length="12" beanref="SP.ofLoansMade_A" type="char"/>
-				<record-element length="12" beanref="SP.loanRepayments_A" type="char"/>
-				<record-element length="12" beanref="SP.totalLoanRepayments_A" type="char"/>
-				<record-element length="12" beanref="SP.refundIndividuals_A" type="char"/>
-				<record-element length="12" beanref="SP.refundPolitical_A" type="char"/>
-				<record-element length="12" beanref="SP.refundOther_A" type="char"/>
-				<record-element length="12" beanref="SP.totalContributionRefunds20d_A" type="char"/>
-				<record-element length="12" beanref="SP.otherDisbursements_A" type="char"/>
-				<record-element length="12" beanref="SP.totalDisbursements_A" type="char"/>
-				<record-element length="12" beanref="SP.totalContributionsNoLoans_B" type="char"/>
-				<record-element length="12" beanref="SP.totalContributionRefunds_B" type="char"/>
-				<record-element length="12" beanref="SP.netContributions_B" type="char"/>
-				<record-element length="12" beanref="SP.totalOperatingExpenditures_B" type="char"/>
-				<record-element length="12" beanref="SP.totalOffsetToOperatingExpenditures_B" type="char"/>
-				<record-element length="12" beanref="SP.netOperatingExpenditures_B" type="char"/>
-				<record-element length="12" beanref="SP.individualsItemized_B" type="char"/>
-				<record-element length="12" beanref="SP.individualsUnitemized_B" type="char"/>
-				<record-element length="12" beanref="SP.individualContributionTotal_B" type="char"/>
-				<record-element length="12" beanref="SP.politicalPartyCommittees_B" type="char"/>
-				<record-element length="12" beanref="SP.otherPoliticalCommittees_B" type="char"/>
-				<record-element length="12" beanref="SP.theCandidate_B" type="char"/>
-				<record-element length="12" beanref="SP.totalContributions_B" type="char"/>
-				<record-element length="12" beanref="SP.transfersFromOtherAuthorizedCmtes_B" type="char"/>
-				<record-element length="12" beanref="SP.loansMadeOrGuarantyByTheCandidate_B" type="char"/>
-				<record-element length="12" beanref="SP.allOtherLoans_B" type="char"/>
-				<record-element length="12" beanref="SP.totalLoans_B" type="char"/>
-				<record-element length="12" beanref="SP.offsetsToOperatingExpenditures_B" type="char"/>
-				<record-element length="12" beanref="SP.otherReceipts_B" type="char"/>
-				<record-element length="12" beanref="SP.totalReceipts_B" type="char"/>
-				<record-element length="12" beanref="SP.operatingExpenditures_B" type="char"/>
-				<record-element length="12" beanref="SP.transfersToOtherAuthorizedCommittees_B" type="char"/>
-				<record-element length="12" beanref="SP.loanRepaymentByCandidate_B" type="char"/>
-				<record-element length="12" beanref="SP.loanRepayments_B" type="char"/>
-				<record-element length="12" beanref="SP.totalLoanRepayments_B" type="char"/>
-				<record-element length="12" beanref="SP.refundIndividuals_B" type="char"/>
-				<record-element length="12" beanref="SP.refundPolitical_B" type="char"/>
-				<record-element length="12" beanref="SP.refundOther_B" type="char"/>
-				<record-element length="12" beanref="SP.totalContributionRefunds20d_B" type="char"/>
-				<record-element length="12" beanref="SP.otherDisbursements_B" type="char"/>
-				<record-element length="12" beanref="SP.totalDisbursements_B" type="char"/>
-				<record-element length="12" beanref="SP.cashBeginningReportingPeriod" type="char"/>
-				<record-element length="12" beanref="SP.totalReceiptsThisPeriod" type="char"/>
-				<record-element length="12" beanref="SP.subTotal" type="char"/>
-				<record-element length="12" beanref="SP.totalDisbursementsThisPeriod" type="char"/>
-				<record-element length="12" beanref="SP.cashOnHandAtClosePeriod" type="char"/>
-				<record-element length="12" beanref="SP.beginningImageNumber" type="char"/>
+				<record-element length="0" beanref="SP.formType" type="char"/>
+				<record-element length="0" beanref="SP.filterFecCommitteeId" type="char"/>
+				<record-element length="0" beanref="SP.committeeName" type="char"/>
+				<record-element length="0" beanref="SP.changeOfAddress" type="char"/>
+				<record-element length="0" beanref="SP.street1" type="char"/>
+				<record-element length="0" beanref="SP.street2" type="char"/>
+				<record-element length="0" beanref="SP.city" type="char"/>
+				<record-element length="0" beanref="SP.state" type="char"/>
+				<record-element length="0" beanref="SP.zip" type="char"/>
+				<record-element length="0" beanref="SP.electionState" type="char"/>
+				<record-element length="0" beanref="SP.electionDistrict" type="char"/>
+				<record-element length="0" beanref="SP.reportCode" type="char"/>
+				<record-element length="0" beanref="SP.dateOfElection" type="char"/>
+				<record-element length="0" beanref="SP.stateOfElection" type="char"/>
+				<record-element length="0" beanref="SP.coverageFromDate" type="char"/>
+				<record-element length="0" beanref="SP.coverageThroughDate" type="char"/>
+				<record-element length="0" beanref="SP.treasLastName" type="char"/>
+				<record-element length="0" beanref="SP.treasFirstName" type="char"/>
+				<record-element length="0" beanref="SP.treasMiddleName" type="char"/>
+				<record-element length="0" beanref="SP.treasPrefix" type="char"/>
+				<record-element length="0" beanref="SP.treasSuffix" type="char"/>
+				<record-element length="0" beanref="SP.treasDate" type="char"/>
+				<record-element length="0" beanref="SP.totalContributionsNoLoans_A" type="char"/>
+				<record-element length="0" beanref="SP.totalContributionRefunds_A" type="char"/>
+				<record-element length="0" beanref="SP.netContributions_A" type="char"/>
+				<record-element length="0" beanref="SP.totalOperatingExpenditures_A" type="char"/>
+				<record-element length="0" beanref="SP.totalOffsetToOperatingExpenditures_A" type="char"/>
+				<record-element length="0" beanref="SP.netOperatingExpenditures_A" type="char"/>
+				<record-element length="0" beanref="SP.cashOnHandAtClose" type="char"/>
+				<record-element length="0" beanref="SP.debtsTo" type="char"/>
+				<record-element length="0" beanref="SP.debtsBy" type="char"/>
+				<record-element length="0" beanref="SP.individualsItemized_A" type="char"/>
+				<record-element length="0" beanref="SP.individualsUnitemized_A" type="char"/>
+				<record-element length="0" beanref="SP.individualContributionTotal_A" type="char"/>
+				<record-element length="0" beanref="SP.politicalPartyCommittees_A" type="char"/>
+				<record-element length="0" beanref="SP.otherPoliticalCommittees_A" type="char"/>
+				<record-element length="0" beanref="SP.theCandidate_A" type="char"/>
+				<record-element length="0" beanref="SP.totalContributions_A" type="char"/>
+				<record-element length="0" beanref="SP.transfersFromOtherAuthorizedCmtes_A" type="char"/>
+				<record-element length="0" beanref="SP.loansMadeOrGuarantyByTheCandidate_A" type="char"/>
+				<record-element length="0" beanref="SP.allOtherLoans_A" type="char"/>
+				<record-element length="0" beanref="SP.totalLoans_A" type="char"/>
+				<record-element length="0" beanref="SP.offsetsToOperatingExpenditures_A" type="char"/>
+				<record-element length="0" beanref="SP.otherReceipts_A" type="char"/>
+				<record-element length="0" beanref="SP.totalReceipts_A" type="char"/>
+				<record-element length="0" beanref="SP.operatingExpenditures_A" type="char"/>
+				<record-element length="0" beanref="SP.transfersToOtherAuthorizedCommittees_A" type="char"/>
+				<record-element length="0" beanref="SP.ofLoansMade_A" type="char"/>
+				<record-element length="0" beanref="SP.loanRepayments_A" type="char"/>
+				<record-element length="0" beanref="SP.totalLoanRepayments_A" type="char"/>
+				<record-element length="0" beanref="SP.refundIndividuals_A" type="char"/>
+				<record-element length="0" beanref="SP.refundPolitical_A" type="char"/>
+				<record-element length="0" beanref="SP.refundOther_A" type="char"/>
+				<record-element length="0" beanref="SP.totalContributionRefunds20d_A" type="char"/>
+				<record-element length="0" beanref="SP.otherDisbursements_A" type="char"/>
+				<record-element length="0" beanref="SP.totalDisbursements_A" type="char"/>
+				<record-element length="0" beanref="SP.totalContributionsNoLoans_B" type="char"/>
+				<record-element length="0" beanref="SP.totalContributionRefunds_B" type="char"/>
+				<record-element length="0" beanref="SP.netContributions_B" type="char"/>
+				<record-element length="0" beanref="SP.totalOperatingExpenditures_B" type="char"/>
+				<record-element length="0" beanref="SP.totalOffsetToOperatingExpenditures_B" type="char"/>
+				<record-element length="0" beanref="SP.netOperatingExpenditures_B" type="char"/>
+				<record-element length="0" beanref="SP.individualsItemized_B" type="char"/>
+				<record-element length="0" beanref="SP.individualsUnitemized_B" type="char"/>
+				<record-element length="0" beanref="SP.individualContributionTotal_B" type="char"/>
+				<record-element length="0" beanref="SP.politicalPartyCommittees_B" type="char"/>
+				<record-element length="0" beanref="SP.otherPoliticalCommittees_B" type="char"/>
+				<record-element length="0" beanref="SP.theCandidate_B" type="char"/>
+				<record-element length="0" beanref="SP.totalContributions_B" type="char"/>
+				<record-element length="0" beanref="SP.transfersFromOtherAuthorizedCmtes_B" type="char"/>
+				<record-element length="0" beanref="SP.loansMadeOrGuarantyByTheCandidate_B" type="char"/>
+				<record-element length="0" beanref="SP.allOtherLoans_B" type="char"/>
+				<record-element length="0" beanref="SP.totalLoans_B" type="char"/>
+				<record-element length="0" beanref="SP.offsetsToOperatingExpenditures_B" type="char"/>
+				<record-element length="0" beanref="SP.otherReceipts_B" type="char"/>
+				<record-element length="0" beanref="SP.totalReceipts_B" type="char"/>
+				<record-element length="0" beanref="SP.operatingExpenditures_B" type="char"/>
+				<record-element length="0" beanref="SP.transfersToOtherAuthorizedCommittees_B" type="char"/>
+				<record-element length="0" beanref="SP.loanRepaymentByCandidate_B" type="char"/>
+				<record-element length="0" beanref="SP.loanRepayments_B" type="char"/>
+				<record-element length="0" beanref="SP.totalLoanRepayments_B" type="char"/>
+				<record-element length="0" beanref="SP.refundIndividuals_B" type="char"/>
+				<record-element length="0" beanref="SP.refundPolitical_B" type="char"/>
+				<record-element length="0" beanref="SP.refundOther_B" type="char"/>
+				<record-element length="0" beanref="SP.totalContributionRefunds20d_B" type="char"/>
+				<record-element length="0" beanref="SP.otherDisbursements_B" type="char"/>
+				<record-element length="0" beanref="SP.totalDisbursements_B" type="char"/>
+				<record-element length="0" beanref="SP.cashBeginningReportingPeriod" type="char"/>
+				<record-element length="0" beanref="SP.totalReceiptsThisPeriod" type="char"/>
+				<record-element length="0" beanref="SP.subTotal" type="char"/>
+				<record-element length="0" beanref="SP.totalDisbursementsThisPeriod" type="char"/>
+				<record-element length="0" beanref="SP.cashOnHandAtClosePeriod" type="char"/>
+				<record-element length="0" beanref="SP.beginningImageNumber" type="char"/>
 			</line>
         </record-definition>
     </record>
@@ -108,29 +108,29 @@
         <record-definition>
             <bean name="SA" class="com.captricity.bean.FECScheduleARecord"/>
 			<line delimit="">
-				<record-element length="8" beanref="SA.formType" type="char"/>
-				<record-element length="9" beanref="SA.filerFECCommitteeId" type="char" />
-				<record-element length="200" beanref="SA.contribOrganizationName" type="char" />
-				<record-element length="30" beanref="SA.contributorLastName" type="char" />
-				<record-element length="20" beanref="SA.contributorFirstName" type="char" />
-				<record-element length="20" beanref="SA.contributorMiddleName" type="char" />
-				<record-element length="10" beanref="SA.contributorPrefix" type="char" />
-				<record-element length="10" beanref="SA.contributorSuffix" type="char" />
-				<record-element length="34" beanref="SA.street1" type="char" />
-				<record-element length="34" beanref="SA.street2" type="char" />
-				<record-element length="30" beanref="SA.city" type="char" />
-				<record-element length="2" beanref="SA.state" type="char" />
-				<record-element length="9" beanref="SA.zip" type="char" />
-				<record-element length="8" beanref="SA.dateReceived" type="char" />
-				<record-element length="9" beanref="SA.fecCommitteeIdNumber" type="char" />
-				<record-element length="38" beanref="SA.indEmployer" type="char" />
-				<record-element length="38" beanref="SA.indOccupation" type="char" />
-				<record-element length="5" beanref="SA.itemElectCode" type="char" />
-				<record-element length="20" beanref="SA.itemElectOther" type="char" />
-				<record-element length="12" beanref="SA.aggregateYTD" type="char"/>
-				<record-element length="12" beanref="SA.amountReceived" type="char"/>
-				<record-element length="100" beanref="SA.memoDescription" type="char" />
-				<record-element length="11" beanref="SA.imageNumber" type="char" />
+				<record-element length="0" beanref="SA.formType" type="char"/>
+				<record-element length="0" beanref="SA.filerFECCommitteeId" type="char" />
+				<record-element length="0" beanref="SA.contribOrganizationName" type="char" />
+				<record-element length="0" beanref="SA.contributorLastName" type="char" />
+				<record-element length="0" beanref="SA.contributorFirstName" type="char" />
+				<record-element length="0" beanref="SA.contributorMiddleName" type="char" />
+				<record-element length="0" beanref="SA.contributorPrefix" type="char" />
+				<record-element length="0" beanref="SA.contributorSuffix" type="char" />
+				<record-element length="0" beanref="SA.street1" type="char" />
+				<record-element length="0" beanref="SA.street2" type="char" />
+				<record-element length="0" beanref="SA.city" type="char" />
+				<record-element length="0" beanref="SA.state" type="char" />
+				<record-element length="0" beanref="SA.zip" type="char" />
+				<record-element length="0" beanref="SA.dateReceived" type="char" />
+				<record-element length="0" beanref="SA.fecCommitteeIdNumber" type="char" />
+				<record-element length="0" beanref="SA.indEmployer" type="char" />
+				<record-element length="0" beanref="SA.indOccupation" type="char" />
+				<record-element length="0" beanref="SA.itemElectCode" type="char" />
+				<record-element length="0" beanref="SA.itemElectOther" type="char" />
+				<record-element length="0" beanref="SA.aggregateYTD" type="char"/>
+				<record-element length="0" beanref="SA.amountReceived" type="char"/>
+				<record-element length="0" beanref="SA.memoDescription" type="char" />
+				<record-element length="0" beanref="SA.imageNumber" type="char" />
 			</line>
         </record-definition>
     </record>
@@ -139,37 +139,37 @@
         <record-definition>
             <bean name="SB" class="com.captricity.bean.FECScheduleBRecord"/>
 			<line delimit="">
-				<record-element length="8" beanref="SB.formType" type="char"/>
-				<record-element length="9" beanref="SB.fecCommitteeId" type="char" />
-				<record-element length="200" beanref="SB.recipientOrganizationName" type="char" />
-				<record-element length="30" beanref="SB.recipientLastName" type="char" />
-				<record-element length="20" beanref="SB.recipientFirstName" type="char" />
-				<record-element length="20" beanref="SB.recipientMiddleName" type="char" />
-				<record-element length="10" beanref="SB.recipientPrefix" type="char" />
-				<record-element length="10" beanref="SB.recipientSuffix" type="char" />
-				<record-element length="34" beanref="SB.street1" type="char" />
-				<record-element length="34" beanref="SB.street2" type="char" />
-				<record-element length="30" beanref="SB.city" type="char" />
-				<record-element length="2" beanref="SB.state" type="char" />
-				<record-element length="9" beanref="SB.zip" type="char" />
-				<record-element length="8" beanref="SB.dateOfDisbursement" type="char" />
-				<record-element length="40" beanref="SB.purposeOfDisbursement" type="char" />
-				<record-element length="200" beanref="SB.beneficiaryCommitteeName" type="char" />
-				<record-element length="30" beanref="SB.canLastName" type="char" />
-				<record-element length="20" beanref="SB.canFirstName" type="char" />
-				<record-element length="20" beanref="SB.canMiddleName" type="char" />
-				<record-element length="10" beanref="SB.canPrefix" type="char" />
-				<record-element length="10" beanref="SB.canSuffix" type="char" />
-				<record-element length="3" beanref="SB.categoryCode" type="char" />
-				<record-element length="1" beanref="SB.canOffice" type="char" />
-				<record-element length="2" beanref="SB.canState" type="char" />
-				<record-element length="2" beanref="SB.canDist" type="char" />
-				<record-element length="5" beanref="SB.itemElectCode" type="char" />
-				<record-element length="20" beanref="SB.itemElectOther" type="char" />
-				<record-element length="12" beanref="SB.amountOfDisbursement" type="char" />
-				<record-element length="12" beanref="SB.semiAnnualRefundedBundledAmt" type="char" />
-				<record-element length="100" beanref="SB.memoTextDescription" type="char" />
-				<record-element length="11" beanref="SB.imageNumber" type="char" />
+				<record-element length="0" beanref="SB.formType" type="char"/>
+				<record-element length="0" beanref="SB.fecCommitteeId" type="char" />
+				<record-element length="0" beanref="SB.recipientOrganizationName" type="char" />
+				<record-element length="0" beanref="SB.recipientLastName" type="char" />
+				<record-element length="0" beanref="SB.recipientFirstName" type="char" />
+				<record-element length="0" beanref="SB.recipientMiddleName" type="char" />
+				<record-element length="0" beanref="SB.recipientPrefix" type="char" />
+				<record-element length="0" beanref="SB.recipientSuffix" type="char" />
+				<record-element length="0" beanref="SB.street1" type="char" />
+				<record-element length="0" beanref="SB.street2" type="char" />
+				<record-element length="0" beanref="SB.city" type="char" />
+				<record-element length="0" beanref="SB.state" type="char" />
+				<record-element length="0" beanref="SB.zip" type="char" />
+				<record-element length="0" beanref="SB.dateOfDisbursement" type="char" />
+				<record-element length="0" beanref="SB.purposeOfDisbursement" type="char" />
+				<record-element length="0" beanref="SB.beneficiaryCommitteeName" type="char" />
+				<record-element length="0" beanref="SB.canLastName" type="char" />
+				<record-element length="0" beanref="SB.canFirstName" type="char" />
+				<record-element length="0" beanref="SB.canMiddleName" type="char" />
+				<record-element length="0" beanref="SB.canPrefix" type="char" />
+				<record-element length="0" beanref="SB.canSuffix" type="char" />
+				<record-element length="0" beanref="SB.categoryCode" type="char" />
+				<record-element length="0" beanref="SB.canOffice" type="char" />
+				<record-element length="0" beanref="SB.canState" type="char" />
+				<record-element length="0" beanref="SB.canDist" type="char" />
+				<record-element length="0" beanref="SB.itemElectCode" type="char" />
+				<record-element length="0" beanref="SB.itemElectOther" type="char" />
+				<record-element length="0" beanref="SB.amountOfDisbursement" type="char" />
+				<record-element length="0" beanref="SB.semiAnnualRefundedBundledAmt" type="char" />
+				<record-element length="0" beanref="SB.memoTextDescription" type="char" />
+				<record-element length="0" beanref="SB.imageNumber" type="char" />
 			</line>
         </record-definition>
     </record>
@@ -178,31 +178,31 @@
         <record-definition>
             <bean name="SC" class="com.captricity.bean.FECScheduleCRecord"/>
 			<line delimit="">
-				<record-element length="8" beanref="SC.formType" type="char"/>
-				<record-element length="9" beanref="SC.fecCommitteeId" type="char" />
-				<record-element length="8" beanref="SC.receiptLineNumber" type="char" />
-				<record-element length="200" beanref="SC.loanOrganizationName" type="char" />
-				<record-element length="30" beanref="SC.loanLastName" type="char" />
-				<record-element length="20" beanref="SC.loanFirstName" type="char" />
-				<record-element length="20" beanref="SC.loanMiddleName" type="char" />
-				<record-element length="10" beanref="SC.loanPrefix" type="char" />
-				<record-element length="10" beanref="SC.loanSuffix" type="char" />
-				<record-element length="34" beanref="SC.street1" type="char" />
-				<record-element length="34" beanref="SC.street2" type="char" />
-				<record-element length="30" beanref="SC.city" type="char" />
-				<record-element length="2" beanref="SC.state" type="char" />
-				<record-element length="9" beanref="SC.zip" type="char" />
-				<record-element length="5" beanref="SC.election" type="char" />
-				<record-element length="20" beanref="SC.electionDescription" type="char" />
-				<record-element length="12" beanref="SC.origAmtOfLoan" type="char" />
-				<record-element length="12" beanref="SC.paymentToDate" type="char" />
-				<record-element length="12" beanref="SC.loanBalance" type="char" />
-				<record-element length="8" beanref="SC.dateIncurred" type="char" />
-				<record-element length="15" beanref="SC.dueDateTerms" type="char" />
-				<record-element length="15" beanref="SC.pctRateTerms" type="char" />
-				<record-element length="1" beanref="SC.securedYesno" type="char" />
-				<record-element length="100" beanref="SC.memoTextDescription" type="char" />
-				<record-element length="11" beanref="SC.imageNumber" type="char" />
+				<record-element length="0" beanref="SC.formType" type="char"/>
+				<record-element length="0" beanref="SC.fecCommitteeId" type="char" />
+				<record-element length="0" beanref="SC.receiptLineNumber" type="char" />
+				<record-element length="0" beanref="SC.loanOrganizationName" type="char" />
+				<record-element length="0" beanref="SC.loanLastName" type="char" />
+				<record-element length="0" beanref="SC.loanFirstName" type="char" />
+				<record-element length="0" beanref="SC.loanMiddleName" type="char" />
+				<record-element length="0" beanref="SC.loanPrefix" type="char" />
+				<record-element length="0" beanref="SC.loanSuffix" type="char" />
+				<record-element length="0" beanref="SC.street1" type="char" />
+				<record-element length="0" beanref="SC.street2" type="char" />
+				<record-element length="0" beanref="SC.city" type="char" />
+				<record-element length="0" beanref="SC.state" type="char" />
+				<record-element length="0" beanref="SC.zip" type="char" />
+				<record-element length="0" beanref="SC.election" type="char" />
+				<record-element length="0" beanref="SC.electionDescription" type="char" />
+				<record-element length="0" beanref="SC.origAmtOfLoan" type="char" />
+				<record-element length="0" beanref="SC.paymentToDate" type="char" />
+				<record-element length="0" beanref="SC.loanBalance" type="char" />
+				<record-element length="0" beanref="SC.dateIncurred" type="char" />
+				<record-element length="0" beanref="SC.dueDateTerms" type="char" />
+				<record-element length="0" beanref="SC.pctRateTerms" type="char" />
+				<record-element length="0" beanref="SC.securedYesno" type="char" />
+				<record-element length="0" beanref="SC.memoTextDescription" type="char" />
+				<record-element length="0" beanref="SC.imageNumber" type="char" />
 			</line>
         </record-definition>
     </record>
@@ -211,22 +211,22 @@
         <record-definition>
             <bean name="SC2" class="com.captricity.bean.FECScheduleC2Record"/>
 			<line delimit="">
-				<record-element length="8" beanref="SC2.formType" type="char"/>
-				<record-element length="9" beanref="SC2.fecCommitteeId" type="char" />
-				<record-element length="30" beanref="SC2.indLastName" type="char" />
-				<record-element length="20" beanref="SC2.indFirstName" type="char" />
-				<record-element length="20" beanref="SC2.indMiddleName" type="char" />
-				<record-element length="10" beanref="SC2.indPrefix" type="char" />
-				<record-element length="10" beanref="SC2.indSuffix" type="char" />
-				<record-element length="34" beanref="SC2.street1" type="char" />
-				<record-element length="34" beanref="SC2.street2" type="char" />
-				<record-element length="30" beanref="SC2.city" type="char" />
-				<record-element length="2" beanref="SC2.state" type="char" />
-				<record-element length="9" beanref="SC2.zip" type="char" />
-				<record-element length="38" beanref="SC2.indEmployer" type="char" />
-				<record-element length="38" beanref="SC2.indOccupation" type="char" />
-				<record-element length="12" beanref="SC2.amountGuaranteedBalance" type="char" />
-				<record-element length="11" beanref="SC2.imageNumber" type="char" />
+				<record-element length="0" beanref="SC2.formType" type="char"/>
+				<record-element length="0" beanref="SC2.fecCommitteeId" type="char" />
+				<record-element length="0" beanref="SC2.indLastName" type="char" />
+				<record-element length="0" beanref="SC2.indFirstName" type="char" />
+				<record-element length="0" beanref="SC2.indMiddleName" type="char" />
+				<record-element length="0" beanref="SC2.indPrefix" type="char" />
+				<record-element length="0" beanref="SC2.indSuffix" type="char" />
+				<record-element length="0" beanref="SC2.street1" type="char" />
+				<record-element length="0" beanref="SC2.street2" type="char" />
+				<record-element length="0" beanref="SC2.city" type="char" />
+				<record-element length="0" beanref="SC2.state" type="char" />
+				<record-element length="0" beanref="SC2.zip" type="char" />
+				<record-element length="0" beanref="SC2.indEmployer" type="char" />
+				<record-element length="0" beanref="SC2.indOccupation" type="char" />
+				<record-element length="0" beanref="SC2.amountGuaranteedBalance" type="char" />
+				<record-element length="0" beanref="SC2.imageNumber" type="char" />
 			</line>
         </record-definition>
     </record>
@@ -235,25 +235,25 @@
         <record-definition>
             <bean name="SD" class="com.captricity.bean.FECScheduleDRecord"/>
 			<line delimit="">
-				<record-element length="8" beanref="SD.formType" type="char"/>
-				<record-element length="9" beanref="SD.filterFECCommitteeId" type="char" />
-				<record-element length="200" beanref="SD.debtName" type="char" />
-				<record-element length="30" beanref="SD.debtLastName" type="char" />
-				<record-element length="20" beanref="SD.debtFirstName" type="char" />
-				<record-element length="20" beanref="SD.debtMiddleName" type="char" />
-				<record-element length="10" beanref="SD.debtPrefix" type="char" />
-				<record-element length="10" beanref="SD.debtSuffix" type="char" />
-				<record-element length="34" beanref="SD.street1" type="char" />
-				<record-element length="34" beanref="SD.street2" type="char" />
-				<record-element length="30" beanref="SD.city" type="char" />
-				<record-element length="2" beanref="SD.state" type="char" />
-				<record-element length="9" beanref="SD.zip" type="char" />
-				<record-element length="40" beanref="SD.naturePurposeDebtDescription" type="char" />
-				<record-element length="12" beanref="SD.beginningBalance" type="char" />
-				<record-element length="12" beanref="SD.incurredThisPeriod" type="char" />
-				<record-element length="12" beanref="SD.paymentThisPeriod" type="char" />
-				<record-element length="12" beanref="SD.balanceAtClose" type="char" />
-				<record-element length="11" beanref="SD.imageNumber" type="char" />
+				<record-element length="0" beanref="SD.formType" type="char"/>
+				<record-element length="0" beanref="SD.filterFECCommitteeId" type="char" />
+				<record-element length="0" beanref="SD.debtName" type="char" />
+				<record-element length="0" beanref="SD.debtLastName" type="char" />
+				<record-element length="0" beanref="SD.debtFirstName" type="char" />
+				<record-element length="0" beanref="SD.debtMiddleName" type="char" />
+				<record-element length="0" beanref="SD.debtPrefix" type="char" />
+				<record-element length="0" beanref="SD.debtSuffix" type="char" />
+				<record-element length="0" beanref="SD.street1" type="char" />
+				<record-element length="0" beanref="SD.street2" type="char" />
+				<record-element length="0" beanref="SD.city" type="char" />
+				<record-element length="0" beanref="SD.state" type="char" />
+				<record-element length="0" beanref="SD.zip" type="char" />
+				<record-element length="0" beanref="SD.naturePurposeDebtDescription" type="char" />
+				<record-element length="0" beanref="SD.beginningBalance" type="char" />
+				<record-element length="0" beanref="SD.incurredThisPeriod" type="char" />
+				<record-element length="0" beanref="SD.paymentThisPeriod" type="char" />
+				<record-element length="0" beanref="SD.balanceAtClose" type="char" />
+				<record-element length="0" beanref="SD.imageNumber" type="char" />
 			</line>
         </record-definition>
     </record>
@@ -262,52 +262,52 @@
         <record-definition>
             <bean name="SC1" class="com.captricity.bean.FECScheduleC1Record"/>
 			<line delimit="">
-				<record-element length="8" beanref="SC1.formType" type="char"/>
-				<record-element length="9" beanref="SC1.fecCommitteeId" type="char" />
-				<record-element length="200" beanref="SC1.nameLender" type="char" />
-				<record-element length="34" beanref="SC1.street1" type="char" />
-				<record-element length="34" beanref="SC1.street2" type="char" />
-				<record-element length="30" beanref="SC1.city" type="char" />
-				<record-element length="2" beanref="SC1.state" type="char" />
-				<record-element length="9" beanref="SC1.zip" type="char" />
-				<record-element length="12" beanref="SC1.amtOfLoan" type="char" />
-				<record-element length="15" beanref="SC1.loanInterestRatePercent" type="char" />
-				<record-element length="8" beanref="SC1.dateIncurred" type="char" />
-				<record-element length="15" beanref="SC1.dateDue" type="char" />
-				<record-element length="1" beanref="SC1.yesNo_A" type="char" />
-				<record-element length="8" beanref="SC1.dateOfOriginalLoan_A" type="char" />
-				<record-element length="12" beanref="SC1.creditAmountThisDraw_B" type="char" />
-				<record-element length="12" beanref="SC1.totalBalance_B" type="char" />
-				<record-element length="1" beanref="SC1.yesNo_C" type="char" />
-				<record-element length="1" beanref="SC1.yesNoCollateral_D" type="char" />
-				<record-element length="100" beanref="SC1.description_D" type="char" />
-				<record-element length="12" beanref="SC1.collateralValueAmount_D" type="char" />
-				<record-element length="1" beanref="SC1.yesNoPerfectedInterest_D" type="char" />
-				<record-element length="1" beanref="SC1.yesNo_E" type="char" />
-				<record-element length="100" beanref="SC1.description_E" type="char" />
-				<record-element length="12" beanref="SC1.estimatedValue_E" type="char" />
-				<record-element length="8" beanref="SC1.date_E" type="char" />
-				<record-element length="200" beanref="SC1.accountName_E" type="char" />
-				<record-element length="34" beanref="SC1.street1_E" type="char" />
-				<record-element length="34" beanref="SC1.street2_E" type="char" />
-				<record-element length="30" beanref="SC1.city_E" type="char" />
-				<record-element length="2" beanref="SC1.state_E" type="char" />
-				<record-element length="9" beanref="SC1.zip_E" type="char" />
-				<record-element length="100" beanref="SC1.description_F" type="char" />
-				<record-element length="30" beanref="SC1.treasLastName_G" type="char" />
-				<record-element length="20" beanref="SC1.treasFirstName_G" type="char" />
-				<record-element length="20" beanref="SC1.treasMiddleName_G" type="char" />
-				<record-element length="10" beanref="SC1.treasPrefix_G" type="char" />
-				<record-element length="10" beanref="SC1.treasSuffix_G" type="char" />
-				<record-element length="8" beanref="SC1.treasDate_G" type="char" />
-				<record-element length="30" beanref="SC1.authLastName" type="char" />
-				<record-element length="20" beanref="SC1.authFirstName" type="char" />
-				<record-element length="20" beanref="SC1.authMiddleName" type="char" />
-				<record-element length="10" beanref="SC1.authPrefix" type="char" />
-				<record-element length="10" beanref="SC1.authSuffix" type="char" />
-				<record-element length="20" beanref="SC1.authTitle" type="char" />
-				<record-element length="8" beanref="SC1.authDate" type="char" />
-				<record-element length="11" beanref="SC1.imageNumber" type="char" />	
+				<record-element length="0" beanref="SC1.formType" type="char"/>
+				<record-element length="0" beanref="SC1.fecCommitteeId" type="char" />
+				<record-element length="0" beanref="SC1.nameLender" type="char" />
+				<record-element length="0" beanref="SC1.street1" type="char" />
+				<record-element length="0" beanref="SC1.street2" type="char" />
+				<record-element length="0" beanref="SC1.city" type="char" />
+				<record-element length="0" beanref="SC1.state" type="char" />
+				<record-element length="0" beanref="SC1.zip" type="char" />
+				<record-element length="0" beanref="SC1.amtOfLoan" type="char" />
+				<record-element length="0" beanref="SC1.loanInterestRatePercent" type="char" />
+				<record-element length="0" beanref="SC1.dateIncurred" type="char" />
+				<record-element length="0" beanref="SC1.dateDue" type="char" />
+				<record-element length="0" beanref="SC1.yesNo_A" type="char" />
+				<record-element length="0" beanref="SC1.dateOfOriginalLoan_A" type="char" />
+				<record-element length="0" beanref="SC1.creditAmountThisDraw_B" type="char" />
+				<record-element length="0" beanref="SC1.totalBalance_B" type="char" />
+				<record-element length="0" beanref="SC1.yesNo_C" type="char" />
+				<record-element length="0" beanref="SC1.yesNoCollateral_D" type="char" />
+				<record-element length="0" beanref="SC1.description_D" type="char" />
+				<record-element length="0" beanref="SC1.collateralValueAmount_D" type="char" />
+				<record-element length="0" beanref="SC1.yesNoPerfectedInterest_D" type="char" />
+				<record-element length="0" beanref="SC1.yesNo_E" type="char" />
+				<record-element length="0" beanref="SC1.description_E" type="char" />
+				<record-element length="0" beanref="SC1.estimatedValue_E" type="char" />
+				<record-element length="0" beanref="SC1.date_E" type="char" />
+				<record-element length="0" beanref="SC1.accountName_E" type="char" />
+				<record-element length="0" beanref="SC1.street1_E" type="char" />
+				<record-element length="0" beanref="SC1.street2_E" type="char" />
+				<record-element length="0" beanref="SC1.city_E" type="char" />
+				<record-element length="0" beanref="SC1.state_E" type="char" />
+				<record-element length="0" beanref="SC1.zip_E" type="char" />
+				<record-element length="0" beanref="SC1.description_F" type="char" />
+				<record-element length="0" beanref="SC1.treasLastName_G" type="char" />
+				<record-element length="0" beanref="SC1.treasFirstName_G" type="char" />
+				<record-element length="0" beanref="SC1.treasMiddleName_G" type="char" />
+				<record-element length="0" beanref="SC1.treasPrefix_G" type="char" />
+				<record-element length="0" beanref="SC1.treasSuffix_G" type="char" />
+				<record-element length="0" beanref="SC1.treasDate_G" type="char" />
+				<record-element length="0" beanref="SC1.authLastName" type="char" />
+				<record-element length="0" beanref="SC1.authFirstName" type="char" />
+				<record-element length="0" beanref="SC1.authMiddleName" type="char" />
+				<record-element length="0" beanref="SC1.authPrefix" type="char" />
+				<record-element length="0" beanref="SC1.authSuffix" type="char" />
+				<record-element length="0" beanref="SC1.authTitle" type="char" />
+				<record-element length="0" beanref="SC1.authDate" type="char" />
+				<record-element length="0" beanref="SC1.imageNumber" type="char" />	
 			</line>
         </record-definition>
     </record>

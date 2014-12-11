@@ -4,6 +4,8 @@ import java.io.FileReader;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.time.FastDateFormat;
@@ -26,6 +28,7 @@ public class ConvertCSVScheC1ToFECScheC1 {
 		"amtOfLoan",
 		"loanInterestRatePercent",
 		"street1",
+		"streetFull",
 		"street2",
 		"dateIncurred",
 		"city",
@@ -46,28 +49,28 @@ public class ConvertCSVScheC1ToFECScheC1 {
 		"estimatedValue_E",
 		"accountName_E",
 		"street1_E",
-		"date_E",
+		"streetFull_E",
 		"street2_E",
-		"city_E",
+		"date_E",
 		"state_E",
+		"city_E",
 		"zip_E",
 		"description_F",
-		"tresFullName_G",
-		"treasSuffix_G",
-		"treasMiddleName_G",
-		"treasLastName_G",
 		"treasPrefix_G",
+		"treasSuffix_G",
+		"treasLastName_G",
+		"treasMiddleName_G",
 		"treasFirstName_G",
+		"tresFullName_G",
 		"treasDate_G",
-		"authFullName",
-		"authFirstName",
 		"authMiddleName",
-		"authPrefix",
+		"authFullName",
 		"authLastName",
+		"authPrefix",
+		"authFirstName",
 		"authSuffix",
 		"authTitle",
-		"authDate"
-	};
+		"authDate"};
 	
 	private static final FastDateFormat FEC_DATE_RECEIVED = FastDateFormat.getInstance("yyyyMMdd");
 	private static final FastDateFormat CSV_DATE_RECEIVED = FastDateFormat.getInstance("MMddyyyy");
@@ -200,13 +203,14 @@ public class ConvertCSVScheC1ToFECScheC1 {
 			
 			fecScheduleC1Record.setDescription_F(csvScheduleC1Record.getDescription_F());
 			
-			
-			String splitedFullName[] = 	FECConverterUtil.splitFullName(csvScheduleC1Record.getTresFullName_G());
-			fecScheduleC1Record.setTreasPrefix_G(splitedFullName[0]);
-			fecScheduleC1Record.setTreasFirstName_G(splitedFullName[1]);
-			fecScheduleC1Record.setTreasMiddleName_G(splitedFullName[2]);
-			fecScheduleC1Record.setTreasLastName_G(splitedFullName[3]);
-			fecScheduleC1Record.setTreasSuffix_G(splitedFullName[4]);
+			if(!StringUtils.isBlank(csvScheduleC1Record.getTresFullName_G())){
+				String splitedFullName[] = 	FECConverterUtil.splitFullName(csvScheduleC1Record.getTresFullName_G());
+				fecScheduleC1Record.setTreasPrefix_G(splitedFullName[0]);
+				fecScheduleC1Record.setTreasFirstName_G(splitedFullName[1]);
+				fecScheduleC1Record.setTreasMiddleName_G(splitedFullName[2]);
+				fecScheduleC1Record.setTreasLastName_G(splitedFullName[3]);
+				fecScheduleC1Record.setTreasSuffix_G(splitedFullName[4]);
+			}
 			if(!StringUtils.isBlank(csvScheduleC1Record.getTreasDate_G())){
 				try{
 					fecScheduleC1Record.setTreasDate_G(FEC_DATE_RECEIVED.format(CSV_DATE_RECEIVED.parse(csvScheduleC1Record.getTreasDate_G())));
@@ -216,13 +220,14 @@ public class ConvertCSVScheC1ToFECScheC1 {
 				}
 			}
 			
-			
-			splitedFullName = FECConverterUtil.splitFullName(csvScheduleC1Record.getAuthFullName());
-			fecScheduleC1Record.setAuthPrefix(splitedFullName[0]);
-			fecScheduleC1Record.setAuthFirstName(splitedFullName[1]);
-			fecScheduleC1Record.setAuthMiddleName(splitedFullName[2]);
-			fecScheduleC1Record.setAuthLastName(splitedFullName[3]);
-			fecScheduleC1Record.setAuthSuffix(splitedFullName[4]);
+			if(!StringUtils.isBlank(csvScheduleC1Record.getAuthFullName())){
+				String splitedFullName[] = FECConverterUtil.splitFullName(csvScheduleC1Record.getAuthFullName());
+				fecScheduleC1Record.setAuthPrefix(splitedFullName[0]);
+				fecScheduleC1Record.setAuthFirstName(splitedFullName[1]);
+				fecScheduleC1Record.setAuthMiddleName(splitedFullName[2]);
+				fecScheduleC1Record.setAuthLastName(splitedFullName[3]);
+				fecScheduleC1Record.setAuthSuffix(splitedFullName[4]);
+			}
 			fecScheduleC1Record.setAuthTitle(csvScheduleC1Record.getAuthTitle());
 			if(!StringUtils.isBlank(csvScheduleC1Record.getAuthDate())){
 				try{
@@ -233,8 +238,12 @@ public class ConvertCSVScheC1ToFECScheC1 {
 				}
 			}
 			
-			fecScheduleC1Record.setImageNumber("93240010033");//TODO: Need to get from file name
-	
+			Pattern pattern = Pattern.compile("\\_(.*?)\\-");
+			Matcher match = pattern.matcher(csvScheduleC1Record.getName());
+			if (match.find()) {
+				fecScheduleC1Record.setImageNumber(match.group(1));
+			}
+
 			return fecScheduleC1Record;	
 	}
 }

@@ -9,6 +9,9 @@ public enum SuffixConstant {
 	III("III"),
 	MD("MD"),
 	PHD("PhD"),
+	CPA("CPA"),
+	ESQ("ESQ"),
+	JD("JD"),
 	OTHER("Other");
 	
 	private SuffixConstant(String suffix){
